@@ -1,6 +1,7 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Tests.Unit;
 
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using VerifyTests;
@@ -10,6 +11,7 @@ using Xunit.Sdk;
 /// <summary>
 /// Base class for Trait Attribute tests
 /// </summary>
+[ExcludeFromCodeCoverage]
 [UsesVerify]
 public abstract class AttributeTestsBase
 {

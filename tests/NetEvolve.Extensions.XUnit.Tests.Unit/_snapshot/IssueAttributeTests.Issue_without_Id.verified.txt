@@ -1,5 +1,8 @@
 ﻿[
   {
+    Category: Issue
+  },
+  {
     TestCategory: Issue
   }
 ]

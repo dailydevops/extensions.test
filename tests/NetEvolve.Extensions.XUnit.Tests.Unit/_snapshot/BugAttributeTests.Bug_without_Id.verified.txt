@@ -1,5 +1,8 @@
 ﻿[
   {
+    Category: Bug
+  },
+  {
     TestCategory: Bug
   }
 ]

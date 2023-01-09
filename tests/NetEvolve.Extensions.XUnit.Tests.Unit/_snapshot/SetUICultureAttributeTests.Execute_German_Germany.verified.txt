@@ -1,6 +1,6 @@
 ﻿[
   {
-    SetCulture: en
+    SetUICulture: de-DE
   },
   {
     Translation: Hallo Welt!

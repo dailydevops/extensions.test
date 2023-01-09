@@ -1,5 +1,8 @@
 ﻿[
   {
+    Category: PreDeployment
+  },
+  {
     TestCategory: PreDeployment
   }
 ]

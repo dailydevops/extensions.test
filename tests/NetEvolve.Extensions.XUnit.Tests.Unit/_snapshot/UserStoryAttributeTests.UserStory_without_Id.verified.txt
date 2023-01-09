@@ -1,5 +1,8 @@
 ﻿[
   {
+    Category: UserStory
+  },
+  {
     TestCategory: UserStory
   }
 ]

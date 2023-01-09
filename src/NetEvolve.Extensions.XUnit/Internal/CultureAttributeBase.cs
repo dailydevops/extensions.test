@@ -26,7 +26,7 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
     {
         Category = category;
         Id = culture;
-        _culture = CreateLazyCultureInfo(culture);
+        _culture = CreateCultureInfo(culture);
     }
 
     /// <inheritdoc/>
@@ -46,19 +46,14 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
         }
     }
 
-    private static CultureInfo CreateLazyCultureInfo(string culture)
-    {
-        if (string.IsNullOrWhiteSpace(culture))
-        {
-            return CultureInfo.InvariantCulture;
-        }
-
+    private static CultureInfo CreateCultureInfo(string culture)
+        =>
 #if NETSTANDARD2_0_OR_GREATER || NETCOREAPP2_0_OR_GREATER
-        return new CultureInfo(culture, false);
+        new CultureInfo(culture, false);
 #else
         return new CultureInfo(x);
 #endif
-    }
+
 
     protected abstract bool SetCurrentCulture(CultureInfo culture);
 }

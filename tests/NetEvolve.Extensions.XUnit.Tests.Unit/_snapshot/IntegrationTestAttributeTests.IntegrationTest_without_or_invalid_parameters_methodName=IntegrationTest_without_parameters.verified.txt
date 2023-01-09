@@ -1,5 +1,8 @@
 ﻿[
   {
+    Category: IntegrationTest
+  },
+  {
     TestCategory: IntegrationTest
   }
 ]

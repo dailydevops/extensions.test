@@ -9,10 +9,10 @@ using System.Collections.Generic;
 
 [ExcludeFromCodeCoverage]
 [UsesVerify]
-public class SetCultureAttributeTests : AttributeTestsBase
+public class SetUICultureAttributeTests : AttributeTestsBase
 {
     [Fact]
-    [SetCulture("en")]
+    [SetUICulture("en")]
     public async Task Execute_English()
     {
         var traits = GetTraits();
@@ -24,8 +24,8 @@ public class SetCultureAttributeTests : AttributeTestsBase
         _ = await Verify(traits.Union(translations));
     }
 
-    [Fact(Skip = "Flaky test")]
-    [SetCulture("")]
+    [Fact]
+    [SetUICulture("")]
     public async Task Execute_Invariant()
     {
         var traits = GetTraits();
@@ -38,7 +38,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
     }
 
     [Fact]
-    [SetCulture("de")]
+    [SetUICulture("de")]
     public async Task Execute_German()
     {
         var traits = GetTraits();
@@ -51,7 +51,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
     }
 
     [Fact]
-    [SetCulture("de-DE")]
+    [SetUICulture("de-DE")]
     public async Task Execute_German_Germany()
     {
         var traits = GetTraits();
