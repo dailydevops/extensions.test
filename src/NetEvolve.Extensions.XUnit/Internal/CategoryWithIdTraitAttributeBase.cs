@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Internal;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Xunit.Sdk;
 
 [AttributeUsage(
@@ -8,7 +9,12 @@ using Xunit.Sdk;
     Inherited = true
 )]
 [TraitDiscoverer(Namespaces.CategoryTraitDiscoverer, Namespaces.Assembly)]
-public abstract class CategoryWithIdTraitAttribute : Attribute, ITraitAttribute
+[SuppressMessage(
+    "Naming",
+    "CA1710:Identifiers should have correct suffix",
+    Justification = "Conflicting naming convention"
+)]
+public abstract class CategoryWithIdTraitAttributeBase : Attribute, ITraitAttribute
 {
     /// <summary>
     /// Gets the category value of the trait.
@@ -21,22 +27,22 @@ public abstract class CategoryWithIdTraitAttribute : Attribute, ITraitAttribute
     public string? Id { get; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryWithIdTraitAttribute"/> class.
+    /// Initializes a new instance of the <see cref="CategoryWithIdTraitAttributeBase"/> class.
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="id">Id</param>
-    protected CategoryWithIdTraitAttribute(string category, string? id)
+    protected CategoryWithIdTraitAttributeBase(string category, string? id)
     {
         Category = category;
         Id = id;
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryWithIdTraitAttribute"/> class.
+    /// Initializes a new instance of the <see cref="CategoryWithIdTraitAttributeBase"/> class.
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="id">Id</param>
-    protected CategoryWithIdTraitAttribute(string category, long id)
+    protected CategoryWithIdTraitAttributeBase(string category, long id)
     {
         Category = category;
         Id = $"{id}";

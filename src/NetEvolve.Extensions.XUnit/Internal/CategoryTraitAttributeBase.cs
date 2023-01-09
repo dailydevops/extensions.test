@@ -3,6 +3,7 @@
 using System;
 using Xunit.Sdk;
 using NetEvolve.Extensions.XUnit;
+using System.Diagnostics.CodeAnalysis;
 
 [AttributeUsage(
     AttributeTargets.Class | AttributeTargets.Method,
@@ -10,7 +11,12 @@ using NetEvolve.Extensions.XUnit;
     Inherited = true
 )]
 [TraitDiscoverer(Namespaces.CategoryTraitDiscoverer, Namespaces.Assembly)]
-public abstract class CategoryTraitAttribute : Attribute, ITraitAttribute
+[SuppressMessage(
+    "Naming",
+    "CA1710:Identifiers should have correct suffix",
+    Justification = "Conflicting naming convention"
+)]
+public abstract class CategoryTraitAttributeBase : Attribute, ITraitAttribute
 {
     /// <summary>
     /// Gets the category value of the trait.
@@ -18,8 +24,8 @@ public abstract class CategoryTraitAttribute : Attribute, ITraitAttribute
     public string Category { get; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryTraitAttribute"/> class.
+    /// Initializes a new instance of the <see cref="CategoryTraitAttributeBase"/> class.
     /// </summary>
     /// <param name="category"></param>
-    protected CategoryTraitAttribute(string category) => Category = category;
+    protected CategoryTraitAttributeBase(string category) => Category = category;
 }

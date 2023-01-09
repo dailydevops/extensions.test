@@ -46,14 +46,12 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
         }
     }
 
-    private static CultureInfo CreateCultureInfo(string culture)
-        =>
+    private static CultureInfo CreateCultureInfo(string culture) =>
 #if NETSTANDARD2_0_OR_GREATER || NETCOREAPP2_0_OR_GREATER
         new CultureInfo(culture, false);
 #else
-        return new CultureInfo(x);
+        new CultureInfo(x);
 #endif
-
 
     protected abstract bool SetCurrentCulture(CultureInfo culture);
 }

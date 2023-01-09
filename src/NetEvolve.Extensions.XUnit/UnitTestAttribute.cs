@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as UnitTest
 /// </summary>
-public sealed class UnitTestAttribute : CategoryTraitAttribute
+public sealed class UnitTestAttribute : CategoryTraitAttributeBase
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="UnitTestAttribute"/> class.
