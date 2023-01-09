@@ -17,10 +17,6 @@ public sealed class SetCultureAttribute : CultureAttributeBase
         {
             CultureInfo.CurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentCulture = culture;
-#if NETSTANDARD2_0_OR_GREATER || NET5_0_OR_GREATER
-            CultureInfo.CurrentCulture?.ClearCachedData();
-            CultureInfo.DefaultThreadCurrentCulture?.ClearCachedData();
-#endif
             return true;
         }
 

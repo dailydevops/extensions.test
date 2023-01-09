@@ -24,7 +24,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
         _ = await Verify(traits.Union(translations));
     }
 
-    [Fact(Skip = "Flaky test")]
+    [Fact]
     [SetCulture("")]
     public async Task Execute_Invariant()
     {
