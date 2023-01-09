@@ -27,4 +27,10 @@
     <ProjectReference Include="..\..\src\NetEvolve.Extensions.XUnit\NetEvolve.Extensions.XUnit.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Translations.de.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

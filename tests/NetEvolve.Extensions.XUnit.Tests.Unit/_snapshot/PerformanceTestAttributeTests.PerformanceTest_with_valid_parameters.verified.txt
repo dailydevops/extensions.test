@@ -1,0 +1,10 @@
+﻿[
+  {
+    Key: Category,
+    Value: PerformanceTest
+  },
+  {
+    Key: String,
+    Value: Format
+  }
+]

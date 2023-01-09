@@ -1,0 +1,8 @@
+﻿[
+  {
+    SetCulture: 
+  },
+  {
+    Translation: Hello World!
+  }
+]
