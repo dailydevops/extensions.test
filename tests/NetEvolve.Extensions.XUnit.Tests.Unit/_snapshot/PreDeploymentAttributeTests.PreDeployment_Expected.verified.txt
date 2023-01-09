@@ -1,8 +1,0 @@
-﻿[
-  {
-    Category: PreDeployment
-  },
-  {
-    TestCategory: PreDeployment
-  }
-]

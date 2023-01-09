@@ -1,6 +1,0 @@
-﻿[
-  {
-    Key: Category,
-    Value: EndToEndTest
-  }
-]

@@ -52,5 +52,5 @@ public abstract class AttributeTestsBase
     }
 
     protected static SettingsTask Verify<T>(T traits) =>
-        Verifier.Verify(traits).UseDirectory("_snapshot");
+        Verifier.Verify(traits).UseDirectory("../_snapshot");
 }
