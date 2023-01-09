@@ -1,0 +1,10 @@
+﻿[
+  {
+    Key: Category,
+    Value: UnitTest
+  },
+  {
+    Key: String,
+    Value: Format
+  }
+]

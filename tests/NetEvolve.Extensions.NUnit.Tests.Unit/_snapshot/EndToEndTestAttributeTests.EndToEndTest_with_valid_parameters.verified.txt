@@ -1,0 +1,10 @@
+﻿[
+  {
+    Key: Category,
+    Value: EndToEndTest
+  },
+  {
+    Key: String,
+    Value: Format
+  }
+]

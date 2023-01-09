@@ -1,0 +1,11 @@
+﻿[
+  {
+    Category: Bug
+  },
+  {
+    TestCategory: Bug
+  },
+  {
+    Bug: 123456
+  }
+]

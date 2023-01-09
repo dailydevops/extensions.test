@@ -1,0 +1,8 @@
+﻿[
+  {
+    Category: FunctionalTest
+  },
+  {
+    TestCategory: FunctionalTest
+  }
+]
