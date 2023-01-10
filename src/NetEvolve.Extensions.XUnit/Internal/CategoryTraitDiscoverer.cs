@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using Xunit.Abstractions;
 using NetEvolve.Extensions.XUnit;
 
+/// <summary>
+/// Discoverer for all implementations of <see cref="CategoryTraitAttributeBase"/>.
+/// </summary>
 public sealed class CategoryTraitDiscoverer : DiscovererBase
 {
     /// <inheritdoc />

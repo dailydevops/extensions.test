@@ -5,6 +5,10 @@ using System.Collections.Generic;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 
+/// <summary>
+/// Abstract class implementation of <see cref="ITraitDiscoverer"/>.
+/// Provides implementation of <see cref="GetNamedArgument(IAttributeInfo, string)"/>.
+/// </summary>
 public abstract class DiscovererBase : ITraitDiscoverer
 {
     /// <inheritdoc />

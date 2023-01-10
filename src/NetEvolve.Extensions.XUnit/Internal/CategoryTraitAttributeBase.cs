@@ -5,6 +5,10 @@ using Xunit.Sdk;
 using NetEvolve.Extensions.XUnit;
 using System.Diagnostics.CodeAnalysis;
 
+/// <summary>
+/// Abstract class implementation of <see cref="ITraitAttribute"/>.
+/// Provides property <see cref="Category"/>.
+/// </summary>
 [AttributeUsage(
     AttributeTargets.Class | AttributeTargets.Method,
     AllowMultiple = true,

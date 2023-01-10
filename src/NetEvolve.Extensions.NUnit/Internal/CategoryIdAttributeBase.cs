@@ -2,6 +2,10 @@
 
 using global::NUnit.Framework.Internal;
 
+/// <summary>
+/// Abstract class implementation.
+/// Extends <see cref="CategoryAttributeBase"/> with an additional property <see cref="Id"/>.
+/// </summary>
 public abstract class CategoryIdAttributeBase : CategoryAttributeBase
 {
     /// <summary>

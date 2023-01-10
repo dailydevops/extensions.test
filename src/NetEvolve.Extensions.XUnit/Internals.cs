@@ -11,6 +11,16 @@ internal static class Internals
     public const string Id = nameof(Id);
 
     /// <summary>
+    /// Culture
+    /// </summary>
+    public const string Culture = nameof(Culture);
+
+    /// <summary>
+    /// UI Culture
+    /// </summary>
+    public const string UICulture = nameof(UICulture);
+
+    /// <summary>
     /// Test Category
     /// </summary>
     public const string Category = nameof(Category);

@@ -3,6 +3,23 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Xunit.Sdk;
 
+/// <summary>
+/// <para>
+/// Abstract class implementation of <see cref="ITraitAttribute"/>.
+/// Provides basic functionality for category / id based testing.
+/// </para>
+/// <para>
+/// Like:
+/// <list type="bullet">
+/// <item><see cref="BugAttribute"/></item>
+/// <item><see cref="EpicAttribute"/></item>
+/// <item><see cref="FeatureAttribute"/></item>
+/// <item><see cref="IssueAttribute"/></item>
+/// <item><see cref="UserStoryAttribute"/></item>
+/// <item><see cref="WorkItemAttribute"/></item>
+/// </list>
+/// </para>
+/// </summary>
 [AttributeUsage(
     AttributeTargets.Class | AttributeTargets.Method,
     AllowMultiple = true,

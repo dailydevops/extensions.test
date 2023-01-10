@@ -5,6 +5,10 @@ using global::NUnit.Framework.Internal;
 using System;
 using System.Diagnostics.CodeAnalysis;
 
+/// <summary>
+/// Abstract class implementation of <see cref="IApplyToTest"/>.
+/// Provides basic Functionality, see <see cref="ApplyToTest(Test)"/>
+/// </summary>
 [SuppressMessage(
     "Naming",
     "CA1710:Identifiers should have correct suffix",

@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using Xunit.Abstractions;
 using NetEvolve.Extensions.XUnit;
 
+/// <summary>
+/// Discoverer for all implementations of <see cref="CultureAttributeBase"/>.
+/// </summary>
 public sealed class CultureTraitDiscoverer : DiscovererBase
 {
     /// <inheritdoc />
@@ -22,7 +25,13 @@ public sealed class CultureTraitDiscoverer : DiscovererBase
             yield break;
         }
 
-        var id = GetNamedArgument(traitAttribute, Internals.Id);
-        yield return new KeyValuePair<string, string>(category!, id!);
+        var culture = GetNamedArgument(traitAttribute, Internals.Culture);
+        yield return new KeyValuePair<string, string>(category!, culture!);
+
+        var uiCulture = GetNamedArgument(traitAttribute, Internals.UICulture);
+        if (!string.IsNullOrWhiteSpace(uiCulture))
+        {
+            yield return new KeyValuePair<string, string>("SetUICulture", uiCulture!);
+        }
     }
 }

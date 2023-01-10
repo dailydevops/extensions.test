@@ -5,6 +5,10 @@ using System.Globalization;
 using System.Reflection;
 using Xunit.Sdk;
 
+/// <summary>
+/// Abstract class implementation of <see cref="ITraitAttribute"/>.
+/// Provides basic functionality for culture-based testing.
+/// </summary>
 [AttributeUsage(
     AttributeTargets.Class | AttributeTargets.Method,
     AllowMultiple = true,
@@ -18,23 +22,22 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
     private CultureInfo? _originalCulture;
     private bool _changed;
 
+    /// <summary>
+    /// Category
+    /// </summary>
     public string Category { get; }
-    public string Id { get; }
+
+    /// <summary>
+    /// Culture
+    /// </summary>
+    public string Culture { get; }
 
     /// <inheritdoc/>
     protected CultureAttributeBase(string category, string culture)
     {
         Category = category;
-        Id = culture;
+        Culture = culture;
         _culture = CreateCultureInfo(culture);
-    }
-
-    /// <inheritdoc/>
-    public override void Before(MethodInfo methodUnderTest)
-    {
-        _originalCulture = CultureInfo.CurrentCulture;
-
-        _changed = SetCurrentCulture(_culture);
     }
 
     /// <inheritdoc/>
@@ -42,16 +45,30 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
     {
         if (_changed)
         {
-            _ = SetCurrentCulture(_originalCulture!);
+            _ = SetCulture(_originalCulture!);
         }
     }
 
-    private static CultureInfo CreateCultureInfo(string culture) =>
-#if NETSTANDARD2_0_OR_GREATER || NETCOREAPP2_0_OR_GREATER
-        new CultureInfo(culture, false);
-#else
-        new CultureInfo(x);
-#endif
+    /// <inheritdoc/>
+    public override void Before(MethodInfo methodUnderTest)
+    {
+        _originalCulture = CultureInfo.CurrentCulture;
 
-    protected abstract bool SetCurrentCulture(CultureInfo culture);
+        _changed = SetCulture(_culture);
+    }
+
+    private protected static CultureInfo CreateCultureInfo(string culture) =>
+        new CultureInfo(culture, false);
+
+    private protected virtual bool SetCulture(CultureInfo culture)
+    {
+        if (CultureInfo.CurrentCulture != culture)
+        {
+            CultureInfo.CurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            return true;
+        }
+
+        return false;
+    }
 }
