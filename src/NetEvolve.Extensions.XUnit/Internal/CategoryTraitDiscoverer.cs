@@ -22,14 +22,14 @@ public sealed class CategoryTraitDiscoverer : DiscovererBase
             yield break;
         }
 
-        yield return new KeyValuePair<string, string>(Internals.Category, category);
-        yield return new KeyValuePair<string, string>(Internals.TestCategory, category);
+        yield return new KeyValuePair<string, string>(Internals.Category, category!);
+        yield return new KeyValuePair<string, string>(Internals.TestCategory, category!);
 
         var id = GetNamedArgument(traitAttribute, Internals.Id);
 
         if (!string.IsNullOrWhiteSpace(id))
         {
-            yield return new KeyValuePair<string, string>(category, id!);
+            yield return new KeyValuePair<string, string>(category!, id!);
         }
     }
 }

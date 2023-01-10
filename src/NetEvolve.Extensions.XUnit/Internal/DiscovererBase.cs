@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Internal;
 
+using System;
 using System.Collections.Generic;
 using Xunit.Abstractions;
 using Xunit.Sdk;
@@ -20,7 +21,7 @@ public abstract class DiscovererBase : ITraitDiscoverer
         {
             return traitAttribute.GetNamedArgument<string>(argumentName);
         }
-        catch
+        catch (ArgumentException)
         {
             // Ignore
         }

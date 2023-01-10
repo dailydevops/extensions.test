@@ -26,6 +26,11 @@ public abstract class CategoryAttributeBase : Attribute, IApplyToTest
     /// <inheritdoc/>
     public virtual void ApplyToTest(Test test)
     {
+        if (test is null)
+        {
+            return;
+        }
+
         test.Properties.Add(PropertyNames.Category, Category);
         test.Properties.Add(Internals.TestCategory, Category);
     }

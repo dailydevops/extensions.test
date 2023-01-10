@@ -25,11 +25,16 @@ public abstract class CategoryIdAttributeBase : CategoryAttributeBase
     /// <inheritdoc/>
     public override void ApplyToTest(Test test)
     {
+        if (test is null)
+        {
+            return;
+        }
+
         base.ApplyToTest(test);
 
         if (!string.IsNullOrEmpty(Id))
         {
-            test.Properties.Add(Category, Id);
+            test.Properties.Add(Category, Id!);
         }
     }
 }

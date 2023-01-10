@@ -23,6 +23,6 @@ public sealed class CultureTraitDiscoverer : DiscovererBase
         }
 
         var id = GetNamedArgument(traitAttribute, Internals.Id);
-        yield return new KeyValuePair<string, string>(category, id!);
+        yield return new KeyValuePair<string, string>(category!, id!);
     }
 }
