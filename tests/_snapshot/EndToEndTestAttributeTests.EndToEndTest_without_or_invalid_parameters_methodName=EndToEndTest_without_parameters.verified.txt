@@ -1,0 +1,8 @@
+﻿[
+  {
+    Category: EndToEndTest
+  },
+  {
+    TestCategory: EndToEndTest
+  }
+]

@@ -1,0 +1,10 @@
+﻿[
+  {
+    Key: Category,
+    Value: FunctionalTest
+  },
+  {
+    Key: String,
+    Value: Format
+  }
+]

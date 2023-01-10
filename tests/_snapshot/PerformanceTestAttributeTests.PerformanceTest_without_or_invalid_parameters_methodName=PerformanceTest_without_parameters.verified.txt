@@ -1,0 +1,8 @@
+﻿[
+  {
+    Category: PerformanceTest
+  },
+  {
+    TestCategory: PerformanceTest
+  }
+]
