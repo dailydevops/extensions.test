@@ -10,17 +10,20 @@ public sealed class FeatureAttribute : CategoryWithIdTraitAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="FeatureAttribute"/> class.
     /// </summary>
-    public FeatureAttribute() : base(Internals.Feature, null) { }
+    public FeatureAttribute()
+        : base(Internals.Feature, null) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="FeatureAttribute"/> class.
     /// </summary>
     /// <param name="id">Feature Id</param>
-    public FeatureAttribute(string? id) : base(Internals.Feature, id) { }
+    public FeatureAttribute(string? id)
+        : base(Internals.Feature, id) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="FeatureAttribute"/> class.
     /// </summary>
     /// <param name="id">Feature Id</param>
-    public FeatureAttribute(long id) : base(Internals.Feature, id) { }
+    public FeatureAttribute(long id)
+        : base(Internals.Feature, id) { }
 }

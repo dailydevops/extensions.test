@@ -10,17 +10,20 @@ public sealed class EpicAttribute : CategoryWithIdTraitAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="EpicAttribute"/> class.
     /// </summary>
-    public EpicAttribute() : base(Internals.Epic, null) { }
+    public EpicAttribute()
+        : base(Internals.Epic, null) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="EpicAttribute"/> class.
     /// </summary>
     /// <param name="id">Bug Id</param>
-    public EpicAttribute(string? id) : base(Internals.Epic, id) { }
+    public EpicAttribute(string? id)
+        : base(Internals.Epic, id) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="EpicAttribute"/> class.
     /// </summary>
     /// <param name="id">Bug Id</param>
-    public EpicAttribute(long id) : base(Internals.Epic, id) { }
+    public EpicAttribute(long id)
+        : base(Internals.Epic, id) { }
 }

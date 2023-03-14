@@ -13,13 +13,15 @@ public sealed class SetUICultureAttribute : CultureAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="SetUICultureAttribute"/> class.
     /// </summary>
-    public SetUICultureAttribute() : base("SetUICulture", string.Empty) { }
+    public SetUICultureAttribute()
+        : base("SetUICulture", string.Empty) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SetUICultureAttribute"/> class.
     /// </summary>
     /// <param name="culture">UI culture to use.</param>
-    public SetUICultureAttribute(string culture) : base("SetUICulture", culture) { }
+    public SetUICultureAttribute(string culture)
+        : base("SetUICulture", culture) { }
 
     private protected override bool SetCulture(CultureInfo culture)
     {

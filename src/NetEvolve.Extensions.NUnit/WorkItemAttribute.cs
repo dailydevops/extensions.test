@@ -12,17 +12,20 @@ public sealed class WorkItemAttribute : CategoryIdAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="WorkItemAttribute"/> class.
     /// </summary>
-    public WorkItemAttribute() : base(Internals.WorkItem) { }
+    public WorkItemAttribute()
+        : base(Internals.WorkItem) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="WorkItemAttribute"/> class.
     /// </summary>
     /// <param name="id">WorkItem Id</param>
-    public WorkItemAttribute(string? id) : base(Internals.WorkItem, id) { }
+    public WorkItemAttribute(string? id)
+        : base(Internals.WorkItem, id) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="WorkItemAttribute"/> class.
     /// </summary>
     /// <param name="id">WorkItem Id</param>
-    public WorkItemAttribute(long id) : base(Internals.WorkItem, $"{id}") { }
+    public WorkItemAttribute(long id)
+        : base(Internals.WorkItem, $"{id}") { }
 }

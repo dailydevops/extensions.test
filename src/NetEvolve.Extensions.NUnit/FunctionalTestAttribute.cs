@@ -10,5 +10,6 @@ public sealed class FunctionalTestAttribute : CategoryAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="FunctionalTestAttribute"/> class.
     /// </summary>
-    public FunctionalTestAttribute() : base(Internals.FunctionalTest) { }
+    public FunctionalTestAttribute()
+        : base(Internals.FunctionalTest) { }
 }

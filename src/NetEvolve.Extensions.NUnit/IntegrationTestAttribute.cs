@@ -10,5 +10,6 @@ public sealed class IntegrationTestAttribute : CategoryAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="IntegrationTestAttribute"/> class.
     /// </summary>
-    public IntegrationTestAttribute() : base(Internals.IntegrationTest) { }
+    public IntegrationTestAttribute()
+        : base(Internals.IntegrationTest) { }
 }
