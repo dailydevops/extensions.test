@@ -1,8 +1,5 @@
 ﻿[
   {
-    Category: PostDeployment
-  },
-  {
     TestCategory: PostDeployment
   }
 ]

@@ -35,7 +35,6 @@ public abstract class CategoryAttributeBase : Attribute, IApplyToTest
             return;
         }
 
-        test.Properties.Add(PropertyNames.Category, Category);
         test.Properties.Add(Internals.TestCategory, Category);
     }
 }

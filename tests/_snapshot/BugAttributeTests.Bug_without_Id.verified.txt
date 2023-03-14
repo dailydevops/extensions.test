@@ -1,8 +1,5 @@
 ﻿[
   {
-    Category: Bug
-  },
-  {
     TestCategory: Bug
   }
 ]
