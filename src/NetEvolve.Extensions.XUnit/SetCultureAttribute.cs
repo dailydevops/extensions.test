@@ -23,20 +23,23 @@ public sealed class SetCultureAttribute : CultureAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="SetCultureAttribute"/> class.
     /// </summary>
-    public SetCultureAttribute() : this(string.Empty, string.Empty) { }
+    public SetCultureAttribute()
+        : this(string.Empty, string.Empty) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SetCultureAttribute"/> class.
     /// </summary>
     /// <param name="culture">Culture to use.</param>
-    public SetCultureAttribute(string culture) : this(culture, string.Empty) { }
+    public SetCultureAttribute(string culture)
+        : this(culture, string.Empty) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SetCultureAttribute"/> class.
     /// </summary>
     /// <param name="culture">Culture to use.</param>
     /// <param name="uiCulture">UI culture to use.</param>
-    public SetCultureAttribute(string culture, string? uiCulture) : base("SetCulture", culture)
+    public SetCultureAttribute(string culture, string? uiCulture)
+        : base("SetCulture", culture)
     {
         if (string.IsNullOrWhiteSpace(uiCulture))
         {

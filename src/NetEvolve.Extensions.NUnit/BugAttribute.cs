@@ -12,17 +12,20 @@ public sealed class BugAttribute : CategoryIdAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="BugAttribute"/> class.
     /// </summary>
-    public BugAttribute() : base(Internals.Bug) { }
+    public BugAttribute()
+        : base(Internals.Bug) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="BugAttribute"/> class.
     /// </summary>
     /// <param name="id">Bug Id</param>
-    public BugAttribute(string? id) : base(Internals.Bug, id) { }
+    public BugAttribute(string? id)
+        : base(Internals.Bug, id) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="BugAttribute"/> class.
     /// </summary>
     /// <param name="id">Bug Id</param>
-    public BugAttribute(long id) : base(Internals.Bug, $"{id}") { }
+    public BugAttribute(long id)
+        : base(Internals.Bug, $"{id}") { }
 }

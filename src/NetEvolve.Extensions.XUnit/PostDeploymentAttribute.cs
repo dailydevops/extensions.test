@@ -9,5 +9,6 @@ public sealed class PostDeploymentAttribute : CategoryTraitAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="PostDeploymentAttribute"/> class.
     /// </summary>
-    public PostDeploymentAttribute() : base(Internals.PostDeployment) { }
+    public PostDeploymentAttribute()
+        : base(Internals.PostDeployment) { }
 }

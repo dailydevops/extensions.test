@@ -10,5 +10,6 @@ public sealed class PerformanceTestAttribute : CategoryAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="PerformanceTestAttribute"/> class.
     /// </summary>
-    public PerformanceTestAttribute() : base(Internals.PerformanceTest) { }
+    public PerformanceTestAttribute()
+        : base(Internals.PerformanceTest) { }
 }
