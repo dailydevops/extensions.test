@@ -10,5 +10,6 @@ public sealed class UnitTestAttribute : CategoryAttributeBase
     /// <summary>
     /// Initializes a new instance of the <see cref="UnitTestAttribute"/> class.
     /// </summary>
-    public UnitTestAttribute() : base(Internals.UnitTest) { }
+    public UnitTestAttribute()
+        : base(Internals.UnitTest) { }
 }
