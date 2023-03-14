@@ -1,8 +1,5 @@
 ﻿[
   {
-    Category: Epic
-  },
-  {
     TestCategory: Epic
   },
   {

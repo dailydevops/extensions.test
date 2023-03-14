@@ -1,8 +1,5 @@
 ﻿[
   {
-    Category: UserStory
-  },
-  {
     TestCategory: UserStory
   }
 ]
