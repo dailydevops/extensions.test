@@ -1,8 +1,0 @@
-﻿[
-  {
-    SetCulture: de-DE
-  },
-  {
-    Translation: Hello World!
-  }
-]
