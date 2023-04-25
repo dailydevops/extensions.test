@@ -13,6 +13,7 @@ public class UnitTestAttributeTests : AttributeTestsBase
     [Theory]
     [UnitTest]
     [TestCase(nameof(UnitTest_without_parameters))]
+    [TestCase(nameof(UnitTest_without_or_invalid_parameters))]
     public async Task UnitTest_without_or_invalid_parameters(string methodName)
     {
         var properties = GetProperties(methodName);

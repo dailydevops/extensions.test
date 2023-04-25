@@ -15,6 +15,7 @@ public class EndToEndTestAttributeTests : AttributeTestsBase
     [Theory]
     [EndToEndTest]
     [InlineData(nameof(EndToEndTest_without_parameters))]
+    [InlineData(nameof(EndToEndTest_without_or_invalid_parameters))]
     public async Task EndToEndTest_without_or_invalid_parameters(string methodName)
     {
         var traits = GetTraits(methodName);

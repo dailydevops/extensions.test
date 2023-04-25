@@ -13,6 +13,7 @@ public class EndToEndTestAttributeTests : AttributeTestsBase
     [Theory]
     [EndToEndTest]
     [TestCase(nameof(EndToEndTest_without_parameters))]
+    [TestCase(nameof(EndToEndTest_without_or_invalid_parameters))]
     public async Task EndToEndTest_without_or_invalid_parameters(string methodName)
     {
         var properties = GetProperties(methodName);
