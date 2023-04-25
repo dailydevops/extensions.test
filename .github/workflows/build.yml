@@ -65,26 +65,11 @@ jobs:
           **/*.nupkg
           **/*.snupkg
 
-  github:
-    name: "Publish to GitHub Packages"
-    runs-on: ubuntu-latest
-    needs: [ build ]
-
-    steps:
-    - name: Download Artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: release-packages
-        path: packages
-
-    - name: Push packages to GitHub.com/NetEvolve
-      run: dotnet nuget push packages/**/*.nupkg -k ${{ secrets.PACKAGES_TOKEN }} -s https://nuget.pkg.github.com/NetEvolve/index.json --skip-duplicate
-
   nuget:
     name: "Publish to NuGet.org"
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    needs: [ build, github ]
+    needs: [ build ]
 
     steps:
     - name: Download Artifacts
