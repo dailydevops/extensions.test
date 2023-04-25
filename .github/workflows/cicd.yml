@@ -1,0 +1,8 @@
+name: Build & Tests
+
+jobs:
+  uses: NetEvolve/pipelines/.github/workflows/cicd-dotnet.yml@main
+  with:
+    version-dotnet: 7.x
+    solution: $GITHUB_WORKSPACE/Extensions.Test.sln
+  secrets: inherit
