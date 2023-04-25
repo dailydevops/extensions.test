@@ -1,11 +1,11 @@
 ﻿namespace NetEvolve.Extensions.NUnit;
 
-using NetEvolve.Extensions.NUnit.Internal;
+using global::NUnit.Framework;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as PostDeployment.
 /// </summary>
-public sealed class PostDeploymentAttribute : CategoryAttributeBase
+public sealed class PostDeploymentAttribute : CategoryAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PostDeploymentAttribute"/> class.

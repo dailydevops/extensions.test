@@ -1,11 +1,11 @@
 ﻿namespace NetEvolve.Extensions.NUnit;
 
-using NetEvolve.Extensions.NUnit.Internal;
+using global::NUnit.Framework;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as PerformanceTest.
 /// </summary>
-public sealed class PerformanceTestAttribute : CategoryAttributeBase
+public sealed class PerformanceTestAttribute : CategoryAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PerformanceTestAttribute"/> class.
