@@ -11,5 +11,5 @@ jobs:
     uses: NetEvolve/pipelines/.github/workflows/cicd-dotnet.yml@fix/nuget-restore
     with:
       version-dotnet: 7.x
-      solution: $GITHUB_WORKSPACE/Extensions.Test.sln
+      solution: ./Extensions.Test.sln
     secrets: inherit
