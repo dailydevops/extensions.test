@@ -13,6 +13,7 @@ public class FunctionalTestAttributeTests : AttributeTestsBase
     [Theory]
     [FunctionalTest]
     [TestCase(nameof(FunctionalTest_without_parameters))]
+    [TestCase(nameof(FunctionalTest_without_or_invalid_parameters))]
     public async Task FunctionalTest_without_or_invalid_parameters(string methodName)
     {
         var properties = GetProperties(methodName);

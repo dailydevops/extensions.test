@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 /// Unit tests for <see cref="BugAttribute"/>.
 /// </summary>
 [ExcludeFromCodeCoverage]
-[Bug("PlacedOnClass")]
 public class BugAttributeTests : AttributeTestsBase
 {
     /// <summary>

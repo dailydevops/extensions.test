@@ -1,11 +1,11 @@
 ﻿namespace NetEvolve.Extensions.NUnit;
 
-using NetEvolve.Extensions.NUnit.Internal;
+using global::NUnit.Framework;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as FunctionalTest.
 /// </summary>
-public sealed class FunctionalTestAttribute : CategoryAttributeBase
+public sealed class FunctionalTestAttribute : CategoryAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="FunctionalTestAttribute"/> class.

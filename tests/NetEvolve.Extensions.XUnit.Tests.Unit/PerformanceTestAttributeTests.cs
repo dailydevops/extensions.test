@@ -15,6 +15,7 @@ public class PerformanceTestAttributeTests : AttributeTestsBase
     [Theory]
     [PerformanceTest]
     [InlineData(nameof(PerformanceTest_without_parameters))]
+    [InlineData(nameof(PerformanceTest_without_or_invalid_parameters))]
     public async Task PerformanceTest_without_or_invalid_parameters(string methodName)
     {
         var traits = GetTraits(methodName);

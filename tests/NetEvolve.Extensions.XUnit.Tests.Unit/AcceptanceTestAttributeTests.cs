@@ -15,6 +15,7 @@ public class AcceptanceTestAttributeTests : AttributeTestsBase
     [Theory]
     [AcceptanceTest]
     [InlineData(nameof(AcceptanceTest_without_parameters))]
+    [InlineData(nameof(AcceptanceTest_without_or_invalid_parameters))]
     public async Task AcceptanceTest_without_or_invalid_parameters(string methodName)
     {
         var traits = GetTraits(methodName);

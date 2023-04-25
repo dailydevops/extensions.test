@@ -13,6 +13,7 @@ public class PerformanceTestAttributeTests : AttributeTestsBase
     [Theory]
     [PerformanceTest]
     [TestCase(nameof(PerformanceTest_without_parameters))]
+    [TestCase(nameof(PerformanceTest_without_or_invalid_parameters))]
     public async Task PerformanceTest_without_or_invalid_parameters(string methodName)
     {
         var properties = GetProperties(methodName);

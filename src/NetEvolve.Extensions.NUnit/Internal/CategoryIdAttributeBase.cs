@@ -1,12 +1,14 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Internal;
 
+using global::NUnit.Framework;
+using global::NUnit.Framework.Interfaces;
 using global::NUnit.Framework.Internal;
 
 /// <summary>
 /// Abstract class implementation.
-/// Extends <see cref="CategoryAttributeBase"/> with an additional property <see cref="Id"/>.
+/// Extends <see cref="CategoryAttribute"/> with an additional property <see cref="Id"/>.
 /// </summary>
-public abstract class CategoryIdAttributeBase : CategoryAttributeBase
+public abstract class CategoryIdAttributeBase : CategoryAttribute, IApplyToTest
 {
     /// <summary>
     /// Gets the Id
@@ -29,7 +31,7 @@ public abstract class CategoryIdAttributeBase : CategoryAttributeBase
         : base(category) => Id = id;
 
     /// <inheritdoc/>
-    public override void ApplyToTest(Test test)
+    void IApplyToTest.ApplyToTest(Test test)
     {
         if (test is null)
         {
@@ -40,7 +42,7 @@ public abstract class CategoryIdAttributeBase : CategoryAttributeBase
 
         if (!string.IsNullOrEmpty(Id))
         {
-            test.Properties.Add(Category, Id!);
+            test.Properties.Add(Name, Id!);
         }
     }
 }

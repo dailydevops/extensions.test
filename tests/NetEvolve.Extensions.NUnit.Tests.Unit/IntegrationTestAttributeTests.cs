@@ -13,6 +13,7 @@ public class IntegrationTestAttributeTests : AttributeTestsBase
     [Theory]
     [IntegrationTest]
     [TestCase(nameof(IntegrationTest_without_parameters))]
+    [TestCase(nameof(IntegrationTest_without_or_invalid_parameters))]
     public async Task IntegrationTest_without_or_invalid_parameters(string methodName)
     {
         var properties = GetProperties(methodName);

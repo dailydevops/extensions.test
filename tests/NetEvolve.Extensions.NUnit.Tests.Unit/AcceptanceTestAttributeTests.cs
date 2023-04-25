@@ -13,6 +13,7 @@ public class AcceptanceTestAttributeTests : AttributeTestsBase
     [Theory]
     [AcceptanceTest]
     [TestCase(nameof(AcceptanceTest_without_parameters))]
+    [TestCase(nameof(AcceptanceTest_without_or_invalid_parameters))]
     public async Task AcceptanceTest_without_or_invalid_parameters(string methodName)
     {
         var properties = GetProperties(methodName);
