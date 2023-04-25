@@ -1,19 +1,15 @@
 ﻿namespace NetEvolve.Extensions.MSTest;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
+using NetEvolve.Extensions.MSTest.Internal;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as AcceptanceTest.
 /// </summary>
-public sealed class AcceptanceTestAttribute : TestCategoryBaseAttribute
+public sealed class AcceptanceTestAttribute : TestTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="AcceptanceTestAttribute"/> class.
     /// </summary>
-    public AcceptanceTestAttribute() { }
-
-    /// <inheritdoc/>
-    public override IList<string> TestCategories { get; } =
-        new List<string> { Internals.AcceptanceTest };
+    public AcceptanceTestAttribute()
+        : base(Internals.AcceptanceTest) { }
 }

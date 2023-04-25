@@ -1,7 +1,6 @@
-﻿namespace NetEvolve.Extensions.NUnit.Tests.Unit;
+﻿namespace NetEvolve.Extensions.MSTest.Tests.Unit;
 
-using global::NUnit.Framework;
-using NetEvolve.Extensions.NUnit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 
@@ -9,42 +8,43 @@ using System.Threading.Tasks;
 /// Unit tests for <see cref="BugAttribute"/>.
 /// </summary>
 [ExcludeFromCodeCoverage]
+[TestClass]
 public class BugAttributeTests : AttributeTestsBase
 {
     /// <summary>
     /// Tests the case of methods with <see cref="BugAttribute"/> without additional information.
     /// </summary>
-    [Test]
+    [TestMethod]
     [Bug]
     [Bug("")]
     public async Task Bug_without_Id()
     {
         var properties = GetProperties();
 
-        _ = await Verify(properties);
+        _ = await VerifyMSTest(properties);
     }
 
     /// <summary>
     /// Tests the case of methods with <see cref="BugAttribute"/> with numeric id.
     /// </summary>
-    [Test]
+    [TestMethod]
     [Bug(123456)]
     public async Task Bug_with_LongId()
     {
         var properties = GetProperties();
 
-        _ = await Verify(properties);
+        _ = await VerifyMSTest(properties);
     }
 
     /// <summary>
     /// Tests the case of methods with <see cref="BugAttribute"/> with id.
     /// </summary>
-    [Test]
+    [TestMethod]
     [Bug("123456")]
     public async Task Bug_with_StringId()
     {
         var properties = GetProperties();
 
-        _ = await Verify(properties);
+        _ = await VerifyMSTest(properties);
     }
 }

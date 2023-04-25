@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Tests.Unit;
 
+using global::NUnit.Framework;
 using global::NUnit.Framework.Internal;
 using global::NUnit.Framework.Internal.Builders;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ using System;
 /// Base class for Trait Attribute tests
 /// </summary>
 [ExcludeFromCodeCoverage]
+[TestFixture]
 public abstract class AttributeTestsBase
 {
     private static readonly List<string> _excludeKeys
@@ -56,7 +58,7 @@ public abstract class AttributeTestsBase
 
             foreach (string value in test.Properties[key])
             {
-                result.Add(new KeyValuePair<string, string>(key, value));
+                result.Add(new KeyValuePair<string, string>(key.Replace(PropertyNames.Category, "TestCategory", StringComparison.Ordinal), value));
             }
         }
 

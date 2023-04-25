@@ -2,24 +2,28 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using VerifyTests;
 
 /// <summary>
 /// Unit tests for <see cref="AcceptanceTestAttribute"/>.
 /// </summary>
 [ExcludeFromCodeCoverage]
 [TestClass]
-[AcceptanceTest]
-public class AcceptanceTestAttributeTests
+public class AcceptanceTestAttributeTests : AttributeTestsBase
 {
     [TestMethod]
+    [AcceptanceTest]
     [DataRow(nameof(AcceptanceTest_without_parameters))]
+    [DataRow(nameof(AcceptanceTest_without_or_invalid_parameters))]
     public async Task AcceptanceTest_without_or_invalid_parameters(string methodName)
     {
-        await Task.Yield();
-        await Task.Yield();
-        Assert.IsTrue(true);
+        var properties = GetProperties(methodName);
+
+        _ = await VerifyMSTest(properties).UseParameters(methodName);
     }
 
+    [AcceptanceTest]
     public void AcceptanceTest_without_parameters() { }
 }
