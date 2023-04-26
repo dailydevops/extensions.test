@@ -10,6 +10,7 @@ jobs:
   all:
     uses: NetEvolve/pipelines/.github/workflows/cicd-dotnet.yml@fix/nuget-restore
     with:
-      version-dotnet: 7.x
+      dotnet-logging: minimal
+      dotnet-version: 7.x
       solution: ./Extensions.Test.sln
     secrets: inherit
