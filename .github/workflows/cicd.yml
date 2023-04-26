@@ -1,16 +1,29 @@
-name: Build & Tests
+name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      dotnet-logging:
+        required: true
+        type: choice
+        default: minimal
+        options:
+          - quiet
+          - minimal
+          - normal
+          - detailed
+          - diagnostic
 
 jobs:
   all:
+    name: Build & Tests
     uses: NetEvolve/pipelines/.github/workflows/cicd-dotnet.yml@fix/nuget-restore
     with:
-      dotnet-logging: minimal
+      dotnet-logging: ${{ inputs.dotnet-logging }}
       dotnet-version: 7.x
       solution: ./Extensions.Test.sln
     secrets: inherit
