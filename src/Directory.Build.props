@@ -13,8 +13,8 @@
 
     <CopyrightYearStart>2023</CopyrightYearStart>
 
-    <PackageProjectUrl>https://github.com/NetEvolve/extensions.test</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/NetEvolve/extensions.test.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dailydevops/extensions.test</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dailydevops/extensions.test.git</RepositoryUrl>
 
     <PackageTags>compatibility;test;category;categories;culture;workitems</PackageTags>
   </PropertyGroup>
