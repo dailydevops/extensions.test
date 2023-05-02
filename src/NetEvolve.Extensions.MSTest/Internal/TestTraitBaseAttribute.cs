@@ -1,6 +1,7 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Internal;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 
 /// <inheritdoc/>
