@@ -25,7 +25,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
     }
 
     [Fact]
-    [SetCulture("")]
+    [SetCulture]
     public async Task Execute_Invariant()
     {
         var traits = GetTraits();

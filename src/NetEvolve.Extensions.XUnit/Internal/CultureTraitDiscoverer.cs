@@ -27,11 +27,5 @@ public sealed class CultureTraitDiscoverer : DiscovererBase
 
         var culture = GetNamedArgument(traitAttribute, Internals.Culture);
         yield return new KeyValuePair<string, string>(category!, culture!);
-
-        var uiCulture = GetNamedArgument(traitAttribute, Internals.UICulture);
-        if (!string.IsNullOrWhiteSpace(uiCulture))
-        {
-            yield return new KeyValuePair<string, string>("SetUICulture", uiCulture!);
-        }
     }
 }
