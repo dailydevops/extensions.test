@@ -19,7 +19,7 @@
     <PackageVersion Include="MSTest.TestAdapter" Version="3.0.4" />
     <PackageVersion Include="MSTest.TestFramework" Version="3.0.4" />
     <PackageVersion Include="NUnit" Version="3.13.3" />
-    <PackageVersion Include="NUnit3TestAdapter" Version="4.4.2" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageVersion Include="NUnit.Analyzers" Version="3.6.1" />
     <PackageVersion Include="Verify.MSTest" Version="20.3.2" />
     <PackageVersion Include="Verify.NUnit" Version="20.3.2" />
