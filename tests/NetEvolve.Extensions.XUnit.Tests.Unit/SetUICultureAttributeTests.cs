@@ -25,7 +25,7 @@ public class SetUICultureAttributeTests : AttributeTestsBase
     }
 
     [Fact]
-    [SetUICulture("")]
+    [SetUICulture]
     public async Task Execute_Invariant()
     {
         var traits = GetTraits();
