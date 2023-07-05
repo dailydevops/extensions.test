@@ -1,4 +1,5 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Internal;
+
 using System;
 using System.Diagnostics.CodeAnalysis;
 using Xunit.Sdk;

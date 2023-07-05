@@ -1,4 +1,5 @@
 ﻿namespace NetEvolve.Extensions.XUnit;
+
 using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
