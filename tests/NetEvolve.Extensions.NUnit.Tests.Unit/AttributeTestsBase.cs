@@ -3,13 +3,13 @@
 using global::NUnit.Framework;
 using global::NUnit.Framework.Internal;
 using global::NUnit.Framework.Internal.Builders;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using VerifyTests;
 using VerifyNUnit;
-using System.Diagnostics.CodeAnalysis;
-using System;
+using VerifyTests;
 
 /// <summary>
 /// Base class for Trait Attribute tests
