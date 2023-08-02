@@ -1,9 +1,9 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Internal;
 
-using System;
-using Xunit.Sdk;
 using NetEvolve.Extensions.XUnit;
+using System;
 using System.Diagnostics.CodeAnalysis;
+using Xunit.Sdk;
 
 /// <summary>
 /// Abstract class implementation of <see cref="ITraitAttribute"/>.

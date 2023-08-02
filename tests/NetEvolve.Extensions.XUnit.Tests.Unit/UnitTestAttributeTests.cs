@@ -2,8 +2,8 @@
 
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using Xunit;
 using VerifyXunit;
+using Xunit;
 
 /// <summary>
 /// Unit tests for <see cref="UnitTestAttribute"/>.

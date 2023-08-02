@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Internal;
 
+using NetEvolve.Extensions.XUnit;
 using System.Collections.Generic;
 using Xunit.Abstractions;
-using NetEvolve.Extensions.XUnit;
 
 /// <summary>
 /// Discoverer for all implementations of <see cref="CategoryTraitAttributeBase"/>.

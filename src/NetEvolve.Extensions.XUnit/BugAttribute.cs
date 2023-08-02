@@ -1,4 +1,4 @@
-namespace NetEvolve.Extensions.XUnit;
+﻿namespace NetEvolve.Extensions.XUnit;
 
 using NetEvolve.Extensions.XUnit.Internal;
 using System;

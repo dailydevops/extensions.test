@@ -1,11 +1,11 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Tests.Unit;
 
-using System.Diagnostics.CodeAnalysis;
-using System.Threading.Tasks;
-using Xunit;
-using VerifyXunit;
-using System.Linq;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Threading.Tasks;
+using VerifyXunit;
+using Xunit;
 
 [ExcludeFromCodeCoverage]
 [UsesVerify]
