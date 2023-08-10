@@ -25,5 +25,6 @@ jobs:
     with:
       dotnet-logging: ${{ inputs.dotnet-logging }}
       dotnet-version: 7.x
+      enableSonarQube: true
       solution: ./Extensions.Test.sln
     secrets: inherit
