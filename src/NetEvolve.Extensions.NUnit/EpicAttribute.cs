@@ -7,7 +7,7 @@ using System;
 /// Attribute used to decorate a test class or method as Epic, with optional Id
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-public sealed class EpicAttribute : CategoryIdAttributeBase
+public sealed class EpicAttribute : CategoryIdBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="EpicAttribute"/> class.

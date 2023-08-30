@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method with TestCategory PreDeployment
 /// </summary>
-public sealed class PreDeploymentAttribute : CategoryTraitAttributeBase
+public sealed class PreDeploymentAttribute : CategoryTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PreDeploymentAttribute"/> class.

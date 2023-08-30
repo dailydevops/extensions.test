@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as WorkItem, with optional Id
 /// </summary>
-public sealed class WorkItemAttribute : CategoryWithIdTraitAttributeBase
+public sealed class WorkItemAttribute : CategoryWithIdTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="WorkItemAttribute"/> class.

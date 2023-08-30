@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as IntegrationTest
 /// </summary>
-public sealed class IntegrationTestAttribute : CategoryTraitAttributeBase
+public sealed class IntegrationTestAttribute : CategoryTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="IntegrationTestAttribute"/> class.

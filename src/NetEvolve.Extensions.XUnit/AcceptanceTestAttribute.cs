@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as <see cref="AcceptanceTestAttribute"/>
 /// </summary>
-public sealed class AcceptanceTestAttribute : CategoryTraitAttributeBase
+public sealed class AcceptanceTestAttribute : CategoryTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="AcceptanceTestAttribute"/> class.

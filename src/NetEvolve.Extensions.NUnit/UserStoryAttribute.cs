@@ -7,7 +7,7 @@ using System;
 /// Attribute used to decorate a test class or method as UserStory, with optional Id
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-public sealed class UserStoryAttribute : CategoryIdAttributeBase
+public sealed class UserStoryAttribute : CategoryIdBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="UserStoryAttribute"/> class.
