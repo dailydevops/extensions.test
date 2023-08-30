@@ -17,6 +17,9 @@
     <RepositoryUrl>https://github.com/dailydevops/extensions.test.git</RepositoryUrl>
 
     <PackageTags>compatibility;test;category;categories;culture;workitems</PackageTags>
+
+    <!-- Project is not a test project -->
+    <SonarQubeTestProject>false</SonarQubeTestProject>
   </PropertyGroup>
 
 </Project>
