@@ -24,6 +24,5 @@ public class FunctionalTestAttributeTests : AttributeTestsBase
     }
 
     [FunctionalTest]
-    [SuppressMessage("Usage", "xUnit1013", Justification = "Reviewed.")]
-    public void FunctionalTest_without_parameters() { }
+    protected void FunctionalTest_without_parameters() { }
 }

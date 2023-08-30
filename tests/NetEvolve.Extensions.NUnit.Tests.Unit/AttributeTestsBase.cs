@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using VerifyNUnit;
 using VerifyTests;
@@ -42,7 +43,7 @@ public abstract class AttributeTestsBase
         }
 
         var classType = GetType();
-        var methodInfo = classType.GetMethod(methodName);
+        var methodInfo = classType.GetMethod(methodName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 
         if (methodInfo is null)
         {

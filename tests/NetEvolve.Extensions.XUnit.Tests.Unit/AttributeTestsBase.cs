@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using VerifyTests;
 using VerifyXunit;
@@ -30,7 +31,7 @@ public abstract class AttributeTestsBase
         }
 
         var classType = GetType();
-        var methodInfo = classType.GetMethod(methodName);
+        var methodInfo = classType.GetMethod(methodName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 
         var result = TraitHelper.GetTraits(methodInfo).Distinct().ToList();
 

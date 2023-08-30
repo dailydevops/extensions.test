@@ -22,5 +22,5 @@ public class IntegrationTestAttributeTests : AttributeTestsBase
     }
 
     [IntegrationTest]
-    public void IntegrationTest_without_parameters() { }
+    private void IntegrationTest_without_parameters() { }
 }

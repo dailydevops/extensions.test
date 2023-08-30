@@ -24,6 +24,5 @@ public class PerformanceTestAttributeTests : AttributeTestsBase
     }
 
     [PerformanceTest]
-    [SuppressMessage("Usage", "xUnit1013", Justification = "Reviewed.")]
-    public void PerformanceTest_without_parameters() { }
+    protected void PerformanceTest_without_parameters() { }
 }

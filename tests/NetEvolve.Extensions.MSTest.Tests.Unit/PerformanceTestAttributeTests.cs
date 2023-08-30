@@ -23,5 +23,5 @@ public class PerformanceTestAttributeTests : AttributeTestsBase
     }
 
     [PerformanceTest]
-    public void PerformanceTest_without_parameters() { }
+    private void PerformanceTest_without_parameters() { }
 }
