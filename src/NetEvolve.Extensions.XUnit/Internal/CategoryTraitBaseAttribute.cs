@@ -15,11 +15,7 @@ using Xunit.Sdk;
     Inherited = true
 )]
 [TraitDiscoverer(Namespaces.CategoryTraitDiscoverer, Namespaces.Assembly)]
-[SuppressMessage(
-    "Style",
-    "IDE1006:Naming Styles",
-    Justification = "As designed."
-)]
+[SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class CategoryTraitBaseAttribute : Attribute, ITraitAttribute
 {
     /// <summary>
