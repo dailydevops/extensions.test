@@ -24,6 +24,5 @@ public class EndToEndTestAttributeTests : AttributeTestsBase
     }
 
     [EndToEndTest]
-    [SuppressMessage("Usage", "xUnit1013", Justification = "Reviewed.")]
-    public void EndToEndTest_without_parameters() { }
+    protected void EndToEndTest_without_parameters() { }
 }

@@ -24,6 +24,5 @@ public class IntegrationTestAttributeTests : AttributeTestsBase
     }
 
     [IntegrationTest]
-    [SuppressMessage("Usage", "xUnit1013", Justification = "Reviewed.")]
-    public void IntegrationTest_without_parameters() { }
+    protected void IntegrationTest_without_parameters() { }
 }

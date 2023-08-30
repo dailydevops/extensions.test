@@ -23,5 +23,5 @@ public class FunctionalTestAttributeTests : AttributeTestsBase
     }
 
     [FunctionalTest]
-    public void FunctionalTest_without_parameters() { }
+    private void FunctionalTest_without_parameters() { }
 }

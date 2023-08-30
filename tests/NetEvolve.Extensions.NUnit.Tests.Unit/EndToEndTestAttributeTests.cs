@@ -22,5 +22,5 @@ public class EndToEndTestAttributeTests : AttributeTestsBase
     }
 
     [EndToEndTest]
-    public void EndToEndTest_without_parameters() { }
+    private void EndToEndTest_without_parameters() { }
 }

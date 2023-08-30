@@ -22,5 +22,5 @@ public class UnitTestAttributeTests : AttributeTestsBase
     }
 
     [UnitTest]
-    public void UnitTest_without_parameters() { }
+    private void UnitTest_without_parameters() { }
 }

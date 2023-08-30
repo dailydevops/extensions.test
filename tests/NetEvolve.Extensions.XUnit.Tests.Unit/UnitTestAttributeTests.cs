@@ -24,6 +24,5 @@ public class UnitTestAttributeTests : AttributeTestsBase
     }
 
     [UnitTest]
-    [SuppressMessage("Usage", "xUnit1013", Justification = "Reviewed.")]
-    public void UnitTest_without_parameters() { }
+    protected void UnitTest_without_parameters() { }
 }

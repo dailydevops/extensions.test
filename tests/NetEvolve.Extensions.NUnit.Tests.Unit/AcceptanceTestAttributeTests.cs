@@ -22,5 +22,5 @@ public class AcceptanceTestAttributeTests : AttributeTestsBase
     }
 
     [AcceptanceTest]
-    public void AcceptanceTest_without_parameters() { }
+    private void AcceptanceTest_without_parameters() { }
 }

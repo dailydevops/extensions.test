@@ -26,7 +26,7 @@ public abstract class AttributeTestsBase : VerifyBase
         if (string.IsNullOrWhiteSpace(methodName)) { throw new ArgumentNullException(nameof(methodName)); }
 
         var owningType = GetType();
-        var methodInfo = owningType.GetMethod(methodName);
+        var methodInfo = owningType.GetMethod(methodName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 
         if (methodInfo is null) { return Enumerable.Empty<KeyValuePair<string, string>>(); }
 

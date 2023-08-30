@@ -24,6 +24,5 @@ public class AcceptanceTestAttributeTests : AttributeTestsBase
     }
 
     [AcceptanceTest]
-    [SuppressMessage("Usage", "xUnit1013", Justification = "Reviewed.")]
-    public void AcceptanceTest_without_parameters() { }
+    protected void AcceptanceTest_without_parameters() { }
 }
