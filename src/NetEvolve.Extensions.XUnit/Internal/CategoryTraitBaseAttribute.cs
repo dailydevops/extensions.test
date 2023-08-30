@@ -16,11 +16,11 @@ using Xunit.Sdk;
 )]
 [TraitDiscoverer(Namespaces.CategoryTraitDiscoverer, Namespaces.Assembly)]
 [SuppressMessage(
-    "Naming",
-    "CA1710:Identifiers should have correct suffix",
-    Justification = "Conflicting naming convention"
+    "Style",
+    "IDE1006:Naming Styles",
+    Justification = "As designed."
 )]
-public abstract class CategoryTraitAttributeBase : Attribute, ITraitAttribute
+public abstract class CategoryTraitBaseAttribute : Attribute, ITraitAttribute
 {
     /// <summary>
     /// Gets the category value of the trait.
@@ -28,8 +28,8 @@ public abstract class CategoryTraitAttributeBase : Attribute, ITraitAttribute
     public string Category { get; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryTraitAttributeBase"/> class.
+    /// Initializes a new instance of the <see cref="CategoryTraitBaseAttribute"/> class.
     /// </summary>
     /// <param name="category"></param>
-    protected CategoryTraitAttributeBase(string category) => Category = category;
+    protected CategoryTraitBaseAttribute(string category) => Category = category;
 }

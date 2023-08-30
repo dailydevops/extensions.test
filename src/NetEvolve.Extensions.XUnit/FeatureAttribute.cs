@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as Feature, with optional Id
 /// </summary>
-public sealed class FeatureAttribute : CategoryWithIdTraitAttributeBase
+public sealed class FeatureAttribute : CategoryWithIdTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="FeatureAttribute"/> class.

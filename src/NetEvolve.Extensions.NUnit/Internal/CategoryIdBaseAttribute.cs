@@ -8,7 +8,12 @@ using global::NUnit.Framework.Internal;
 /// Abstract class implementation.
 /// Extends <see cref="CategoryAttribute"/> with an additional property <see cref="Id"/>.
 /// </summary>
-public abstract class CategoryIdAttributeBase : CategoryAttribute, IApplyToTest
+[System.Diagnostics.CodeAnalysis.SuppressMessage(
+    "Style",
+    "IDE1006:Naming Styles",
+    Justification = "As designed."
+)]
+public abstract class CategoryIdBaseAttribute : CategoryAttribute, IApplyToTest
 {
     /// <summary>
     /// Gets the Id
@@ -16,18 +21,18 @@ public abstract class CategoryIdAttributeBase : CategoryAttribute, IApplyToTest
     public string? Id { get; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryIdAttributeBase"/> class.
+    /// Initializes a new instance of the <see cref="CategoryIdBaseAttribute"/> class.
     /// </summary>
     /// <param name="category">Category</param>
-    protected CategoryIdAttributeBase(string category)
+    protected CategoryIdBaseAttribute(string category)
         : base(category) { }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryIdAttributeBase"/> class.
+    /// Initializes a new instance of the <see cref="CategoryIdBaseAttribute"/> class.
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="id">Id</param>
-    protected CategoryIdAttributeBase(string category, string? id)
+    protected CategoryIdBaseAttribute(string category, string? id)
         : base(category) => Id = id;
 
     /// <inheritdoc/>

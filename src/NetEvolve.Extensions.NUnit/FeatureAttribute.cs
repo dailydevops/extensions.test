@@ -7,7 +7,7 @@ using System;
 /// Attribute used to decorate a test class or method as Feature, with optional Id
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-public sealed class FeatureAttribute : CategoryIdAttributeBase
+public sealed class FeatureAttribute : CategoryIdBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="FeatureAttribute"/> class.

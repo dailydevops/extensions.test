@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as Issue, with optional Id
 /// </summary>
-public sealed class IssueAttribute : CategoryWithIdTraitAttributeBase
+public sealed class IssueAttribute : CategoryWithIdTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="IssueAttribute"/> class.

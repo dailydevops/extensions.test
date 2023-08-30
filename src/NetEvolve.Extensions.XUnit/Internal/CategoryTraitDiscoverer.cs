@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Xunit.Abstractions;
 
 /// <summary>
-/// Discoverer for all implementations of <see cref="CategoryTraitAttributeBase"/>.
+/// Discoverer for all implementations of <see cref="CategoryTraitBaseAttribute"/>.
 /// </summary>
 public sealed class CategoryTraitDiscoverer : DiscovererBase
 {

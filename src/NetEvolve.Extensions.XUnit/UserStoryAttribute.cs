@@ -5,7 +5,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as UserStory, with optional Id
 /// </summary>
-public sealed class UserStoryAttribute : CategoryWithIdTraitAttributeBase
+public sealed class UserStoryAttribute : CategoryWithIdTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="UserStoryAttribute"/> class.

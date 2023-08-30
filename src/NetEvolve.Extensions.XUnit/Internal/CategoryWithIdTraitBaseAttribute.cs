@@ -28,11 +28,11 @@ using Xunit.Sdk;
 )]
 [TraitDiscoverer(Namespaces.CategoryTraitDiscoverer, Namespaces.Assembly)]
 [SuppressMessage(
-    "Naming",
-    "CA1710:Identifiers should have correct suffix",
-    Justification = "Conflicting naming convention"
+    "Style",
+    "IDE1006:Naming Styles",
+    Justification = "As designed."
 )]
-public abstract class CategoryWithIdTraitAttributeBase : Attribute, ITraitAttribute
+public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITraitAttribute
 {
     /// <summary>
     /// Gets the category value of the trait.
@@ -45,22 +45,22 @@ public abstract class CategoryWithIdTraitAttributeBase : Attribute, ITraitAttrib
     public string? Id { get; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryWithIdTraitAttributeBase"/> class.
+    /// Initializes a new instance of the <see cref="CategoryWithIdTraitBaseAttribute"/> class.
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="id">Id</param>
-    protected CategoryWithIdTraitAttributeBase(string category, string? id)
+    protected CategoryWithIdTraitBaseAttribute(string category, string? id)
     {
         Category = category;
         Id = id;
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryWithIdTraitAttributeBase"/> class.
+    /// Initializes a new instance of the <see cref="CategoryWithIdTraitBaseAttribute"/> class.
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="id">Id</param>
-    protected CategoryWithIdTraitAttributeBase(string category, long id)
+    protected CategoryWithIdTraitBaseAttribute(string category, long id)
     {
         Category = category;
         Id = $"{id}";

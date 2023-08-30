@@ -7,7 +7,7 @@ using System;
 /// Attribute used to decorate a test class or method as Bug, with optional Id
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-public sealed class BugAttribute : CategoryWithIdTraitAttributeBase
+public sealed class BugAttribute : CategoryWithIdTraitBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="BugAttribute"/> class.

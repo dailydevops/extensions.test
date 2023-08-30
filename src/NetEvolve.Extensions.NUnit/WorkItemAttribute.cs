@@ -7,7 +7,7 @@ using System;
 /// Attribute used to decorate a test class or method as WorkItem, with optional Id
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-public sealed class WorkItemAttribute : CategoryIdAttributeBase
+public sealed class WorkItemAttribute : CategoryIdBaseAttribute
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="WorkItemAttribute"/> class.
