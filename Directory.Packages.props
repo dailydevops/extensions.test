@@ -23,7 +23,7 @@
     <PackageVersion Include="NUnit.Analyzers" Version="3.8.0" />
     <PackageVersion Include="Verify.MSTest" Version="21.2.0" />
     <PackageVersion Include="Verify.NUnit" Version="21.3.0" />
-    <PackageVersion Include="Verify.Xunit" Version="21.2.0" />
+    <PackageVersion Include="Verify.Xunit" Version="22.1.0" />
     <PackageVersion Include="xunit" Version="2.5.1" />
     <PackageVersion Include="xunit.core" Version="2.5.1" />
     <PackageVersion Include="xunit.extensibility.core" Version="2.5.1" />
