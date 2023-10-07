@@ -4,10 +4,6 @@
   <Import Project="$(DirEngineeringSettings)src.build.props" />
 
   <PropertyGroup>
-    <DisableCompatibility>true</DisableCompatibility>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <Title>$(PackageId)</Title>
     <Description>This library provides various compatibility features between `NUnit` and `XUnit`.</Description>
 
