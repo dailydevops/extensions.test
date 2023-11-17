@@ -31,7 +31,10 @@ public abstract class AttributeTestsBase
         }
 
         var classType = GetType();
-        var methodInfo = classType.GetMethod(methodName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        var methodInfo = classType.GetMethod(
+            methodName,
+            BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
+        );
 
         var result = TraitHelper.GetTraits(methodInfo).Distinct().ToList();
 

@@ -1,7 +1,7 @@
 ﻿namespace NetEvolve.Extensions.MSTest;
 
-using NetEvolve.Extensions.MSTest.Internal;
 using System;
+using NetEvolve.Extensions.MSTest.Internal;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as UserStory, with optional Id

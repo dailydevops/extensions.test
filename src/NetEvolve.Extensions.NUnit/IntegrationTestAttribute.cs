@@ -1,7 +1,7 @@
 ﻿namespace NetEvolve.Extensions.NUnit;
 
-using global::NUnit.Framework;
 using System;
+using global::NUnit.Framework;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as IntegrationTest.

@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.NUnit;
 
-using global::NUnit.Framework;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using global::NUnit.Framework;
 
 /// <summary>
 /// Sets the number of worker threads taking into account the available

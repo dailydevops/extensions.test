@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.XUnit;
 
-using NetEvolve.Extensions.XUnit.Internal;
 using System;
 using System.Globalization;
+using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
 /// Based on the value passed as UI culture, the marked test is executed.
