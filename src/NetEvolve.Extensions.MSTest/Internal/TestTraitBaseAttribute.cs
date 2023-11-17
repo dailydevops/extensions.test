@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Internal;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 /// <inheritdoc/>
 [System.Diagnostics.CodeAnalysis.SuppressMessage(

@@ -1,7 +1,7 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Internal;
 
-using NetEvolve.Extensions.XUnit;
 using System.Collections.Generic;
+using NetEvolve.Extensions.XUnit;
 using Xunit.Abstractions;
 
 /// <summary>

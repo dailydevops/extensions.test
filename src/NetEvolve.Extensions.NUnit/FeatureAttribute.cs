@@ -1,7 +1,7 @@
 ﻿namespace NetEvolve.Extensions.NUnit;
 
-using NetEvolve.Extensions.NUnit.Internal;
 using System;
+using NetEvolve.Extensions.NUnit.Internal;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as Feature, with optional Id

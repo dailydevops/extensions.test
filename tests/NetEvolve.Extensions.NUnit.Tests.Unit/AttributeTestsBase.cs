@@ -1,14 +1,14 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Tests.Unit;
 
-using global::NUnit.Framework;
-using global::NUnit.Framework.Internal;
-using global::NUnit.Framework.Internal.Builders;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using global::NUnit.Framework;
+using global::NUnit.Framework.Internal;
+using global::NUnit.Framework.Internal.Builders;
 using VerifyNUnit;
 using VerifyTests;
 
@@ -19,14 +19,14 @@ using VerifyTests;
 [TestFixture]
 public abstract class AttributeTestsBase
 {
-    private static readonly List<string> _excludeKeys
-        = new List<string> {
-            PropertyNames.AppDomain,
-            PropertyNames.JoinType,
-            PropertyNames.ProcessId,
-            PropertyNames.ProviderStackTrace,
-            PropertyNames.SkipReason
-        };
+    private static readonly List<string> _excludeKeys = new List<string>
+    {
+        PropertyNames.AppDomain,
+        PropertyNames.JoinType,
+        PropertyNames.ProcessId,
+        PropertyNames.ProviderStackTrace,
+        PropertyNames.SkipReason
+    };
 
     /// <summary>
     /// Gets the Traits from the given Method name
@@ -43,7 +43,10 @@ public abstract class AttributeTestsBase
         }
 
         var classType = GetType();
-        var methodInfo = classType.GetMethod(methodName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        var methodInfo = classType.GetMethod(
+            methodName,
+            BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
+        );
 
         if (methodInfo is null)
         {
@@ -55,11 +58,23 @@ public abstract class AttributeTestsBase
 
         foreach (var key in test.Properties.Keys)
         {
-            if (_excludeKeys.Any(x => x.Equals(key, StringComparison.OrdinalIgnoreCase))) { continue; }
+            if (_excludeKeys.Any(x => x.Equals(key, StringComparison.OrdinalIgnoreCase)))
+            {
+                continue;
+            }
 
             foreach (string value in test.Properties[key])
             {
-                result.Add(new KeyValuePair<string, string>(key.Replace(PropertyNames.Category, "TestCategory", StringComparison.Ordinal), value));
+                result.Add(
+                    new KeyValuePair<string, string>(
+                        key.Replace(
+                            PropertyNames.Category,
+                            "TestCategory",
+                            StringComparison.Ordinal
+                        ),
+                        value
+                    )
+                );
             }
         }
 

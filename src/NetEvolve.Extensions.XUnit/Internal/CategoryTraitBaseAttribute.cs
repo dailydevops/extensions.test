@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Internal;
 
-using NetEvolve.Extensions.XUnit;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using NetEvolve.Extensions.XUnit;
 using Xunit.Sdk;
 
 /// <summary>

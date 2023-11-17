@@ -1,9 +1,9 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Tests.Unit;
 
-using global::NUnit.Framework;
-using NetEvolve.Extensions.NUnit;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
+using global::NUnit.Framework;
+using NetEvolve.Extensions.NUnit;
 
 /// <summary>
 /// Unit tests for <see cref="BugAttribute"/>.

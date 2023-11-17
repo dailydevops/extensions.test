@@ -1,7 +1,7 @@
 ﻿namespace NetEvolve.Extensions.XUnit;
 
-using NetEvolve.Extensions.XUnit.Internal;
 using System;
+using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
 /// Attribute used to decorate a test class or method as Bug, with optional Id

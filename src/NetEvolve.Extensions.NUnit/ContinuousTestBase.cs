@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.NUnit;
 
+using System.Threading.Tasks;
 using global::NUnit.Framework;
 using global::NUnit.Framework.Interfaces;
-using System.Threading.Tasks;
 
 /// <summary>
 /// Basic implementation for the execution of continuous tests, based on <see cref="OrderAttribute"/>.

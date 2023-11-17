@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Tests.Unit;
 
-using global::NUnit.Framework;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
+using global::NUnit.Framework;
 
 /// <summary>
 /// Unit tests for <see cref="AcceptanceTestAttribute"/>.

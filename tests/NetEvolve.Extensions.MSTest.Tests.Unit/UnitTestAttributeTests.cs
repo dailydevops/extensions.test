@@ -1,8 +1,8 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Tests.Unit;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 /// <summary>
 /// Unit tests for <see cref="UnitTestAttribute"/>.

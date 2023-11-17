@@ -1,10 +1,10 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Tests.Unit;
 
-using global::NUnit.Framework;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
+using global::NUnit.Framework;
 
 [ExcludeFromCodeCoverage]
 public class SetUICultureAttributeTests : AttributeTestsBase

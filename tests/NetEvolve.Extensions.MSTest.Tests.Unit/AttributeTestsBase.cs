@@ -1,12 +1,12 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Tests.Unit;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NetEvolve.Extensions.MSTest.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NetEvolve.Extensions.MSTest.Internal;
 using VerifyMSTest;
 using VerifyTests;
 
@@ -23,12 +23,21 @@ public abstract class AttributeTestsBase : VerifyBase
         [CallerMemberName] string? methodName = null
     )
     {
-        if (string.IsNullOrWhiteSpace(methodName)) { throw new ArgumentNullException(nameof(methodName)); }
+        if (string.IsNullOrWhiteSpace(methodName))
+        {
+            throw new ArgumentNullException(nameof(methodName));
+        }
 
         var owningType = GetType();
-        var methodInfo = owningType.GetMethod(methodName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        var methodInfo = owningType.GetMethod(
+            methodName,
+            BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
+        );
 
-        if (methodInfo is null) { return Enumerable.Empty<KeyValuePair<string, string>>(); }
+        if (methodInfo is null)
+        {
+            return Enumerable.Empty<KeyValuePair<string, string>>();
+        }
 
         var categories = GetTestCategoryBaseAttributes(methodInfo).ToArray();
         if (categories is not null)
@@ -38,7 +47,9 @@ public abstract class AttributeTestsBase : VerifyBase
 
         if (categories is not null)
         {
-            categories = categories.Concat(GetTestCategoryBaseAttributes(owningType.Module.Assembly)).ToArray();
+            categories = categories
+                .Concat(GetTestCategoryBaseAttributes(owningType.Module.Assembly))
+                .ToArray();
         }
 
         if (categories is null)
@@ -46,54 +57,96 @@ public abstract class AttributeTestsBase : VerifyBase
             return Array.Empty<KeyValuePair<string, string>>();
         }
 
-        return categories.Where(x => x.Key is not null && !string.IsNullOrWhiteSpace(x.Value)).Distinct();
+        return categories
+            .Where(x => x.Key is not null && !string.IsNullOrWhiteSpace(x.Value))
+            .Distinct();
     }
 
-    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(Assembly assembly)
+    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
+        Assembly assembly
+    )
     {
-        if (assembly is null) { yield break; }
+        if (assembly is null)
+        {
+            yield break;
+        }
 
         var attributes = assembly.GetCustomAttributes<TestCategoryBaseAttribute>();
-        if (attributes is null) { yield break; }
+        if (attributes is null)
+        {
+            yield break;
+        }
 
         foreach (var attribute in attributes)
         {
-            if (attribute is null) { continue; }
+            if (attribute is null)
+            {
+                continue;
+            }
 
             foreach (var testCategory in attribute.TestCategories)
             {
-                if (string.IsNullOrWhiteSpace(testCategory)) { continue; }
+                if (string.IsNullOrWhiteSpace(testCategory))
+                {
+                    continue;
+                }
 
                 yield return new KeyValuePair<string, string>("TestCategory", testCategory);
 
-                if (attribute is TestCategoryWithIdBaseAttribute attributeWithId && !string.IsNullOrWhiteSpace(attributeWithId.Id))
+                if (
+                    attribute is TestCategoryWithIdBaseAttribute attributeWithId
+                    && !string.IsNullOrWhiteSpace(attributeWithId.Id)
+                )
                 {
-                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id!);
+                    yield return new KeyValuePair<string, string>(
+                        testCategory,
+                        attributeWithId.Id!
+                    );
                 }
             }
         }
     }
 
-    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(MemberInfo? member)
+    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
+        MemberInfo? member
+    )
     {
-        if (member is null) { yield break; }
+        if (member is null)
+        {
+            yield break;
+        }
 
         var attributes = member.GetCustomAttributes<TestCategoryBaseAttribute>(true);
-        if (attributes is null) { yield break; }
+        if (attributes is null)
+        {
+            yield break;
+        }
 
         foreach (var attribute in attributes)
         {
-            if (attribute is null) { continue; }
+            if (attribute is null)
+            {
+                continue;
+            }
 
             foreach (var testCategory in attribute.TestCategories)
             {
-                if (string.IsNullOrWhiteSpace(testCategory)) { continue; }
+                if (string.IsNullOrWhiteSpace(testCategory))
+                {
+                    continue;
+                }
 
                 yield return new KeyValuePair<string, string>("TestCategory", testCategory);
 
-                if (attribute is TestCategoryWithIdBaseAttribute attributeWithId && !string.IsNullOrWhiteSpace(attributeWithId.Id))
+                if (
+                    attribute is TestCategoryWithIdBaseAttribute attributeWithId
+                    && !string.IsNullOrWhiteSpace(attributeWithId.Id)
+                )
                 {
-                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id!);
+                    yield return new KeyValuePair<string, string>(
+                        testCategory,
+                        attributeWithId.Id!
+                    );
                 }
             }
         }
