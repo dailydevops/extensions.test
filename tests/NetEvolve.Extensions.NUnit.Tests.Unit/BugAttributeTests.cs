@@ -2,8 +2,8 @@
 
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using NetEvolve.Extensions.NUnit;
 using global::NUnit.Framework;
+using NetEvolve.Extensions.NUnit;
 
 /// <summary>
 /// Unit tests for <see cref="BugAttribute"/>.
