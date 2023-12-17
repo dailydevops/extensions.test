@@ -6,11 +6,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using VerifyNUnit;
+using VerifyTests;
 using global::NUnit.Framework;
 using global::NUnit.Framework.Internal;
 using global::NUnit.Framework.Internal.Builders;
-using VerifyNUnit;
-using VerifyTests;
 
 /// <summary>
 /// Base class for Trait Attribute tests
