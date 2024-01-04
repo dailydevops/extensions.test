@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Tests.Unit;
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -25,5 +26,5 @@ public class AcceptanceTestAttributeTests : AttributeTestsBase
     }
 
     [AcceptanceTest]
-    private void AcceptanceTest_without_parameters() { }
+    private void AcceptanceTest_without_parameters() => throw new NotSupportedException();
 }

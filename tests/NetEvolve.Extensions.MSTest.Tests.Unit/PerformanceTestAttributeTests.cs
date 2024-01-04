@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Tests.Unit;
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -23,5 +24,5 @@ public class PerformanceTestAttributeTests : AttributeTestsBase
     }
 
     [PerformanceTest]
-    private void PerformanceTest_without_parameters() { }
+    private void PerformanceTest_without_parameters() => throw new NotSupportedException();
 }

@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Tests.Unit;
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using VerifyXunit;
@@ -24,5 +25,5 @@ public class PerformanceTestAttributeTests : AttributeTestsBase
     }
 
     [PerformanceTest]
-    protected void PerformanceTest_without_parameters() { }
+    protected void PerformanceTest_without_parameters() => throw new NotSupportedException();
 }

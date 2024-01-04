@@ -40,19 +40,19 @@ public abstract class AttributeTestsBase : VerifyBase
         }
 
         var categories = GetTestCategoryBaseAttributes(methodInfo).ToArray();
-        if (categories is not null)
+        if (categories.Length == 0)
         {
             categories = categories.Concat(GetTestCategoryBaseAttributes(owningType)).ToArray();
         }
 
-        if (categories is not null)
+        if (categories.Length == 0)
         {
             categories = categories
                 .Concat(GetTestCategoryBaseAttributes(owningType.Module.Assembly))
                 .ToArray();
         }
 
-        if (categories is null)
+        if (categories.Length == 0)
         {
             return Array.Empty<KeyValuePair<string, string>>();
         }

@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Tests.Unit;
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using global::NUnit.Framework;
@@ -22,5 +23,5 @@ public class UnitTestAttributeTests : AttributeTestsBase
     }
 
     [UnitTest]
-    private void UnitTest_without_parameters() { }
+    private void UnitTest_without_parameters() => throw new NotSupportedException();
 }

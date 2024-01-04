@@ -58,7 +58,7 @@ public abstract class AttributeTestsBase
 
         foreach (var key in test.Properties.Keys)
         {
-            if (_excludeKeys.Any(x => x.Equals(key, StringComparison.OrdinalIgnoreCase)))
+            if (_excludeKeys.Exists(x => x.Equals(key, StringComparison.OrdinalIgnoreCase)))
             {
                 continue;
             }
