@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Tests.Unit;
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -16,7 +17,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
     public async Task Execute_English()
     {
         var traits = GetTraits();
-        var translations = new Dictionary<string, string>
+        var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "Translation", Translations.HelloWorld }
         };
@@ -29,7 +30,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
     public async Task Execute_Invariant()
     {
         var traits = GetTraits();
-        var translations = new Dictionary<string, string>
+        var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "Translation", Translations.HelloWorld }
         };
@@ -42,7 +43,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
     public async Task Execute_German()
     {
         var traits = GetTraits();
-        var translations = new Dictionary<string, string>
+        var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "Translation", Translations.HelloWorld }
         };
@@ -55,7 +56,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
     public async Task Execute_German_Germany()
     {
         var traits = GetTraits();
-        var translations = new Dictionary<string, string>
+        var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "Translation", Translations.HelloWorld }
         };
