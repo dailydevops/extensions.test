@@ -3,14 +3,12 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using VerifyXunit;
 using Xunit;
 
 /// <summary>
 /// Unit tests for <see cref="IntegrationTestAttribute"/>.
 /// </summary>
 [ExcludeFromCodeCoverage]
-[UsesVerify]
 public class IntegrationTestAttributeTests : AttributeTestsBase
 {
     [Theory]

@@ -2,14 +2,12 @@
 
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using VerifyXunit;
 using Xunit;
 
 /// <summary>
 /// Unit tests for <see cref="PostDeploymentAttribute"/>.
 /// </summary>
 [ExcludeFromCodeCoverage]
-[UsesVerify]
 public class PostDeploymentAttributeTests : AttributeTestsBase
 {
     /// <summary>

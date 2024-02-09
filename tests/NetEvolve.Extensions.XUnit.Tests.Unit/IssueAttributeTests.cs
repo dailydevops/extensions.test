@@ -2,14 +2,12 @@
 
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using VerifyXunit;
 using Xunit;
 
 /// <summary>
 /// Unit tests for <see cref="IssueAttribute"/>.
 /// </summary>
 [ExcludeFromCodeCoverage]
-[UsesVerify]
 public class IssueAttributeTests : AttributeTestsBase
 {
     /// <summary>

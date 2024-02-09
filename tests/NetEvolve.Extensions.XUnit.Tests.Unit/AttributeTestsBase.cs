@@ -13,7 +13,6 @@ using Xunit.Sdk;
 /// Base class for Trait Attribute tests
 /// </summary>
 [ExcludeFromCodeCoverage]
-[UsesVerify]
 public abstract class AttributeTestsBase
 {
     /// <summary>
