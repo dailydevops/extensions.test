@@ -99,4 +99,9 @@ internal static class Internals
     /// IntegrationTests
     /// </summary>
     public const string PerformanceTest = nameof(PerformanceTest);
+
+    /// <summary>
+    /// ArchitectureTest
+    /// </summary>
+    public const string ArchitectureTest = nameof(ArchitectureTest);
 }
