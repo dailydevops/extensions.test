@@ -10,7 +10,7 @@ using Xunit.Sdk;
 /// Provides property <see cref="Category"/>.
 /// </summary>
 [AttributeUsage(
-    AttributeTargets.Class | AttributeTargets.Method,
+    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
     AllowMultiple = true,
     Inherited = true
 )]
