@@ -5,11 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
-using VerifyXunit;
 using Xunit;
 
 [ExcludeFromCodeCoverage]
-[UsesVerify]
 public class SetUICultureAttributeTests : AttributeTestsBase
 {
     [Fact]
