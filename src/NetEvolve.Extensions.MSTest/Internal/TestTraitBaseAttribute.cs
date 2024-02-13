@@ -11,7 +11,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
     Justification = "As designed."
 )]
 [AttributeUsage(
-    AttributeTargets.Class | AttributeTargets.Method,
+    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
     AllowMultiple = true,
     Inherited = true
 )]
