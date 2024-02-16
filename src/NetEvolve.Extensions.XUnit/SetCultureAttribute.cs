@@ -31,7 +31,7 @@ public sealed class SetCultureAttribute : CultureAttributeBase
     /// </summary>
     /// <param name="culture">Culture to use.</param>
     public SetCultureAttribute(string culture)
-        : this(culture, string.Empty) { }
+        : this(culture, culture) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SetCultureAttribute"/> class.

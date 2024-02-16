@@ -27,5 +27,10 @@ public sealed class CultureTraitDiscoverer : DiscovererBase
 
         var culture = GetNamedArgument(traitAttribute, Internals.Culture);
         yield return new KeyValuePair<string, string>(category!, culture!);
+
+        if (category!.Equals("SetCulture", System.StringComparison.Ordinal))
+        {
+            yield return new KeyValuePair<string, string>("SetUICulture", culture!);
+        }
     }
 }

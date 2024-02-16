@@ -3,6 +3,9 @@
     SetCulture: de
   },
   {
-    Translation: Hello World!
+    SetUICulture: de
+  },
+  {
+    Translation: Hallo Welt!
   }
 ]
