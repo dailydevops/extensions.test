@@ -12,6 +12,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
 {
     [Test]
     [SetCulture("en")]
+    [SetUICulture("en")]
     public async Task Execute_English()
     {
         var properties = GetProperties();
@@ -25,6 +26,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
 
     [Test]
     [SetCulture("")]
+    [SetUICulture("")]
     public async Task Execute_Invariant()
     {
         var properties = GetProperties();
@@ -38,6 +40,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
 
     [Test]
     [SetCulture("de")]
+    [SetUICulture("de")]
     public async Task Execute_German()
     {
         var properties = GetProperties();
@@ -51,6 +54,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
 
     [Test]
     [SetCulture("de-DE")]
+    [SetUICulture("de-DE")]
     public async Task Execute_German_Germany()
     {
         var properties = GetProperties();
