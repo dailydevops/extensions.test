@@ -3,7 +3,7 @@
 using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as UnitTest
+/// Attribute used to decorate a test class or method as <b>UnitTest</b>.
 /// </summary>
 public sealed class UnitTestAttribute : CategoryTraitBaseAttribute
 {

@@ -3,7 +3,7 @@
 using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as Epic, with optional Id
+/// Attribute used to decorate a test class or method as <b>Epic</b>, with optional Id
 /// </summary>
 public sealed class EpicAttribute : CategoryWithIdTraitBaseAttribute
 {

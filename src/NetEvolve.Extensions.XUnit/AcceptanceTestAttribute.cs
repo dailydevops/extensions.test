@@ -3,7 +3,7 @@
 using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as <see cref="AcceptanceTestAttribute"/>
+/// Attribute used to decorate a test class or method as <b>AcceptanceTest</b>.
 /// </summary>
 public sealed class AcceptanceTestAttribute : CategoryTraitBaseAttribute
 {

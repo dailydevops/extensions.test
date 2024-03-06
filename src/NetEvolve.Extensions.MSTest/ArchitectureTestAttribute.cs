@@ -3,7 +3,7 @@
 using NetEvolve.Extensions.MSTest.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as ArchitectureTest.
+/// Attribute used to decorate a test class or method as <b>ArchitectureTest</b>.
 /// </summary>
 public sealed class ArchitectureTestAttribute : TestTraitBaseAttribute
 {

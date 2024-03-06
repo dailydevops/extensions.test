@@ -3,7 +3,7 @@
 using NetEvolve.Extensions.MSTest.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as PreDeployment.
+/// Attribute used to decorate a test class or method as <b>PreDeployment</b>.
 /// </summary>
 public sealed class PreDeploymentAttribute : TestTraitBaseAttribute
 {

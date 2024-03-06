@@ -4,7 +4,7 @@ using System;
 using NetEvolve.Extensions.MSTest.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as WorkItem, with optional Id
+/// Attribute used to decorate a test class or method as <b>WorkItem</b>, with optional Id.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class WorkItemAttribute : TestCategoryWithIdBaseAttribute

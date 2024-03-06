@@ -3,7 +3,7 @@
 using global::NUnit.Framework;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as EndToEndTest.
+/// Attribute used to decorate a test class or method as <b>EndToEndTest</b>.
 /// </summary>
 public sealed class EndToEndTestAttribute : CategoryAttribute
 {

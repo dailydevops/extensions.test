@@ -4,7 +4,7 @@ using System;
 using NetEvolve.Extensions.NUnit.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as Issue, with optional Id
+/// Attribute used to decorate a test class or method as <b>Issue</b>, with optional Id.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class IssueAttribute : CategoryIdBaseAttribute

@@ -94,4 +94,9 @@ internal static class Internals
     /// ArchitectureTests
     /// </summary>
     public const string ArchitectureTest = nameof(ArchitectureTest);
+
+    /// <summary>
+    /// CodedUITests
+    /// </summary>
+    public const string CodedUITest = nameof(CodedUITest);
 }

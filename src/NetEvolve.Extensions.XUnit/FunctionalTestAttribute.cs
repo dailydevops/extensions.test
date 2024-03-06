@@ -3,7 +3,7 @@
 using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as IntegrationTest
+/// Attribute used to decorate a test class or method as <b>FunctionalTest</b>.
 /// </summary>
 public sealed class FunctionalTestAttribute : CategoryTraitBaseAttribute
 {
