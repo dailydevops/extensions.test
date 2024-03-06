@@ -4,7 +4,7 @@ using System;
 using NetEvolve.Extensions.XUnit.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as Bug, with optional Id
+/// Attribute used to decorate a test class or method as <b>Bug</b>, with optional Id.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class BugAttribute : CategoryWithIdTraitBaseAttribute

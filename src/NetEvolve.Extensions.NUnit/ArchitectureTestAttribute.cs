@@ -3,7 +3,7 @@
 using global::NUnit.Framework;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as UnitTest.
+/// Attribute used to decorate a test class or method as <b>ArchitectureTest</b>.
 /// </summary>
 public sealed class ArchitectureTestAttribute : CategoryAttribute
 {

@@ -4,7 +4,7 @@ using System;
 using NetEvolve.Extensions.NUnit.Internal;
 
 /// <summary>
-/// Attribute used to decorate a test class or method as UserStory, with optional Id
+/// Attribute used to decorate a test class or method as <b>UserStory</b>, with optional Id.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class UserStoryAttribute : CategoryIdBaseAttribute
