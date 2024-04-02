@@ -100,8 +100,6 @@ public abstract class AttributeTestsBase
 
     private static CustomAttributeData? FindDiscovererAttributeType(TypeInfo traitAttribute)
     {
-        var traitDiscovererType = typeof(TraitDiscovererAttribute);
-
         var typeChecking = traitAttribute;
         CustomAttributeData? result;
         do
