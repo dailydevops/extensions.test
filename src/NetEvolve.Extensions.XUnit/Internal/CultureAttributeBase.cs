@@ -15,7 +15,9 @@ using Xunit.Sdk;
     Inherited = true
 )]
 [TraitDiscoverer(Namespaces.CultureTraitDiscoverer, Namespaces.Assembly)]
+#pragma warning disable S3376 // Attribute, EventArgs, and Exception type names should end with the type being extended
 public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAttribute
+#pragma warning restore S3376 // Attribute, EventArgs, and Exception type names should end with the type being extended
 {
     private readonly CultureInfo _culture;
 
