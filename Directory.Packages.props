@@ -20,13 +20,13 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageVersion Include="Microsoft.TestPlatform.TestHost" Version="17.9.0" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.2.2" />
-    <PackageVersion Include="MSTest.TestFramework" Version="3.2.2" />
+    <PackageVersion Include="MSTest.TestFramework" Version="3.3.0" />
     <PackageVersion Include="NUnit" Version="4.1.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageVersion Include="NUnit.Analyzers" Version="4.1.0" />
-    <PackageVersion Include="Verify.MSTest" Version="23.6.0" />
+    <PackageVersion Include="Verify.MSTest" Version="23.7.1" />
     <PackageVersion Include="Verify.NUnit" Version="23.5.2" />
-    <PackageVersion Include="Verify.Xunit" Version="23.6.0" />
+    <PackageVersion Include="Verify.Xunit" Version="23.7.1" />
     <PackageVersion Include="xunit" Version="2.7.0" />
     <PackageVersion Include="xunit.extensibility.core" Version="2.7.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.7" />
