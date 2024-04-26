@@ -22,13 +22,5 @@ public sealed class MaxLevelOfParallelismAttribute : PropertyAttribute
     /// </summary>
     /// <param name="level">The number of worker threads to be created by the framework.</param>
     public MaxLevelOfParallelismAttribute(int level)
-        : this(level, Environment.ProcessorCount - 1) { }
-
-    /// <summary>
-    /// Construct a <see cref="MaxLevelOfParallelismAttribute"/>.
-    /// </summary>
-    /// <param name="level">The number of worker threads to be created by the framework.</param>
-    /// <param name="alternativeLevel">The number of workers, which should be used alternatively.</param>
-    public MaxLevelOfParallelismAttribute(int level, int alternativeLevel)
-        : base("LevelOfParallelism", Math.Min(level, alternativeLevel)) { }
+        : base("LevelOfParallelism", Math.Min(level, (int)(Environment.ProcessorCount * .75))) { }
 }
