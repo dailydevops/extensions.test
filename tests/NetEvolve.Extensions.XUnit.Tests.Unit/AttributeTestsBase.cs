@@ -1,6 +1,5 @@
 ﻿namespace NetEvolve.Extensions.XUnit.Tests.Unit;
 
-using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
