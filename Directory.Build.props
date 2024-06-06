@@ -17,6 +17,7 @@
 
     <PackageProjectUrl>https://github.com/dailydevops/extensions.test</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dailydevops/extensions.test.git</RepositoryUrl>
+    <PackageReleaseNotes>$(PackageProjectUrl)/releases/</PackageReleaseNotes>
 
     <PackageTags>compatibility;test;category;categories;culture;workitems</PackageTags>
 
