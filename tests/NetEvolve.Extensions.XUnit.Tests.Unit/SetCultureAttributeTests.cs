@@ -17,7 +17,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
         var traits = GetTraits();
         var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
-            { "Translation", Translations.HelloWorld }
+            { "Translation", Translations.HelloWorld },
         };
 
         _ = await Verify(traits.Union(translations));
@@ -30,7 +30,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
         var traits = GetTraits();
         var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
-            { "Translation", Translations.HelloWorld }
+            { "Translation", Translations.HelloWorld },
         };
 
         _ = await Verify(traits.Union(translations));
@@ -43,7 +43,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
         var traits = GetTraits();
         var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
-            { "Translation", Translations.HelloWorld }
+            { "Translation", Translations.HelloWorld },
         };
 
         _ = await Verify(traits.Union(translations));
@@ -56,7 +56,7 @@ public class SetCultureAttributeTests : AttributeTestsBase
         var traits = GetTraits();
         var translations = new Dictionary<string, string>(StringComparer.Ordinal)
         {
-            { "Translation", Translations.HelloWorld }
+            { "Translation", Translations.HelloWorld },
         };
 
         _ = await Verify(traits.Union(translations));
