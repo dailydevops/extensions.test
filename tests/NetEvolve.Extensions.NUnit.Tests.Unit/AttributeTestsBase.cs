@@ -25,7 +25,7 @@ public abstract class AttributeTestsBase
         PropertyNames.JoinType,
         PropertyNames.ProcessId,
         PropertyNames.ProviderStackTrace,
-        PropertyNames.SkipReason
+        PropertyNames.SkipReason,
     };
 
     /// <summary>
