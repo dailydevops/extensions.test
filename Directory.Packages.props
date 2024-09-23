@@ -27,8 +27,8 @@
     <PackageVersion Include="Verify.MSTest" Version="26.6.0" />
     <PackageVersion Include="Verify.NUnit" Version="26.6.0" />
     <PackageVersion Include="Verify.Xunit" Version="26.6.0" />
-    <PackageVersion Include="xunit" Version="2.9.0" />
-    <PackageVersion Include="xunit.extensibility.core" Version="2.9.0" />
+    <PackageVersion Include="xunit" Version="2.9.1" />
+    <PackageVersion Include="xunit.extensibility.core" Version="2.9.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2" />
   </ItemGroup>
 
