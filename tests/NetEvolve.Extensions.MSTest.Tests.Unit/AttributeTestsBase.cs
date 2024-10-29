@@ -12,7 +12,7 @@ using VerifyTests;
 
 public abstract class AttributeTestsBase : VerifyBase
 {
-    protected SettingsTask VerifyMSTest<T>(T traits) => Verify(traits).UseDirectory("../_snapshot");
+    protected SettingsTask VerifyMSTest<T>(T traits) => Verify(traits);
 
     /// <summary>
     /// Gets the Traits from the given Method name
