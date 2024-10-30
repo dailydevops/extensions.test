@@ -1,0 +1,99 @@
+﻿namespace NetEvolve.Extensions.MSTest
+{
+    public sealed class AcceptanceTestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public AcceptanceTestAttribute() { }
+    }
+    public sealed class ArchitectureTestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public ArchitectureTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class BugAttribute : NetEvolve.Extensions.MSTest.Internal.TestCategoryWithIdBaseAttribute
+    {
+        public BugAttribute() { }
+        public BugAttribute(long id) { }
+        public BugAttribute(string? id) { }
+    }
+    public sealed class CodedUITestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public CodedUITestAttribute() { }
+    }
+    public sealed class EndToEndTestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public EndToEndTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class EpicAttribute : NetEvolve.Extensions.MSTest.Internal.TestCategoryWithIdBaseAttribute
+    {
+        public EpicAttribute() { }
+        public EpicAttribute(long id) { }
+        public EpicAttribute(string? id) { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class FeatureAttribute : NetEvolve.Extensions.MSTest.Internal.TestCategoryWithIdBaseAttribute
+    {
+        public FeatureAttribute() { }
+        public FeatureAttribute(long id) { }
+        public FeatureAttribute(string? id) { }
+    }
+    public sealed class FunctionalTestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public FunctionalTestAttribute() { }
+    }
+    public sealed class IntegrationTestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public IntegrationTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class IssueAttribute : NetEvolve.Extensions.MSTest.Internal.TestCategoryWithIdBaseAttribute
+    {
+        public IssueAttribute() { }
+        public IssueAttribute(long id) { }
+        public IssueAttribute(string? id) { }
+    }
+    public sealed class PerformanceTestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public PerformanceTestAttribute() { }
+    }
+    public sealed class PostDeploymentAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public PostDeploymentAttribute() { }
+    }
+    public sealed class PreDeploymentAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public PreDeploymentAttribute() { }
+    }
+    public sealed class UnitTestAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        public UnitTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class UserStoryAttribute : NetEvolve.Extensions.MSTest.Internal.TestCategoryWithIdBaseAttribute
+    {
+        public UserStoryAttribute() { }
+        public UserStoryAttribute(long id) { }
+        public UserStoryAttribute(string? id) { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class WorkItemAttribute : NetEvolve.Extensions.MSTest.Internal.TestCategoryWithIdBaseAttribute
+    {
+        public WorkItemAttribute() { }
+        public WorkItemAttribute(long id) { }
+        public WorkItemAttribute(string? id) { }
+    }
+}
+namespace NetEvolve.Extensions.MSTest.Internal
+{
+    public abstract class TestCategoryWithIdBaseAttribute : NetEvolve.Extensions.MSTest.Internal.TestTraitBaseAttribute
+    {
+        protected TestCategoryWithIdBaseAttribute(string categoryName, string? id = null) { }
+        public string? Id { get; }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)]
+    public abstract class TestTraitBaseAttribute : Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryBaseAttribute
+    {
+        protected TestTraitBaseAttribute(string categoryName) { }
+        public override System.Collections.Generic.IList<string> TestCategories { get; }
+    }
+}

@@ -1,0 +1,108 @@
+﻿namespace NetEvolve.Extensions.NUnit
+{
+    public sealed class AcceptanceTestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public AcceptanceTestAttribute() { }
+    }
+    public sealed class ArchitectureTestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public ArchitectureTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class BugAttribute : NetEvolve.Extensions.NUnit.Internal.CategoryIdBaseAttribute
+    {
+        public BugAttribute() { }
+        public BugAttribute(long id) { }
+        public BugAttribute(string? id) { }
+    }
+    public sealed class CodedUITestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public CodedUITestAttribute() { }
+    }
+    public abstract class ContinuousTestBase
+    {
+        protected ContinuousTestBase() { }
+        [NUnit.Framework.SetUp]
+        public virtual System.Threading.Tasks.Task SetUpAsync() { }
+        [NUnit.Framework.TearDown]
+        public virtual System.Threading.Tasks.Task TearDownAsync() { }
+    }
+    public sealed class EndToEndTestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public EndToEndTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class EpicAttribute : NetEvolve.Extensions.NUnit.Internal.CategoryIdBaseAttribute
+    {
+        public EpicAttribute() { }
+        public EpicAttribute(long id) { }
+        public EpicAttribute(string? id) { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class FeatureAttribute : NetEvolve.Extensions.NUnit.Internal.CategoryIdBaseAttribute
+    {
+        public FeatureAttribute() { }
+        public FeatureAttribute(long id) { }
+        public FeatureAttribute(string? id) { }
+    }
+    public sealed class FunctionalTestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public FunctionalTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)]
+    public sealed class IntegrationTestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public IntegrationTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class IssueAttribute : NetEvolve.Extensions.NUnit.Internal.CategoryIdBaseAttribute
+    {
+        public IssueAttribute() { }
+        public IssueAttribute(long id) { }
+        public IssueAttribute(string? id) { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false, Inherited=false)]
+    public sealed class MaxLevelOfParallelismAttribute : NUnit.Framework.PropertyAttribute
+    {
+        public MaxLevelOfParallelismAttribute(int level) { }
+    }
+    public sealed class PerformanceTestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public PerformanceTestAttribute() { }
+    }
+    public sealed class PostDeploymentAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public PostDeploymentAttribute() { }
+    }
+    public sealed class PreDeploymentAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public PreDeploymentAttribute() { }
+    }
+    public sealed class UnitTestAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public UnitTestAttribute() { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class UserStoryAttribute : NetEvolve.Extensions.NUnit.Internal.CategoryIdBaseAttribute
+    {
+        public UserStoryAttribute() { }
+        public UserStoryAttribute(long id) { }
+        public UserStoryAttribute(string? id) { }
+    }
+    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
+    public sealed class WorkItemAttribute : NetEvolve.Extensions.NUnit.Internal.CategoryIdBaseAttribute
+    {
+        public WorkItemAttribute() { }
+        public WorkItemAttribute(long id) { }
+        public WorkItemAttribute(string? id) { }
+    }
+}
+namespace NetEvolve.Extensions.NUnit.Internal
+{
+    public abstract class CategoryIdBaseAttribute : NUnit.Framework.CategoryAttribute, NUnit.Framework.Interfaces.IApplyToTest
+    {
+        protected CategoryIdBaseAttribute(string category) { }
+        protected CategoryIdBaseAttribute(string category, string? id) { }
+        public string? Id { get; }
+    }
+}

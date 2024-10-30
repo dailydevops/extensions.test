@@ -81,6 +81,5 @@ public abstract class AttributeTestsBase
         return result.Distinct();
     }
 
-    protected static SettingsTask Verify<T>(T traits) =>
-        Verifier.Verify(traits).UseDirectory("../_snapshot");
+    protected static SettingsTask Verify<T>(T traits) => Verifier.Verify(traits);
 }

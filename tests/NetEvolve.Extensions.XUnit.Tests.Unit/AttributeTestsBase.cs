@@ -113,6 +113,5 @@ public abstract class AttributeTestsBase
             t.AttributeType == typeof(TraitDiscovererAttribute);
     }
 
-    protected static SettingsTask Verify<T>(T traits) =>
-        Verifier.Verify(traits).UseDirectory("../_snapshot");
+    protected static SettingsTask Verify<T>(T traits) => Verifier.Verify(traits);
 }

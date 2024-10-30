@@ -23,16 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19B4116B-14B4-436F-8A52-E71DB9CFCA7C}"
-	ProjectSection(SolutionItems) = preProject
-		src\Directory.Build.props = src\Directory.Build.props
-		src\Directory.Build.targets = src\Directory.Build.targets
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D67E420A-2329-4879-B82C-069039603B81}"
-	ProjectSection(SolutionItems) = preProject
-		tests\Directory.Build.props = tests\Directory.Build.props
-		tests\Directory.Build.targets = tests\Directory.Build.targets
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetEvolve.Extensions.XUnit", "src\NetEvolve.Extensions.XUnit\NetEvolve.Extensions.XUnit.csproj", "{83075493-17CC-48AC-BACF-A22ACE5223E8}"
 EndProject
@@ -45,6 +37,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetEvolve.Extensions.MSTest", "src\NetEvolve.Extensions.MSTest\NetEvolve.Extensions.MSTest.csproj", "{0797A20A-41EA-419B-A6B6-CB2A973A33FF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetEvolve.Extensions.MSTest.Tests.Unit", "tests\NetEvolve.Extensions.MSTest.Tests.Unit\NetEvolve.Extensions.MSTest.Tests.Unit.csproj", "{75703C6B-80B0-406B-A9FF-84C5F4956186}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetEvolve.Extensions.XUnit.Tests.PublicApi", "tests\NetEvolve.Extensions.XUnit.Tests.PublicApi\NetEvolve.Extensions.XUnit.Tests.PublicApi.csproj", "{4D92E42D-68F1-4092-BDB7-29F6265C8CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetEvolve.Extensions.NUnit.Tests.PublicApi", "tests\NetEvolve.Extensions.NUnit.Tests.PublicApi\NetEvolve.Extensions.NUnit.Tests.PublicApi.csproj", "{4F4B90A9-9371-4D13-875B-331468D1E888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetEvolve.Extensions.MSTest.Tests.PublicApi", "tests\NetEvolve.Extensions.MSTest.Tests.PublicApi\NetEvolve.Extensions.MSTest.Tests.PublicApi.csproj", "{37815304-2B2A-4EE1-A1A2-A947794ED7A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +74,18 @@ Global
 		{75703C6B-80B0-406B-A9FF-84C5F4956186}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75703C6B-80B0-406B-A9FF-84C5F4956186}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75703C6B-80B0-406B-A9FF-84C5F4956186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D92E42D-68F1-4092-BDB7-29F6265C8CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D92E42D-68F1-4092-BDB7-29F6265C8CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D92E42D-68F1-4092-BDB7-29F6265C8CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D92E42D-68F1-4092-BDB7-29F6265C8CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F4B90A9-9371-4D13-875B-331468D1E888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F4B90A9-9371-4D13-875B-331468D1E888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F4B90A9-9371-4D13-875B-331468D1E888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F4B90A9-9371-4D13-875B-331468D1E888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37815304-2B2A-4EE1-A1A2-A947794ED7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37815304-2B2A-4EE1-A1A2-A947794ED7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37815304-2B2A-4EE1-A1A2-A947794ED7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37815304-2B2A-4EE1-A1A2-A947794ED7A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,5 +97,11 @@ Global
 		{4A9EFEA3-5849-4542-A7E4-9EEDF2DD8EBF} = {D67E420A-2329-4879-B82C-069039603B81}
 		{0797A20A-41EA-419B-A6B6-CB2A973A33FF} = {19B4116B-14B4-436F-8A52-E71DB9CFCA7C}
 		{75703C6B-80B0-406B-A9FF-84C5F4956186} = {D67E420A-2329-4879-B82C-069039603B81}
+		{4D92E42D-68F1-4092-BDB7-29F6265C8CEC} = {D67E420A-2329-4879-B82C-069039603B81}
+		{4F4B90A9-9371-4D13-875B-331468D1E888} = {D67E420A-2329-4879-B82C-069039603B81}
+		{37815304-2B2A-4EE1-A1A2-A947794ED7A5} = {D67E420A-2329-4879-B82C-069039603B81}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBB4607C-57F7-4F91-93B2-A444A3D33755}
 	EndGlobalSection
 EndGlobal
