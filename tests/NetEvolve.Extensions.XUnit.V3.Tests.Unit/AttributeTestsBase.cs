@@ -33,7 +33,7 @@ public abstract class AttributeTestsBase
         }
 
         var classType = GetType();
-        //Type? collectionClassType = null;
+
         var methodInfo = classType.GetMethod(
             methodName,
             BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
@@ -45,11 +45,7 @@ public abstract class AttributeTestsBase
         }
 
         var assemblyTraits = ExtensibilityPointFactory.GetAssemblyTraits(classType.Assembly);
-        //var collectionDefinitions = ExtensibilityPointFactory.GetCollectionDefinitions(
-        //    classType.Assembly
-        //);
-        //var collectionTraits = assemblyTraits; //collectionClassType is null ? assemblyTraits : ExtensibilityPointFactory.GetCollectionTraits(collectionClassType, assemblyTraits);
-        var classTraits = ExtensibilityPointFactory.GetClassTraits(classType, assemblyTraits); //collectionTraits);
+        var classTraits = ExtensibilityPointFactory.GetClassTraits(classType, assemblyTraits);
         var methodTraits = ExtensibilityPointFactory.GetMethodTraits(methodInfo, classTraits);
 
         var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);

@@ -24,11 +24,6 @@ using Xunit.v3;
 /// </list>
 /// </para>
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true,
-    Inherited = true
-)]
 [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITraitAttribute
 {

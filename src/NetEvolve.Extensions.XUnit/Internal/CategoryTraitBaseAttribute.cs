@@ -9,11 +9,6 @@ using Xunit.Sdk;
 /// Abstract class implementation of <see cref="ITraitAttribute"/>.
 /// Provides property <see cref="Category"/>.
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true,
-    Inherited = true
-)]
 [TraitDiscoverer(Namespaces.CategoryTraitDiscoverer, Namespaces.Assembly)]
 [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class CategoryTraitBaseAttribute : Attribute, ITraitAttribute

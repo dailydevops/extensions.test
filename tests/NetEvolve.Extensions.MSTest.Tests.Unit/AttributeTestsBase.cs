@@ -64,7 +64,7 @@ public abstract class AttributeTestsBase : VerifyBase
             .Distinct();
     }
 
-    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
+    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
         Assembly assembly
     )
     {
@@ -109,7 +109,7 @@ public abstract class AttributeTestsBase : VerifyBase
         }
     }
 
-    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
+    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
         MemberInfo? member
     )
     {
