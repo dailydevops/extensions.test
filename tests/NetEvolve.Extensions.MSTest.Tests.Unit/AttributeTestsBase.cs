@@ -36,25 +36,27 @@ public abstract class AttributeTestsBase : VerifyBase
 
         if (methodInfo is null)
         {
-            return Enumerable.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         var categories = GetTestCategoryBaseAttributes(methodInfo).ToArray();
         if (categories.Length == 0)
         {
-            categories = categories.Concat(GetTestCategoryBaseAttributes(owningType)).ToArray();
+            categories = [.. categories, .. GetTestCategoryBaseAttributes(owningType)];
         }
 
         if (categories.Length == 0)
         {
-            categories = categories
-                .Concat(GetTestCategoryBaseAttributes(owningType.Module.Assembly))
-                .ToArray();
+            categories =
+            [
+                .. categories,
+                .. GetTestCategoryBaseAttributes(owningType.Module.Assembly),
+            ];
         }
 
         if (categories.Length == 0)
         {
-            return Array.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         return categories
@@ -62,7 +64,7 @@ public abstract class AttributeTestsBase : VerifyBase
             .Distinct();
     }
 
-    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
+    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
         Assembly assembly
     )
     {
@@ -107,7 +109,7 @@ public abstract class AttributeTestsBase : VerifyBase
         }
     }
 
-    private IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
+    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
         MemberInfo? member
     )
     {

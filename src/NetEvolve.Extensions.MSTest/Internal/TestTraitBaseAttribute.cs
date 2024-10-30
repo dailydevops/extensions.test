@@ -10,11 +10,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
     "IDE1006:Naming Styles",
     Justification = "As designed."
 )]
-[AttributeUsage(
-    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true,
-    Inherited = true
-)]
 public abstract class TestTraitBaseAttribute : TestCategoryBaseAttribute
 {
     /// <inheritdoc/>
@@ -22,5 +17,5 @@ public abstract class TestTraitBaseAttribute : TestCategoryBaseAttribute
 
     /// <inheritdoc/>
     protected TestTraitBaseAttribute(string categoryName)
-        : base() => TestCategories = new List<string> { categoryName };
+        : base() => TestCategories = [categoryName];
 }

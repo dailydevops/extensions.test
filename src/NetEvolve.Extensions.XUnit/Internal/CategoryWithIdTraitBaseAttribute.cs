@@ -21,11 +21,6 @@ using Xunit.Sdk;
 /// </list>
 /// </para>
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true,
-    Inherited = true
-)]
 [TraitDiscoverer(Namespaces.CategoryTraitDiscoverer, Namespaces.Assembly)]
 [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITraitAttribute

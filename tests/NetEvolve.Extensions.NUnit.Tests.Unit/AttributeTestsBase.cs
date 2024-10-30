@@ -19,14 +19,14 @@ using VerifyTests;
 [TestFixture]
 public abstract class AttributeTestsBase
 {
-    private static readonly List<string> _excludeKeys = new List<string>
-    {
+    private static readonly List<string> _excludeKeys =
+    [
         PropertyNames.AppDomain,
         PropertyNames.JoinType,
         PropertyNames.ProcessId,
         PropertyNames.ProviderStackTrace,
         PropertyNames.SkipReason,
-    };
+    ];
 
     /// <summary>
     /// Gets the Traits from the given Method name
@@ -39,7 +39,7 @@ public abstract class AttributeTestsBase
     {
         if (methodName is null)
         {
-            return Enumerable.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         var classType = GetType();
@@ -50,7 +50,7 @@ public abstract class AttributeTestsBase
 
         if (methodInfo is null)
         {
-            return Enumerable.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         var test = new DefaultTestCaseBuilder().BuildFrom(new MethodWrapper(classType, methodInfo));
