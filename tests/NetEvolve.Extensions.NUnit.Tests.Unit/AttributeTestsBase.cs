@@ -19,14 +19,14 @@ using VerifyTests;
 [TestFixture]
 public abstract class AttributeTestsBase
 {
-    private static readonly List<string> _excludeKeys = new List<string>
-    {
+    private static readonly List<string> _excludeKeys =
+    [
         PropertyNames.AppDomain,
         PropertyNames.JoinType,
         PropertyNames.ProcessId,
         PropertyNames.ProviderStackTrace,
         PropertyNames.SkipReason,
-    };
+    ];
 
     /// <summary>
     /// Gets the Traits from the given Method name

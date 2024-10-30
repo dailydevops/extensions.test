@@ -22,5 +22,5 @@ public abstract class TestTraitBaseAttribute : TestCategoryBaseAttribute
 
     /// <inheritdoc/>
     protected TestTraitBaseAttribute(string categoryName)
-        : base() => TestCategories = new List<string> { categoryName };
+        : base() => TestCategories = [categoryName];
 }
