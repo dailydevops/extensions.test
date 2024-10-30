@@ -1,4 +1,4 @@
-# NetEvolve.Extensions.NUnit
+# NetEvolve.Extensions.XUnit.V3
 
 Compatibility library for solutions using multiple .NET test frameworks.
 The following test frameworks are supported
@@ -11,7 +11,7 @@ The following test frameworks are supported
 
 For consistent usage and addressing of use cases like
 `dotnet test -c Release --filter TestCategory=IntegrationTest`,
-the following attributes are provided in this library in the namespace `NetEvolve.Extensions.NUnit`.
+the following attributes are provided in this library in the namespace `NetEvolve.Extensions.XUnit`.
 
 - `AcceptanceTestAttribute`
 - `ArchitectureTestAttribute`
@@ -35,11 +35,10 @@ These can be applied on assembly, class or method definitions as follows.
 ```cs
 [assembly: AcceptanceTest] // Mark all test methods of this assembly as AcceptanceTest
 
-[TestFixture]
 [AcceptanceTest] // Mark all test methods of this class as AcceptanceTest
 public partial class FantasticTest
 {
-    [Test]
+    [Fact]
     [AcceptanceTest] // Alternatively, only one method can be selected.
     public void I_am_Ironman()
     {

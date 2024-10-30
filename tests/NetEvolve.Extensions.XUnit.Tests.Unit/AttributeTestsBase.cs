@@ -25,9 +25,9 @@ public abstract class AttributeTestsBase
         [CallerMemberName] string? methodName = null
     )
     {
-        if (methodName == null)
+        if (methodName is null)
         {
-            return Enumerable.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         var classType = GetType();
@@ -38,7 +38,7 @@ public abstract class AttributeTestsBase
 
         if (methodInfo is null)
         {
-            return Enumerable.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         var messageSink = new NullMessageSink();
@@ -73,7 +73,7 @@ public abstract class AttributeTestsBase
             var discovererAttributeData = FindDiscovererAttributeType(
                 traitAttributeType.GetTypeInfo()
             );
-            if (discovererAttributeData == null)
+            if (discovererAttributeData is null)
             {
                 continue;
             }
@@ -82,13 +82,13 @@ public abstract class AttributeTestsBase
                 messageSink,
                 Reflector.Wrap(discovererAttributeData)
             );
-            if (discoverer == null)
+            if (discoverer is null)
             {
                 continue;
             }
 
             var traits = discoverer.GetTraits(Reflector.Wrap(traitAttributeData));
-            if (traits != null)
+            if (traits is not null)
             {
                 result.AddRange(traits);
             }
@@ -105,7 +105,7 @@ public abstract class AttributeTestsBase
         {
             result = typeChecking.CustomAttributes.FirstOrDefault(isTraitDiscovererAttribute);
             typeChecking = traitAttribute.BaseType.GetTypeInfo();
-        } while (result == null && typeChecking != null);
+        } while (result is null && typeChecking is not null);
 
         return result;
 

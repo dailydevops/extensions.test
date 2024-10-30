@@ -39,7 +39,7 @@ public abstract class AttributeTestsBase
     {
         if (methodName is null)
         {
-            return Enumerable.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         var classType = GetType();
@@ -50,7 +50,7 @@ public abstract class AttributeTestsBase
 
         if (methodInfo is null)
         {
-            return Enumerable.Empty<KeyValuePair<string, string>>();
+            return [];
         }
 
         var test = new DefaultTestCaseBuilder().BuildFrom(new MethodWrapper(classType, methodInfo));

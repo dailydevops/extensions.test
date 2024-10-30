@@ -1,4 +1,4 @@
-﻿namespace NetEvolve.Extensions.NUnit.Tests.PublicApi;
+﻿namespace NetEvolve.Extensions.XUnit.V3.Tests.Unit;
 
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -15,6 +15,7 @@ internal static class Predefined
             {
                 var directory = Path.Combine(
                     projectDirectory,
+                    "..",
                     "_snapshots",
                     Namer.TargetFrameworkNameAndVersion
                 );
