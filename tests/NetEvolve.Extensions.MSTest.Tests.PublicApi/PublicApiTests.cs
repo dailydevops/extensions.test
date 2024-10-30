@@ -29,6 +29,7 @@ public class PublicApiTests
                 typeof(CLSCompliantAttribute).FullName!,
                 typeof(AssemblyMetadataAttribute).FullName!,
                 typeof(NeutralResourcesLanguageAttribute).FullName!,
+                typeof(AttributeUsageAttribute).FullName!,
             ],
             IncludeTypes = types,
         };

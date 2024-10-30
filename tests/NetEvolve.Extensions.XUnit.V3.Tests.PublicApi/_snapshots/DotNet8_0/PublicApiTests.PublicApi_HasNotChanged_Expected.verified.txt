@@ -8,7 +8,6 @@
     {
         public ArchitectureTestAttribute() { }
     }
-    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true)]
     public sealed class BugAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
     {
         public BugAttribute() { }
@@ -61,7 +60,6 @@
     {
         public PreDeploymentAttribute() { }
     }
-    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, Inherited=false)]
     public sealed class SetCultureAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CultureAttributeBase
     {
         public SetCultureAttribute() { }
@@ -72,7 +70,6 @@
         public override System.Threading.Tasks.ValueTask Before(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
         public override System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
     }
-    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, Inherited=false)]
     public sealed class SetUICultureAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CultureAttributeBase
     {
         public SetUICultureAttribute() { }
@@ -98,14 +95,12 @@
 }
 namespace NetEvolve.Extensions.XUnit.V3.Internal
 {
-    [System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)]
     public abstract class CategoryTraitBaseAttribute : System.Attribute, Xunit.v3.ITraitAttribute
     {
         protected CategoryTraitBaseAttribute(string category) { }
         public string Category { get; }
         public System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
     }
-    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)]
     public abstract class CategoryWithIdTraitBaseAttribute : System.Attribute, Xunit.v3.ITraitAttribute
     {
         protected CategoryWithIdTraitBaseAttribute(string category, long id) { }
@@ -114,14 +109,13 @@ namespace NetEvolve.Extensions.XUnit.V3.Internal
         public string? Id { get; }
         public System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
     }
-    [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)]
-    public abstract class CultureAttributeBase : Xunit.v3.BeforeAfterTestAttribute, Xunit.v3.ITraitAttribute
+    public abstract class CultureAttributeBase : System.Attribute, Xunit.v3.IBeforeAfterTestAttribute, Xunit.v3.ITraitAttribute
     {
         protected CultureAttributeBase(string category, string culture) { }
         public string Category { get; }
         public string Culture { get; }
-        public override System.Threading.Tasks.ValueTask After(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
-        public override System.Threading.Tasks.ValueTask Before(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
+        public virtual System.Threading.Tasks.ValueTask After(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
+        public virtual System.Threading.Tasks.ValueTask Before(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
         public abstract System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits();
     }
 }

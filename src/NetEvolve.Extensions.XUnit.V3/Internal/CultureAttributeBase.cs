@@ -18,7 +18,9 @@ using Xunit.v3;
 )]
 //[TraitDiscoverer(Namespaces.CultureTraitDiscoverer, Namespaces.Assembly)]
 #pragma warning disable S3376 // Attribute, EventArgs, and Exception type names should end with the type being extended
-public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAttribute
+#pragma warning disable CA1710 // Identifiers should have correct suffix
+public abstract class CultureAttributeBase : Attribute, IBeforeAfterTestAttribute, ITraitAttribute
+#pragma warning restore CA1710 // Identifiers should have correct suffix
 #pragma warning restore S3376 // Attribute, EventArgs, and Exception type names should end with the type being extended
 {
     private readonly CultureInfo _culture;
@@ -45,23 +47,24 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
     }
 
     /// <inheritdoc/>
-    public override async ValueTask After(MethodInfo methodUnderTest, IXunitTest test)
+    public virtual ValueTask After(MethodInfo methodUnderTest, IXunitTest test)
     {
-        await base.After(methodUnderTest, test).ConfigureAwait(false);
         if (_changed)
         {
             _ = SetCulture(_originalCulture!);
         }
+
+        return new ValueTask();
     }
 
     /// <inheritdoc/>
-    public override async ValueTask Before(MethodInfo methodUnderTest, IXunitTest test)
+    public virtual ValueTask Before(MethodInfo methodUnderTest, IXunitTest test)
     {
-        await base.Before(methodUnderTest, test).ConfigureAwait(false);
-
         _originalCulture = CultureInfo.CurrentCulture;
 
         _changed = SetCulture(_culture);
+
+        return new ValueTask();
     }
 
     private protected static CultureInfo CreateCultureInfo(string culture) =>
