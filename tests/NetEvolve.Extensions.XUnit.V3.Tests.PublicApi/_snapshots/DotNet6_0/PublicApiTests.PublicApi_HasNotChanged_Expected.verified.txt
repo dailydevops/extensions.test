@@ -60,22 +60,6 @@
     {
         public PreDeploymentAttribute() { }
     }
-    public sealed class SetCultureAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CultureAttributeBase
-    {
-        public SetCultureAttribute() { }
-        public SetCultureAttribute(string culture) { }
-        public SetCultureAttribute(string culture, string? uiCulture) { }
-        public string? UICulture { get; }
-        public override System.Threading.Tasks.ValueTask After(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
-        public override System.Threading.Tasks.ValueTask Before(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
-        public override System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
-    }
-    public sealed class SetUICultureAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CultureAttributeBase
-    {
-        public SetUICultureAttribute() { }
-        public SetUICultureAttribute(string culture) { }
-        public override System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
-    }
     public sealed class UnitTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
     {
         public UnitTestAttribute() { }
@@ -108,14 +92,5 @@ namespace NetEvolve.Extensions.XUnit.V3.Internal
         public string Category { get; }
         public string? Id { get; }
         public System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
-    }
-    public abstract class CultureAttributeBase : System.Attribute, Xunit.v3.IBeforeAfterTestAttribute, Xunit.v3.ITraitAttribute
-    {
-        protected CultureAttributeBase(string category, string culture) { }
-        public string Category { get; }
-        public string Culture { get; }
-        public virtual System.Threading.Tasks.ValueTask After(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
-        public virtual System.Threading.Tasks.ValueTask Before(System.Reflection.MethodInfo methodUnderTest, Xunit.v3.IXunitTest test) { }
-        public abstract System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits();
     }
 }
