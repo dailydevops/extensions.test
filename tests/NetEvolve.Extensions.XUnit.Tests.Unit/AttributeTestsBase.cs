@@ -103,13 +103,13 @@ public abstract class AttributeTestsBase
         CustomAttributeData? result;
         do
         {
-            result = typeChecking.CustomAttributes.FirstOrDefault(isTraitDiscovererAttribute);
+            result = typeChecking.CustomAttributes.FirstOrDefault(IsTraitDiscovererAttribute);
             typeChecking = traitAttribute.BaseType.GetTypeInfo();
         } while (result is null && typeChecking is not null);
 
         return result;
 
-        static bool isTraitDiscovererAttribute(CustomAttributeData t) =>
+        static bool IsTraitDiscovererAttribute(CustomAttributeData t) =>
             t.AttributeType == typeof(TraitDiscovererAttribute);
     }
 

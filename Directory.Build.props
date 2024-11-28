@@ -1,15 +1,6 @@
 <Project>
 
   <PropertyGroup>
-    <DirEngineering>$([MSBuild]::NormalizeDirectory('$(MSBuildThisFileDirectory)', 'eng'))</DirEngineering>
-    <DirEngineeringSettings>$([MSBuild]::NormalizeDirectory('$(DirEngineering)', 'settings'))</DirEngineeringSettings>
-  </PropertyGroup>
-
-  <Import Project="$(DirEngineeringSettings)sln.build.props" />
-  <Import Project="$(DirEngineeringSettings)src.build.props" Condition=" '$(IsTestableProject)' != 'true' " />
-  <Import Project="$(DirEngineeringSettings)tests.build.props" Condition=" '$(IsTestableProject)' == 'true' " />
-
-  <PropertyGroup Condition=" '$(IsTestableProject)' != 'true' " >
     <Title>$(PackageId)</Title>
     <Description>This library provides various compatibility features between `NUnit`, `XUnit` and `MSTest`.</Description>
 
@@ -25,15 +16,17 @@
     <SonarQubeTestProject>false</SonarQubeTestProject>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(IsTestableProject)' == 'true' " >
-    <None Include="..\_snapshots\**\*.*" Link="_sharedSnapshots\%(RecursiveDir)%(Filename)%(Extension)" />
+  <ItemGroup>
+    <None Include="..\_snapshots\**\*.*" Link="_sharedSnapshots\%(RecursiveDir)%(Filename)%(Extension)" Visible="" />
   </ItemGroup>
 
   <PropertyGroup>
-    <NetEvolve_ProjectTargetFrameworks>netstandard2.0;net8.0</NetEvolve_ProjectTargetFrameworks>
+    <NetEvolve_ProjectTargetFrameworks>netstandard2.0;net8.0;net9.0</NetEvolve_ProjectTargetFrameworks>
     <NetEvolve_TestTargetFrameworks>net6.0;net8.0;</NetEvolve_TestTargetFrameworks>
 
     <NoWarn Condition=" '$(TargetFramework)' == 'netstandard2.0' ">$(NoWarn);CA1062;</NoWarn>
+
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
   </PropertyGroup>
 
   <PropertyGroup>
