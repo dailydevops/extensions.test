@@ -6,31 +6,6 @@
 internal static class Internals
 {
     /// <summary>
-    /// Id-Property
-    /// </summary>
-    public const string Id = nameof(Id);
-
-    /// <summary>
-    /// Culture
-    /// </summary>
-    public const string Culture = nameof(Culture);
-
-    /// <summary>
-    /// UI Culture
-    /// </summary>
-    public const string UICulture = nameof(UICulture);
-
-    /// <summary>
-    /// Test Category
-    /// </summary>
-    public const string Category = nameof(Category);
-
-    /// <summary>
-    /// Test Category
-    /// </summary>
-    public const string TestCategory = nameof(TestCategory);
-
-    /// <summary>
     /// Bugs
     /// </summary>
     public const string Bug = nameof(Bug);
