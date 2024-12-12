@@ -24,7 +24,7 @@ jobs:
     uses: dailydevops/pipelines/.github/workflows/cicd-dotnet.yml@0.12.43
     with:
       dotnet-logging: ${{ inputs.dotnet-logging }}
-      dotnet-version: 7.x
+      dotnet-version: ${{ vars.NE_DOTNET_TARGETFRAMEWORKS }}
       enableSonarQube: true
       solution: ./Extensions.Test.sln
     secrets: inherit
