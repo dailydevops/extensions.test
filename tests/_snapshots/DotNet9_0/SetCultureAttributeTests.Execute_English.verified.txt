@@ -1,0 +1,11 @@
+﻿[
+  {
+    SetCulture: en
+  },
+  {
+    SetUICulture: en
+  },
+  {
+    Translation: Hello World!
+  }
+]
