@@ -1,0 +1,96 @@
+﻿namespace NetEvolve.Extensions.XUnit.V3
+{
+    public sealed class AcceptanceTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public AcceptanceTestAttribute() { }
+    }
+    public sealed class ArchitectureTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public ArchitectureTestAttribute() { }
+    }
+    public sealed class BugAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public BugAttribute() { }
+        public BugAttribute(long id) { }
+        public BugAttribute(string? id) { }
+    }
+    public sealed class CodedUITestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public CodedUITestAttribute() { }
+    }
+    public sealed class EndToEndTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public EndToEndTestAttribute() { }
+    }
+    public sealed class EpicAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public EpicAttribute() { }
+        public EpicAttribute(long id) { }
+        public EpicAttribute(string? id) { }
+    }
+    public sealed class FeatureAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public FeatureAttribute() { }
+        public FeatureAttribute(long id) { }
+        public FeatureAttribute(string? id) { }
+    }
+    public sealed class FunctionalTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public FunctionalTestAttribute() { }
+    }
+    public sealed class IntegrationTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public IntegrationTestAttribute() { }
+    }
+    public sealed class IssueAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public IssueAttribute() { }
+        public IssueAttribute(long id) { }
+        public IssueAttribute(string? id) { }
+    }
+    public sealed class PerformanceTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public PerformanceTestAttribute() { }
+    }
+    public sealed class PostDeploymentAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public PostDeploymentAttribute() { }
+    }
+    public sealed class PreDeploymentAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public PreDeploymentAttribute() { }
+    }
+    public sealed class UnitTestAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public UnitTestAttribute() { }
+    }
+    public sealed class UserStoryAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public UserStoryAttribute() { }
+        public UserStoryAttribute(long id) { }
+        public UserStoryAttribute(string? id) { }
+    }
+    public sealed class WorkItemAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public WorkItemAttribute() { }
+        public WorkItemAttribute(long id) { }
+        public WorkItemAttribute(string? id) { }
+    }
+}
+namespace NetEvolve.Extensions.XUnit.V3.Internal
+{
+    public abstract class CategoryTraitBaseAttribute : System.Attribute, Xunit.v3.ITraitAttribute
+    {
+        protected CategoryTraitBaseAttribute(string category) { }
+        public string Category { get; }
+        public System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
+    }
+    public abstract class CategoryWithIdTraitBaseAttribute : System.Attribute, Xunit.v3.ITraitAttribute
+    {
+        protected CategoryWithIdTraitBaseAttribute(string category, long id) { }
+        protected CategoryWithIdTraitBaseAttribute(string category, string? id) { }
+        public string Category { get; }
+        public string? Id { get; }
+        public System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<string, string>> GetTraits() { }
+    }
+}

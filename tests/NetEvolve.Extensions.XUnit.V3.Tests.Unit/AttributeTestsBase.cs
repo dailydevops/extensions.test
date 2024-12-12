@@ -31,10 +31,12 @@ public abstract class AttributeTestsBase
 
         var classType = GetType();
 
+#pragma warning disable S3011 // Reflection should not be used to increase accessibility of classes, methods, or fields
         var methodInfo = classType.GetMethod(
             methodName,
             BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
         );
+#pragma warning restore S3011 // Reflection should not be used to increase accessibility of classes, methods, or fields
 
         if (methodInfo is null)
         {

@@ -1,0 +1,96 @@
+﻿namespace NetEvolve.Extensions.TUnit
+{
+    public sealed class AcceptanceTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public AcceptanceTestAttribute() { }
+    }
+    public sealed class ArchitectureTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public ArchitectureTestAttribute() { }
+    }
+    public sealed class BugAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public BugAttribute() { }
+        public BugAttribute(long id) { }
+        public BugAttribute(string? id) { }
+    }
+    public sealed class CodedUITestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public CodedUITestAttribute() { }
+    }
+    public sealed class EndToEndTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public EndToEndTestAttribute() { }
+    }
+    public sealed class EpicAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public EpicAttribute() { }
+        public EpicAttribute(long id) { }
+        public EpicAttribute(string? id) { }
+    }
+    public sealed class FeatureAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public FeatureAttribute() { }
+        public FeatureAttribute(long id) { }
+        public FeatureAttribute(string? id) { }
+    }
+    public sealed class FunctionalTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public FunctionalTestAttribute() { }
+    }
+    public sealed class IntegrationTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public IntegrationTestAttribute() { }
+    }
+    public sealed class IssueAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public IssueAttribute() { }
+        public IssueAttribute(long id) { }
+        public IssueAttribute(string? id) { }
+    }
+    public sealed class PerformanceTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public PerformanceTestAttribute() { }
+    }
+    public sealed class PostDeploymentAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public PostDeploymentAttribute() { }
+    }
+    public sealed class PreDeploymentAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public PreDeploymentAttribute() { }
+    }
+    public sealed class UnitTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public UnitTestAttribute() { }
+    }
+    public sealed class UserStoryAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public UserStoryAttribute() { }
+        public UserStoryAttribute(long id) { }
+        public UserStoryAttribute(string? id) { }
+    }
+    public sealed class WorkItemAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public WorkItemAttribute() { }
+        public WorkItemAttribute(long id) { }
+        public WorkItemAttribute(string? id) { }
+    }
+}
+namespace NetEvolve.Extensions.TUnit.Internal
+{
+    public abstract class CategoryTraitBaseAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestDiscoveryEventReceiver
+    {
+        protected CategoryTraitBaseAttribute(string category) { }
+        public string Category { get; }
+        public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
+    }
+    public abstract class CategoryWithIdTraitBaseAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestDiscoveryEventReceiver
+    {
+        protected CategoryWithIdTraitBaseAttribute(string category, long id) { }
+        protected CategoryWithIdTraitBaseAttribute(string category, string? id) { }
+        public string Category { get; }
+        public string? Id { get; }
+        public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
+    }
+}
