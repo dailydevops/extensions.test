@@ -26,13 +26,13 @@ public abstract class AttributeTestsBase
         return result;
     }
 
-    private IEnumerable<KeyValuePair<string, string>> GetCategories(TestContext context) =>
+    private static IEnumerable<KeyValuePair<string, string>> GetCategories(TestContext context) =>
         context.TestDetails.Categories.Select(category => new KeyValuePair<string, string>(
             "TestCategory",
             category
         ));
 
-    private IEnumerable<KeyValuePair<string, string>> GetProperties(TestContext context) =>
+    private static IEnumerable<KeyValuePair<string, string>> GetProperties(TestContext context) =>
         context.TestDetails.CustomProperties.Select(property => new KeyValuePair<string, string>(
             property.Key,
             property.Value
