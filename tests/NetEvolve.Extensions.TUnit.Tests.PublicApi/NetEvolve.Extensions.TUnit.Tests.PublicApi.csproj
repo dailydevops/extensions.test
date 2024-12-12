@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="coverlet.collector" />
     <PackageReference Include="coverlet.msbuild" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
     <PackageReference Include="PublicApiGenerator" />
     <PackageReference Include="TUnit" />
     <PackageReference Include="Verify.TUnit" />
