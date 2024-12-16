@@ -10,7 +10,7 @@ using Xunit.Sdk;
 /// Provides basic functionality for culture-based testing.
 /// </summary>
 [AttributeUsage(
-    AttributeTargets.Class | AttributeTargets.Method,
+    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
     AllowMultiple = true,
     Inherited = true
 )]
