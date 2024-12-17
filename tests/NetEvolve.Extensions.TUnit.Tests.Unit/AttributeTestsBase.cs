@@ -10,7 +10,7 @@ public abstract class AttributeTestsBase
     /// </summary>
     /// <param name="methodName">Name of the caller Method</param>
     /// <returns>List of <see cref="KeyValuePair{TKey,TValue}"/></returns>
-    protected IEnumerable<KeyValuePair<string, string>> GetTraits(
+    protected static IEnumerable<KeyValuePair<string, string>> GetTraits(
         [CallerMemberName] string? methodName = null
     )
     {

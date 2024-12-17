@@ -27,22 +27,24 @@ public sealed class SetCultureAttribute : CultureAttributeBase
     /// Initializes a new instance of the <see cref="SetCultureAttribute"/> class.
     /// </summary>
     public SetCultureAttribute()
-        : this(string.Empty, string.Empty) { }
+        : this(string.Empty, string.Empty, false) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SetCultureAttribute"/> class.
     /// </summary>
     /// <param name="culture">Culture to use.</param>
-    public SetCultureAttribute(string culture)
-        : this(culture, culture) { }
+    /// <param name="asHiddenCategory">If <see langword="true"/>, this test will be hidden from test explorer.</param>
+    public SetCultureAttribute(string culture, bool asHiddenCategory = false)
+        : this(culture, culture, asHiddenCategory) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SetCultureAttribute"/> class.
     /// </summary>
     /// <param name="culture">Culture to use.</param>
     /// <param name="uiCulture">UI culture to use.</param>
-    public SetCultureAttribute(string culture, string? uiCulture)
-        : base("SetCulture", culture)
+    /// <param name="asHiddenCategory">If <see langword="true"/>, this test will be hidden from test explorer.</param>
+    public SetCultureAttribute(string culture, string? uiCulture, bool asHiddenCategory = false)
+        : base("SetCulture", culture, asHiddenCategory)
     {
         if (string.IsNullOrWhiteSpace(uiCulture))
         {

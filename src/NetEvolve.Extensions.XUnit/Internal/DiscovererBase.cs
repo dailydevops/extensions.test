@@ -16,19 +16,19 @@ public abstract class DiscovererBase : ITraitDiscoverer
         IAttributeInfo traitAttribute
     );
 
-    private protected static string? GetNamedArgument(
+    private protected static TValue? GetNamedArgument<TValue>(
         IAttributeInfo traitAttribute,
         string argumentName
     )
     {
         try
         {
-            return traitAttribute.GetNamedArgument<string>(argumentName);
+            return traitAttribute.GetNamedArgument<TValue>(argumentName);
         }
         catch (ArgumentException)
         {
             // Ignore
         }
-        return null;
+        return default;
     }
 }

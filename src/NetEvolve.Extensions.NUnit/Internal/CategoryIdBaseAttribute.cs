@@ -43,7 +43,7 @@ public abstract class CategoryIdBaseAttribute : CategoryAttribute, IApplyToTest
             return;
         }
 
-        base.ApplyToTest(test);
+        ApplyToTest(test);
 
         if (!string.IsNullOrEmpty(Id))
         {
