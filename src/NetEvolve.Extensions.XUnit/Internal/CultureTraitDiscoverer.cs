@@ -19,16 +19,25 @@ public sealed class CultureTraitDiscoverer : DiscovererBase
             yield break;
         }
 
-        var category = GetNamedArgument(traitAttribute, Internals.Category);
+        var asHiddenCategory = GetNamedArgument<bool>(
+            traitAttribute,
+            nameof(CultureAttributeBase.AsHiddenCategory)
+        );
+        if (asHiddenCategory)
+        {
+            yield break;
+        }
+
+        var category = GetNamedArgument<string>(traitAttribute, Internals.Category);
         if (string.IsNullOrWhiteSpace(category))
         {
             yield break;
         }
 
-        var culture = GetNamedArgument(traitAttribute, Internals.Culture);
+        var culture = GetNamedArgument<string>(traitAttribute, Internals.Culture);
         yield return new KeyValuePair<string, string>(category!, culture!);
 
-        if (category!.Equals("SetCulture", System.StringComparison.Ordinal))
+        if (category!.Equals("SetCulture", StringComparison.Ordinal))
         {
             yield return new KeyValuePair<string, string>("SetUICulture", culture!);
         }

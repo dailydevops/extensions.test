@@ -34,11 +34,17 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
     /// </summary>
     public string Culture { get; }
 
+    /// <summary>
+    /// As hidden category
+    /// </summary>
+    public bool AsHiddenCategory { get; }
+
     /// <inheritdoc/>
-    protected CultureAttributeBase(string category, string culture)
+    protected CultureAttributeBase(string category, string culture, bool asHiddenCategory)
     {
         Category = category;
         Culture = culture;
+        AsHiddenCategory = asHiddenCategory;
         _culture = CreateCultureInfo(culture);
     }
 

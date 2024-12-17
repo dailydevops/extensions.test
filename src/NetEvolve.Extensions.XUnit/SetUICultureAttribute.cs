@@ -17,14 +17,15 @@ public sealed class SetUICultureAttribute : CultureAttributeBase
     /// Initializes a new instance of the <see cref="SetUICultureAttribute"/> class.
     /// </summary>
     public SetUICultureAttribute()
-        : base("SetUICulture", string.Empty) { }
+        : base("SetUICulture", string.Empty, false) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SetUICultureAttribute"/> class.
     /// </summary>
     /// <param name="culture">UI culture to use.</param>
-    public SetUICultureAttribute(string culture)
-        : base("SetUICulture", culture) { }
+    /// <param name="asHiddenCategory">If <see langword="true"/>, this test will be hidden from test explorer.</param>
+    public SetUICultureAttribute(string culture, bool asHiddenCategory = false)
+        : base("SetUICulture", culture, asHiddenCategory) { }
 
     private protected override bool SetCulture(CultureInfo culture)
     {

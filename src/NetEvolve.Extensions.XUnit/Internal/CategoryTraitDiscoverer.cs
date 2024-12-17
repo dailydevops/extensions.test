@@ -19,7 +19,7 @@ public sealed class CategoryTraitDiscoverer : DiscovererBase
             yield break;
         }
 
-        var category = GetNamedArgument(traitAttribute, Internals.Category);
+        var category = GetNamedArgument<string>(traitAttribute, Internals.Category);
         if (string.IsNullOrWhiteSpace(category))
         {
             yield break;
@@ -27,7 +27,7 @@ public sealed class CategoryTraitDiscoverer : DiscovererBase
 
         yield return new KeyValuePair<string, string>(Internals.TestCategory, category!);
 
-        var id = GetNamedArgument(traitAttribute, Internals.Id);
+        var id = GetNamedArgument<string>(traitAttribute, Internals.Id);
 
         if (!string.IsNullOrWhiteSpace(id))
         {
