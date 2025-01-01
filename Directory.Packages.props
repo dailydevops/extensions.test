@@ -26,8 +26,8 @@
     <PackageVersion Include="NUnit3TestAdapter" Version="4.6.0" />
     <PackageVersion Include="NUnit.Analyzers" Version="4.5.0" />
     <PackageVersion Include="PublicApiGenerator" Version="11.3.0" />
-    <PackageVersion Include="TUnit" Version="0.5.32" />
-    <PackageVersion Include="TUnit.Core" Version="0.5.32" />
+    <PackageVersion Include="TUnit" Version="0.6.15" />
+    <PackageVersion Include="TUnit.Core" Version="0.6.15" />
     <PackageVersion Include="Verify.MSTest" Version="28.7.0" />
     <PackageVersion Include="Verify.NUnit" Version="28.7.0" />
     <PackageVersion Include="Verify.TUnit" Version="28.7.0" />
