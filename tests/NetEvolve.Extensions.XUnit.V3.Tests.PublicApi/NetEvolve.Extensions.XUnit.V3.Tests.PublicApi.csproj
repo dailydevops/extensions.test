@@ -12,7 +12,7 @@
     <PackageReference Include="PublicApiGenerator" />
     <PackageReference Include="Verify.XunitV3" />
     <PackageReference Include="xunit.v3" />
-    <PackageReference Include="xunit.runner.visualstudio" VersionOverride="3.0.0">
+    <PackageReference Include="xunit.runner.visualstudio" VersionOverride="3.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
