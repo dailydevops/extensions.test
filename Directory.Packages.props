@@ -28,11 +28,11 @@
     <PackageVersion Include="PublicApiGenerator" Version="11.3.0" />
     <PackageVersion Include="TUnit" Version="0.6.100" />
     <PackageVersion Include="TUnit.Core" Version="0.6.100" />
-    <PackageVersion Include="Verify.MSTest" Version="28.8.1" />
-    <PackageVersion Include="Verify.NUnit" Version="28.8.1" />
-    <PackageVersion Include="Verify.TUnit" Version="28.8.1" />
-    <PackageVersion Include="Verify.Xunit" Version="28.8.1" />
-    <PackageVersion Include="Verify.XunitV3" Version="28.8.1" />
+    <PackageVersion Include="Verify.MSTest" Version="28.9.0" />
+    <PackageVersion Include="Verify.NUnit" Version="28.9.0" />
+    <PackageVersion Include="Verify.TUnit" Version="28.9.0" />
+    <PackageVersion Include="Verify.Xunit" Version="28.9.0" />
+    <PackageVersion Include="Verify.XunitV3" Version="28.9.0" />
     <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageVersion Include="xunit.extensibility.core" Version="2.9.3" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.1" />
