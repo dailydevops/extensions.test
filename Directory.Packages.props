@@ -21,7 +21,7 @@
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.13.1" />
     <PackageVersion Include="Microsoft.TestPlatform.TestHost" Version="17.12.0" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.7.1" />
-    <PackageVersion Include="MSTest.TestFramework" Version="3.7.0" />
+    <PackageVersion Include="MSTest.TestFramework" Version="3.7.1" />
     <PackageVersion Include="NUnit" Version="4.3.2" />
     <PackageVersion Include="NUnit3TestAdapter" Version="4.6.0" />
     <PackageVersion Include="NUnit.Analyzers" Version="4.6.0" />
