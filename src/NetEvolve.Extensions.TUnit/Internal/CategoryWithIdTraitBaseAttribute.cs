@@ -1,6 +1,5 @@
 ﻿namespace NetEvolve.Extensions.TUnit.Internal;
 
-using System.Diagnostics.CodeAnalysis;
 using global::TUnit.Core.Interfaces;
 
 /// <summary>
