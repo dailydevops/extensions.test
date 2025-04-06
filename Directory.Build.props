@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Title>$(PackageId)</Title>
-    <Description>This library provides various compatibility features between `NUnit`, `XUnit`, `TUnit` and `MSTest`.</Description>
+    <Description>This library provides various compatibility features between `NUnit`, `XUnit`, `XUnit.V3`, `TUnit` and `MSTest`.</Description>
 
     <CopyrightYearStart>2023</CopyrightYearStart>
 
