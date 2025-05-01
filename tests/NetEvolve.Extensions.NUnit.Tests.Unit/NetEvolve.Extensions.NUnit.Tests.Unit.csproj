@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>$(NetEvolve_TestTargetFrameworks)</TargetFrameworks>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="coverlet.collector" />
     <PackageReference Include="coverlet.msbuild" />
@@ -13,9 +11,7 @@
     <PackageReference Include="NUnit.Analyzers" />
     <PackageReference Include="Verify.Nunit" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\src\NetEvolve.Extensions.NUnit\NetEvolve.Extensions.NUnit.csproj" />
   </ItemGroup>
-
 </Project>

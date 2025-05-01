@@ -1,34 +1,28 @@
 <Project>
-
   <PropertyGroup>
     <Title>$(PackageId)</Title>
     <Description>This library provides various compatibility features between `NUnit`, `XUnit`, `XUnit.V3`, `TUnit` and `MSTest`.</Description>
-
     <CopyrightYearStart>2023</CopyrightYearStart>
-
     <PackageProjectUrl>https://github.com/dailydevops/extensions.test</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dailydevops/extensions.test.git</RepositoryUrl>
     <PackageReleaseNotes>$(PackageProjectUrl)/releases/</PackageReleaseNotes>
-
     <PackageTags>compatibility;test;category;categories;culture;workitems</PackageTags>
-
     <!-- Project is not a test project -->
     <SonarQubeTestProject>false</SonarQubeTestProject>
   </PropertyGroup>
-
   <ItemGroup>
-    <None Include="..\_snapshots\**\*.*" Link="_sharedSnapshots\%(RecursiveDir)%(Filename)%(Extension)" Visible="" />
+    <None
+      Include="..\_snapshots\**\*.*"
+      Link="_sharedSnapshots\%(RecursiveDir)%(Filename)%(Extension)"
+      Visible=""
+    />
   </ItemGroup>
-
   <PropertyGroup>
     <NetEvolve_ProjectTargetFrameworks>netstandard2.0;net8.0;net9.0</NetEvolve_ProjectTargetFrameworks>
     <NetEvolve_TestTargetFrameworks>net8.0;net9.0</NetEvolve_TestTargetFrameworks>
-
     <NoWarn Condition=" '$(TargetFramework)' == 'netstandard2.0' ">$(NoWarn);CA1062;</NoWarn>
-
     <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
   </PropertyGroup>
-
   <PropertyGroup>
     <!-- Workaround, until https://github.com/GitTools/GitVersion/pull/4206 is released -->
     <GitVersionTargetFramework>net8.0</GitVersionTargetFramework>

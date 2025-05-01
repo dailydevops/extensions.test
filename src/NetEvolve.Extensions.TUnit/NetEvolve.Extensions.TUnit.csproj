@@ -1,15 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
   </PropertyGroup>
-
   <PropertyGroup>
     <PackageTags>$(PackageTags);tunit</PackageTags>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="TUnit.Core" />
   </ItemGroup>
-
 </Project>
