@@ -10,6 +10,7 @@ using NetEvolve.Extensions.MSTest.Internal;
 using VerifyMSTest;
 using VerifyTests;
 
+[TestGroup("MSTest")]
 public abstract class AttributeTestsBase : VerifyBase
 {
     protected SettingsTask VerifyMSTest<T>(T traits) => Verify(traits);
@@ -60,7 +61,10 @@ public abstract class AttributeTestsBase : VerifyBase
         }
 
         return categories
-            .Where(x => x.Key is not null && !string.IsNullOrWhiteSpace(x.Value))
+            .Where(x =>
+                x.Key?.Equals("TestGroup", StringComparison.OrdinalIgnoreCase) == false
+                && !string.IsNullOrWhiteSpace(x.Value)
+            )
             .Distinct();
     }
 

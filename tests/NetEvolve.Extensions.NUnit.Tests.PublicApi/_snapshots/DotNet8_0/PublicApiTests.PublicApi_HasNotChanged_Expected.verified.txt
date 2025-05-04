@@ -72,6 +72,10 @@
     {
         public PreDeploymentAttribute() { }
     }
+    public sealed class TestGroupAttribute : NetEvolve.Extensions.NUnit.Internal.NamedCategoryBaseAttribute
+    {
+        public TestGroupAttribute(string id) { }
+    }
     public sealed class UnitTestAttribute : NUnit.Framework.CategoryAttribute
     {
         public UnitTestAttribute() { }
@@ -96,5 +100,12 @@ namespace NetEvolve.Extensions.NUnit.Internal
         protected CategoryIdBaseAttribute(string category) { }
         protected CategoryIdBaseAttribute(string category, string? id) { }
         public string? Id { get; }
+    }
+    public abstract class NamedCategoryBaseAttribute : NUnit.Framework.NUnitAttribute, NUnit.Framework.Interfaces.IApplyToTest
+    {
+        protected NamedCategoryBaseAttribute(string category, string id) { }
+        public string Category { get; }
+        public string Id { get; }
+        public void ApplyToTest(NUnit.Framework.Internal.Test test) { }
     }
 }

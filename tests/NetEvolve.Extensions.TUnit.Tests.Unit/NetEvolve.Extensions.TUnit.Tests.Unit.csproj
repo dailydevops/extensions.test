@@ -13,4 +13,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\NetEvolve.Extensions.TUnit\NetEvolve.Extensions.TUnit.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="NetEvolve.Extensions.TUnit.TestGroupAttribute">
+      <_Parameter1>TUnit</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 </Project>

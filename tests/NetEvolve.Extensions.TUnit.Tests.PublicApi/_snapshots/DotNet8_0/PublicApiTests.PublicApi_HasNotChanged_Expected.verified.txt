@@ -65,6 +65,10 @@
     {
         public PreDeploymentAttribute() { }
     }
+    public sealed class TestGroupAttribute : NetEvolve.Extensions.TUnit.Internal.NamedCategoryTraitBaseAttribute
+    {
+        public TestGroupAttribute(string id) { }
+    }
     public sealed class UnitTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
     {
         public UnitTestAttribute() { }
@@ -96,6 +100,13 @@ namespace NetEvolve.Extensions.TUnit.Internal
         protected CategoryWithIdTraitBaseAttribute(string category, string? id) { }
         public string Category { get; }
         public string? Id { get; }
+        public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
+    }
+    public abstract class NamedCategoryTraitBaseAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestDiscoveryEventReceiver
+    {
+        protected NamedCategoryTraitBaseAttribute(string category, string id) { }
+        public string Category { get; }
+        public string Id { get; }
         public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
     }
 }
