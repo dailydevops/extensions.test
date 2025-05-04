@@ -99,4 +99,9 @@ internal static class Internals
     /// CodedUITests
     /// </summary>
     public const string CodedUITest = nameof(CodedUITest);
+
+    /// <summary>
+    /// TestGroup
+    /// </summary>
+    public const string TestGroup = nameof(TestGroup);
 }

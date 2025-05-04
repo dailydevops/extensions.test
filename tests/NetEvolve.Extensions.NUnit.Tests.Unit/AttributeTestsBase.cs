@@ -17,6 +17,7 @@ using VerifyTests;
 /// </summary>
 [ExcludeFromCodeCoverage]
 [TestFixture]
+[TestGroup("NUnit")]
 public abstract class AttributeTestsBase
 {
     private static readonly List<string> _excludeKeys =
@@ -26,6 +27,7 @@ public abstract class AttributeTestsBase
         PropertyNames.ProcessId,
         PropertyNames.ProviderStackTrace,
         PropertyNames.SkipReason,
+        "TestGroup",
     ];
 
     /// <summary>

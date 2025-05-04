@@ -1,5 +1,6 @@
 ﻿namespace NetEvolve.Extensions.NUnit.Internal;
 
+using System.Xml.Linq;
 using global::NUnit.Framework;
 using global::NUnit.Framework.Interfaces;
 using global::NUnit.Framework.Internal;

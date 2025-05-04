@@ -23,5 +23,8 @@
   </ItemGroup>
   <ItemGroup>
     <AssemblyAttribute Include="NetEvolve.Extensions.XUnit.IntegrationTestAttribute" />
+    <AssemblyAttribute Include="NetEvolve.Extensions.XUnit.TestGroupAttribute">
+      <_Parameter1>XUnit</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
 </Project>

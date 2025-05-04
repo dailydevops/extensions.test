@@ -17,4 +17,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\NetEvolve.Extensions.XUnit.V3\NetEvolve.Extensions.XUnit.V3.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="NetEvolve.Extensions.XUnit.V3.TestGroupAttribute">
+      <_Parameter1>XUnit.V3</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 </Project>

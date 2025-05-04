@@ -51,7 +51,20 @@ public abstract class AttributeTestsBase
 
         foreach (var trait in methodTraits)
         {
-            result.Add(trait.Key, string.Join(", ", trait.Value));
+            if (trait.Key.Equals("TestGroup", StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            result.Add(
+                trait.Key,
+                string.Join(
+                    ", ",
+                    trait.Value.Where(v =>
+                        !v.Equals("TestGroup", StringComparison.OrdinalIgnoreCase)
+                    )
+                )
+            );
         }
 
         return [.. result];

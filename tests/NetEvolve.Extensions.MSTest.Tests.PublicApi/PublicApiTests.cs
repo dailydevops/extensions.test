@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using PublicApiGenerator;
 using Xunit;
 
+[TestGroup("MSTest")]
 public class PublicApiTests
 {
     [Fact]

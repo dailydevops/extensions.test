@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using PublicApiGenerator;
 using Xunit;
 
+[IntegrationTest]
+[TestGroup("NUnit")]
 public class PublicApiTests
 {
     [Fact]

@@ -74,6 +74,10 @@
         public SetUICultureAttribute() { }
         public SetUICultureAttribute(string culture, bool asHiddenCategory = false) { }
     }
+    public sealed class TestGroupAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public TestGroupAttribute(string id) { }
+    }
     public sealed class UnitTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
     {
         public UnitTestAttribute() { }
