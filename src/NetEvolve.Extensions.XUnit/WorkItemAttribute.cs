@@ -6,10 +6,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as <b>WorkItem</b>, with optional Id
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true
-)]
+[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class WorkItemAttribute : CategoryWithIdTraitBaseAttribute
 {
     /// <summary>

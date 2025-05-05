@@ -12,14 +12,9 @@ using Xunit.Sdk;
 public abstract class DiscovererBase : ITraitDiscoverer
 {
     /// <inheritdoc />
-    public abstract IEnumerable<KeyValuePair<string, string>> GetTraits(
-        IAttributeInfo traitAttribute
-    );
+    public abstract IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute);
 
-    private protected static TValue? GetNamedArgument<TValue>(
-        IAttributeInfo traitAttribute,
-        string argumentName
-    )
+    private protected static TValue? GetNamedArgument<TValue>(IAttributeInfo traitAttribute, string argumentName)
     {
         try
         {

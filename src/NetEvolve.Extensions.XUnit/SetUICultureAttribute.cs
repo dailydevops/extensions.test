@@ -7,10 +7,7 @@ using NetEvolve.Extensions.XUnit.Internal;
 /// <summary>
 /// Based on the value passed as UI culture, the marked test is executed.
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
-    Inherited = false
-)]
+[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method, Inherited = false)]
 public sealed class SetUICultureAttribute : CultureAttributeBase
 {
     /// <summary>

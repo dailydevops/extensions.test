@@ -6,10 +6,7 @@ using NetEvolve.Extensions.TUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as <b>TestGroup</b>, with explicit id
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true
-)]
+[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class TestGroupAttribute : NamedCategoryTraitBaseAttribute
 {
     /// <summary>

@@ -6,10 +6,7 @@ using NetEvolve.Extensions.XUnit.V3.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method as <b>IntegrationTest</b>.
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true
-)]
+[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class IntegrationTestAttribute : CategoryTraitBaseAttribute
 {
     /// <summary>

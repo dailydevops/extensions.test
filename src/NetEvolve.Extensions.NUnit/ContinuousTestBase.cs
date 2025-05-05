@@ -20,9 +20,7 @@ public abstract class ContinuousTestBase
     {
         if (_stopExecution)
         {
-            Assert.Inconclusive(
-                "Previous test failed, further execution for this test class has been disabled!"
-            );
+            Assert.Inconclusive("Previous test failed, further execution for this test class has been disabled!");
         }
 
         return Task.CompletedTask;

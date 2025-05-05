@@ -10,9 +10,7 @@ public abstract class AttributeTestsBase
     /// </summary>
     /// <param name="methodName">Name of the caller Method</param>
     /// <returns>List of <see cref="KeyValuePair{TKey,TValue}"/></returns>
-    protected static IEnumerable<KeyValuePair<string, string>> GetTraits(
-        [CallerMemberName] string? methodName = null
-    )
+    protected static IEnumerable<KeyValuePair<string, string>> GetTraits([CallerMemberName] string? methodName = null)
     {
         if (methodName is null || TestContext.Current is null)
         {
@@ -25,10 +23,7 @@ public abstract class AttributeTestsBase
     }
 
     private static IEnumerable<KeyValuePair<string, string>> GetCategories(TestContext context) =>
-        context.TestDetails.Categories.Select(category => new KeyValuePair<string, string>(
-            "TestCategory",
-            category
-        ));
+        context.TestDetails.Categories.Select(category => new KeyValuePair<string, string>("TestCategory", category));
 
     private static IEnumerable<KeyValuePair<string, string>> GetProperties(TestContext context) =>
         context

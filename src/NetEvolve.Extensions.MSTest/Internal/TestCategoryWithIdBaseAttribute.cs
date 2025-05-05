@@ -1,11 +1,7 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Internal;
 
 /// <inheritdoc/>
-[System.Diagnostics.CodeAnalysis.SuppressMessage(
-    "Style",
-    "IDE1006:Naming Styles",
-    Justification = "As designed."
-)]
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class TestCategoryWithIdBaseAttribute : TestTraitBaseAttribute
 {
     /// <summary>

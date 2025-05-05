@@ -35,9 +35,7 @@ public abstract class AttributeTestsBase
     /// </summary>
     /// <param name="methodName">Name of the caller Method</param>
     /// <returns>List of <see cref="KeyValuePair{TKey,TValue}"/></returns>
-    protected IEnumerable<KeyValuePair<string, string>> GetProperties(
-        [CallerMemberName] string? methodName = null
-    )
+    protected IEnumerable<KeyValuePair<string, string>> GetProperties([CallerMemberName] string? methodName = null)
     {
         if (methodName is null)
         {
@@ -69,11 +67,7 @@ public abstract class AttributeTestsBase
             {
                 result.Add(
                     new KeyValuePair<string, string>(
-                        key.Replace(
-                            PropertyNames.Category,
-                            "TestCategory",
-                            StringComparison.Ordinal
-                        ),
+                        key.Replace(PropertyNames.Category, "TestCategory", StringComparison.Ordinal),
                         value
                     )
                 );

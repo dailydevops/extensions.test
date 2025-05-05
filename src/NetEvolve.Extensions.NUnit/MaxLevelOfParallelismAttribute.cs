@@ -10,11 +10,7 @@ using global::NUnit.Framework;
 /// for the execution of tests.
 /// </summary>
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-[SuppressMessage(
-    "Design",
-    "CA1019:Define accessors for attribute arguments",
-    Justification = "As designed."
-)]
+[SuppressMessage("Design", "CA1019:Define accessors for attribute arguments", Justification = "As designed.")]
 public sealed class MaxLevelOfParallelismAttribute : PropertyAttribute
 {
     /// <summary>
