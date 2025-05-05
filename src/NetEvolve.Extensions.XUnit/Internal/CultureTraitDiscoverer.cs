@@ -10,19 +10,14 @@ using Xunit.Abstractions;
 public sealed class CultureTraitDiscoverer : DiscovererBase
 {
     /// <inheritdoc />
-    public override IEnumerable<KeyValuePair<string, string>> GetTraits(
-        IAttributeInfo traitAttribute
-    )
+    public override IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
     {
         if (traitAttribute is null)
         {
             yield break;
         }
 
-        var asHiddenCategory = GetNamedArgument<bool>(
-            traitAttribute,
-            nameof(CultureAttributeBase.AsHiddenCategory)
-        );
+        var asHiddenCategory = GetNamedArgument<bool>(traitAttribute, nameof(CultureAttributeBase.AsHiddenCategory));
         if (asHiddenCategory)
         {
             yield break;

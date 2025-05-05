@@ -20,9 +20,7 @@ public abstract class AttributeTestsBase : VerifyBase
     /// </summary>
     /// <param name="methodName">Name of the caller Method</param>
     /// <returns>List of <see cref="KeyValuePair{TKey,TValue}"/></returns>
-    protected IEnumerable<KeyValuePair<string, string>> GetProperties(
-        [CallerMemberName] string? methodName = null
-    )
+    protected IEnumerable<KeyValuePair<string, string>> GetProperties([CallerMemberName] string? methodName = null)
     {
         if (string.IsNullOrWhiteSpace(methodName))
         {
@@ -48,11 +46,7 @@ public abstract class AttributeTestsBase : VerifyBase
 
         if (categories.Length == 0)
         {
-            categories =
-            [
-                .. categories,
-                .. GetTestCategoryBaseAttributes(owningType.Module.Assembly),
-            ];
+            categories = [.. categories, .. GetTestCategoryBaseAttributes(owningType.Module.Assembly)];
         }
 
         if (categories.Length == 0)
@@ -68,9 +62,7 @@ public abstract class AttributeTestsBase : VerifyBase
             .Distinct();
     }
 
-    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
-        Assembly assembly
-    )
+    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(Assembly assembly)
     {
         if (assembly is null)
         {
@@ -104,18 +96,13 @@ public abstract class AttributeTestsBase : VerifyBase
                     && !string.IsNullOrWhiteSpace(attributeWithId.Id)
                 )
                 {
-                    yield return new KeyValuePair<string, string>(
-                        testCategory,
-                        attributeWithId.Id!
-                    );
+                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id!);
                 }
             }
         }
     }
 
-    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(
-        MemberInfo? member
-    )
+    private static IEnumerable<KeyValuePair<string, string>> GetTestCategoryBaseAttributes(MemberInfo? member)
     {
         if (member is null)
         {
@@ -149,10 +136,7 @@ public abstract class AttributeTestsBase : VerifyBase
                     && !string.IsNullOrWhiteSpace(attributeWithId.Id)
                 )
                 {
-                    yield return new KeyValuePair<string, string>(
-                        testCategory,
-                        attributeWithId.Id!
-                    );
+                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id!);
                 }
             }
         }

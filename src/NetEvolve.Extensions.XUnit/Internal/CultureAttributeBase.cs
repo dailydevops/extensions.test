@@ -65,8 +65,7 @@ public abstract class CultureAttributeBase : BeforeAfterTestAttribute, ITraitAtt
         _changed = SetCulture(_culture);
     }
 
-    private protected static CultureInfo CreateCultureInfo(string culture) =>
-        new CultureInfo(culture, false);
+    private protected static CultureInfo CreateCultureInfo(string culture) => new CultureInfo(culture, false);
 
     private protected virtual bool SetCulture(CultureInfo culture)
     {

@@ -9,11 +9,7 @@ using global::NUnit.Framework.Internal;
 /// Abstract class implementation.
 /// Extends <see cref="CategoryAttribute"/> with an additional property <see cref="Id"/>.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage(
-    "Style",
-    "IDE1006:Naming Styles",
-    Justification = "As designed."
-)]
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class CategoryIdBaseAttribute : CategoryAttribute, IApplyToTest
 {
     /// <summary>

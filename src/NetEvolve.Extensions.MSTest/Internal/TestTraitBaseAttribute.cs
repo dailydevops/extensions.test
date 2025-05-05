@@ -4,11 +4,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 /// <inheritdoc/>
-[System.Diagnostics.CodeAnalysis.SuppressMessage(
-    "Style",
-    "IDE1006:Naming Styles",
-    Justification = "As designed."
-)]
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class TestTraitBaseAttribute : TestCategoryBaseAttribute
 {
     /// <inheritdoc/>

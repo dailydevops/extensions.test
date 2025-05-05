@@ -21,9 +21,7 @@ public abstract class AttributeTestsBase
     /// </summary>
     /// <param name="methodName">Name of the caller Method</param>
     /// <returns>List of <see cref="KeyValuePair{TKey,TValue}"/></returns>
-    protected IEnumerable<KeyValuePair<string, string>> GetTraits(
-        [CallerMemberName] string? methodName = null
-    )
+    protected IEnumerable<KeyValuePair<string, string>> GetTraits([CallerMemberName] string? methodName = null)
     {
         if (methodName is null)
         {
@@ -63,18 +61,12 @@ public abstract class AttributeTestsBase
         foreach (var traitAttributeData in customAttributes)
         {
             var traitAttributeType = traitAttributeData.AttributeType;
-            if (
-                !typeof(ITraitAttribute)
-                    .GetTypeInfo()
-                    .IsAssignableFrom(traitAttributeType.GetTypeInfo())
-            )
+            if (!typeof(ITraitAttribute).GetTypeInfo().IsAssignableFrom(traitAttributeType.GetTypeInfo()))
             {
                 continue;
             }
 
-            var discovererAttributeData = FindDiscovererAttributeType(
-                traitAttributeType.GetTypeInfo()
-            );
+            var discovererAttributeData = FindDiscovererAttributeType(traitAttributeType.GetTypeInfo());
             if (discovererAttributeData is null)
             {
                 continue;

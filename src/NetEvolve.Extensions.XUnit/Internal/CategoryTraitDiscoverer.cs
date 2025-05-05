@@ -10,9 +10,7 @@ using Xunit.Abstractions;
 public sealed class CategoryTraitDiscoverer : DiscovererBase
 {
     /// <inheritdoc />
-    public override IEnumerable<KeyValuePair<string, string>> GetTraits(
-        IAttributeInfo traitAttribute
-    )
+    public override IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
     {
         if (traitAttribute is null)
         {

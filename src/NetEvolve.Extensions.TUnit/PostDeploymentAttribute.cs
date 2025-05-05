@@ -6,10 +6,7 @@ using NetEvolve.Extensions.TUnit.Internal;
 /// <summary>
 /// Attribute used to decorate a test class or method with TestCategory PostDeployment.
 /// </summary>
-[AttributeUsage(
-    AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method,
-    AllowMultiple = true
-)]
+[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public sealed class PostDeploymentAttribute : CategoryTraitBaseAttribute
 {
     /// <summary>
