@@ -42,6 +42,11 @@ public class PublicApiTests
 
     private static bool IsVisibleToIntelliSense(Type type)
     {
+        if (type.FullName!.Contains("AssemblyLoader", StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
         var browsable = type.GetCustomAttribute<BrowsableAttribute>();
         if (browsable is null || browsable.Browsable)
         {

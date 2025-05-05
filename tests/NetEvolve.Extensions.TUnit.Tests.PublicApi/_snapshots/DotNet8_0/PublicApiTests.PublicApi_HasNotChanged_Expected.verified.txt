@@ -1,9 +1,4 @@
-﻿public static class AssemblyLoaderd83e0c84879b4d66ab5c210125cadb29
-{
-    [System.Runtime.CompilerServices.ModuleInitializer]
-    public static void Initialize() { }
-}
-namespace NetEvolve.Extensions.TUnit
+﻿namespace NetEvolve.Extensions.TUnit
 {
     public sealed class AcceptanceTestAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
     {
