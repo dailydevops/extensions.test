@@ -54,10 +54,7 @@ public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITraitAttrib
     /// <param name="category">Category</param>
     /// <param name="id">Id</param>
     protected CategoryWithIdTraitBaseAttribute(string category, long id)
-    {
-        Category = category;
-        Id = $"{id}";
-    }
+        : this(category, $"{id}") { }
 
     /// <inheritdoc />
     public IReadOnlyCollection<KeyValuePair<string, string>> GetTraits()
@@ -66,7 +63,10 @@ public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITraitAttrib
 
         if (!string.IsNullOrWhiteSpace(Category))
         {
-            result.Add(Internals.TestCategory, Category);
+            if (!Category.Equals(Internals.TestGroup, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Add(Internals.TestCategory, Category);
+            }
 
             if (!string.IsNullOrWhiteSpace(Id))
             {

@@ -18,18 +18,21 @@ public sealed class CategoryTraitDiscoverer : DiscovererBase
         }
 
         var category = GetNamedArgument<string>(traitAttribute, Internals.Category);
-        if (string.IsNullOrWhiteSpace(category))
+        if (category is null || string.IsNullOrWhiteSpace(category))
         {
             yield break;
         }
 
-        yield return new KeyValuePair<string, string>(Internals.TestCategory, category!);
+        if (!category.Equals(Internals.TestGroup, StringComparison.OrdinalIgnoreCase))
+        {
+            yield return new KeyValuePair<string, string>(Internals.TestCategory, category);
+        }
 
         var id = GetNamedArgument<string>(traitAttribute, Internals.Id);
 
         if (!string.IsNullOrWhiteSpace(id))
         {
-            yield return new KeyValuePair<string, string>(category!, id!);
+            yield return new KeyValuePair<string, string>(category, id!);
         }
     }
 }
