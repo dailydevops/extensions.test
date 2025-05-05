@@ -8,11 +8,6 @@
     {
         public ArchitectureTestAttribute() { }
     }
-    public static class AssemblyLoader
-    {
-        [System.Runtime.CompilerServices.ModuleInitializer]
-        public static void Initialize() { }
-    }
     public sealed class BugAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryWithIdTraitBaseAttribute
     {
         public BugAttribute() { }
