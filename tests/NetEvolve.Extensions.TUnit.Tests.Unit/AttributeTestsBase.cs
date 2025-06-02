@@ -30,7 +30,9 @@ public abstract class AttributeTestsBase
             .TestDetails.CustomProperties.Where(property =>
                 !property.Key.Equals("TestGroup", StringComparison.OrdinalIgnoreCase)
             )
-            .Select(property => new KeyValuePair<string, string>(property.Key, property.Value));
+            .SelectMany(property =>
+                property.Value.Select(value => new KeyValuePair<string, string>(property.Key, value))
+            );
 
     protected static SettingsTask Verify<T>(T traits) => Verifier.Verify(traits);
 }
