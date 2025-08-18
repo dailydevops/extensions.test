@@ -17,6 +17,9 @@ public abstract class NamedCategoryTraitBaseAttribute : Attribute, ITestDiscover
     /// </summary>
     public string Id { get; }
 
+    /// <inheritdoc cref="IEventReceiver.Order" />
+    public int Order => 0;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="NamedCategoryTraitBaseAttribute"/> class.
     /// </summary>
@@ -29,16 +32,18 @@ public abstract class NamedCategoryTraitBaseAttribute : Attribute, ITestDiscover
     }
 
     /// <inheritdoc/>
-    public void OnTestDiscovery(DiscoveredTestContext discoveredTestContext)
+    public ValueTask OnTestDiscovered(DiscoveredTestContext context)
     {
-        if (discoveredTestContext is null)
+        if (context is null)
         {
-            return;
+            return ValueTask.CompletedTask;
         }
 
         if (!string.IsNullOrWhiteSpace(Id))
         {
-            discoveredTestContext.AddProperty(Category, Id);
+            context.AddProperty(Category, Id);
         }
+
+        return ValueTask.CompletedTask;
     }
 }

@@ -87,6 +87,7 @@ namespace NetEvolve.Extensions.TUnit.Internal
     {
         protected CategoryTraitBaseAttribute(string category) { }
         public string Category { get; }
+        public int Order { get; }
         public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
     }
     public abstract class CategoryWithIdTraitBaseAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestDiscoveryEventReceiver
@@ -95,6 +96,7 @@ namespace NetEvolve.Extensions.TUnit.Internal
         protected CategoryWithIdTraitBaseAttribute(string category, string? id) { }
         public string Category { get; }
         public string? Id { get; }
+        public int Order { get; }
         public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
     }
     public abstract class NamedCategoryTraitBaseAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestDiscoveryEventReceiver
@@ -102,6 +104,7 @@ namespace NetEvolve.Extensions.TUnit.Internal
         protected NamedCategoryTraitBaseAttribute(string category, string id) { }
         public string Category { get; }
         public string Id { get; }
+        public int Order { get; }
         public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
     }
 }

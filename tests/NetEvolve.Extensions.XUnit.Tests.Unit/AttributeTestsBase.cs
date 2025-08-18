@@ -40,15 +40,17 @@ public abstract class AttributeTestsBase
         }
 
         var messageSink = new NullMessageSink();
-        return GetTraits(methodInfo.CustomAttributes, messageSink)
-            .Union(GetTraits(classType.CustomAttributes, messageSink))
-            .Union(GetTraits(classType.Assembly.CustomAttributes, messageSink))
-            .Distinct()
-            .Where(kvp =>
-                !kvp.Key.Equals("TestGroup", StringComparison.OrdinalIgnoreCase)
-                && !kvp.Value.Equals("TestGroup", StringComparison.OrdinalIgnoreCase)
-            )
-            .ToList();
+        return
+        [
+            .. GetTraits(methodInfo.CustomAttributes, messageSink)
+                .Union(GetTraits(classType.CustomAttributes, messageSink))
+                .Union(GetTraits(classType.Assembly.CustomAttributes, messageSink))
+                .Distinct()
+                .Where(kvp =>
+                    !kvp.Key.Equals("TestGroup", StringComparison.OrdinalIgnoreCase)
+                    && !kvp.Value.Equals("TestGroup", StringComparison.OrdinalIgnoreCase)
+                ),
+        ];
     }
 
     private static List<KeyValuePair<string, string>> GetTraits(

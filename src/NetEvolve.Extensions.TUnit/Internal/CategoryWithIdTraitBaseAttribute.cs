@@ -1,5 +1,7 @@
 ﻿namespace NetEvolve.Extensions.TUnit.Internal;
 
+using System.Threading.Tasks;
+using global::TUnit.Core;
 using global::TUnit.Core.Interfaces;
 
 /// <summary>
@@ -31,6 +33,9 @@ public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITestDiscove
     /// </summary>
     public string? Id { get; }
 
+    /// <inheritdoc cref="IEventReceiver.Order" />
+    public int Order => 0;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="CategoryWithIdTraitBaseAttribute"/> class.
     /// </summary>
@@ -54,17 +59,19 @@ public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITestDiscove
     }
 
     /// <inheritdoc/>
-    public void OnTestDiscovery(DiscoveredTestContext discoveredTestContext)
+    public ValueTask OnTestDiscovered(DiscoveredTestContext context)
     {
-        if (discoveredTestContext is null)
+        if (context is null)
         {
-            return;
+            return ValueTask.CompletedTask;
         }
 
-        discoveredTestContext.AddCategory(Category);
+        context.AddCategory(Category);
         if (!string.IsNullOrWhiteSpace(Id))
         {
-            discoveredTestContext.AddProperty(Category, Id);
+            context.AddProperty(Category, Id);
         }
+
+        return ValueTask.CompletedTask;
     }
 }

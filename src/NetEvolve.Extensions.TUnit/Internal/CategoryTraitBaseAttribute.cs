@@ -1,6 +1,7 @@
 ﻿namespace NetEvolve.Extensions.TUnit.Internal;
 
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using global::TUnit.Core.Interfaces;
 
 /// <summary>
@@ -15,6 +16,9 @@ public abstract class CategoryTraitBaseAttribute : Attribute, ITestDiscoveryEven
     /// </summary>
     public string Category { get; }
 
+    /// <inheritdoc cref="IEventReceiver.Order" />
+    public int Order => 0;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="CategoryTraitBaseAttribute"/> class.
     /// </summary>
@@ -22,13 +26,15 @@ public abstract class CategoryTraitBaseAttribute : Attribute, ITestDiscoveryEven
     protected CategoryTraitBaseAttribute(string category) => Category = category;
 
     /// <inheritdoc/>
-    public void OnTestDiscovery(DiscoveredTestContext discoveredTestContext)
+    public ValueTask OnTestDiscovered(DiscoveredTestContext context)
     {
-        if (discoveredTestContext is null)
+        if (context is null)
         {
-            return;
+            return ValueTask.CompletedTask;
         }
 
-        discoveredTestContext.AddCategory(Category);
+        context.AddCategory(Category);
+
+        return ValueTask.CompletedTask;
     }
 }
