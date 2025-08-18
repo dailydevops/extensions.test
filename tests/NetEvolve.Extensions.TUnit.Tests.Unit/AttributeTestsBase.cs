@@ -19,7 +19,7 @@ public abstract class AttributeTestsBase
 
         var context = TestContext.Current;
 
-        return GetCategories(context).Union(GetProperties(context)).Distinct().ToList();
+        return [.. GetCategories(context).Union(GetProperties(context)).Distinct()];
     }
 
     private static IEnumerable<KeyValuePair<string, string>> GetCategories(TestContext context) =>

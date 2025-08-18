@@ -87,7 +87,8 @@ namespace NetEvolve.Extensions.TUnit.Internal
     {
         protected CategoryTraitBaseAttribute(string category) { }
         public string Category { get; }
-        public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
+        public int Order { get; }
+        public System.Threading.Tasks.ValueTask OnTestDiscovered(TUnit.Core.DiscoveredTestContext context) { }
     }
     public abstract class CategoryWithIdTraitBaseAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestDiscoveryEventReceiver
     {
@@ -95,13 +96,53 @@ namespace NetEvolve.Extensions.TUnit.Internal
         protected CategoryWithIdTraitBaseAttribute(string category, string? id) { }
         public string Category { get; }
         public string? Id { get; }
-        public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
+        public int Order { get; }
+        public System.Threading.Tasks.ValueTask OnTestDiscovered(TUnit.Core.DiscoveredTestContext context) { }
     }
     public abstract class NamedCategoryTraitBaseAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestDiscoveryEventReceiver
     {
         protected NamedCategoryTraitBaseAttribute(string category, string id) { }
         public string Category { get; }
         public string Id { get; }
-        public void OnTestDiscovery(TUnit.Core.DiscoveredTestContext discoveredTestContext) { }
+        public int Order { get; }
+        public System.Threading.Tasks.ValueTask OnTestDiscovered(TUnit.Core.DiscoveredTestContext context) { }
+    }
+}
+namespace TUnit.Core.Helpers
+{
+    public static class ReflectionReplacements
+    {
+        public static bool IsAotMode { get; }
+        public static object?[]? ConvertTupleToArray(object tuple) { }
+        public static System.Threading.Tasks.Task<object?> InvokeMethodAsync(string methodKey, object? instance, params object?[]? parameters) { }
+        public static bool IsTupleType(System.Type type) { }
+        public static System.Type? MakeGenericType(System.Type genericDefinition, params System.Type[] typeArguments) { }
+        public static void RegisterGenericTypeFactory(TUnit.Core.Helpers.ReflectionReplacements.GenericTypeFactoryDelegate genericTypeFactory) { }
+        public static void RegisterMethodInvoker(TUnit.Core.Helpers.ReflectionReplacements.MethodInvokerDelegate methodInvoker) { }
+        public static void RegisterPropertyInjector<T>(TUnit.Core.Helpers.ReflectionReplacements.PropertyInjectorDelegate<T> propertyInjector)
+            where T :  notnull { }
+        public static void RegisterTupleConverter(TUnit.Core.Helpers.ReflectionReplacements.TupleConverterDelegate tupleConverter) { }
+        public static void RegisterTupleTypeChecker(TUnit.Core.Helpers.ReflectionReplacements.TupleTypeCheckerDelegate tupleTypeChecker) { }
+        public static void RegisterTypeResolver(TUnit.Core.Helpers.ReflectionReplacements.TypeResolverDelegate typeResolver) { }
+        public static System.Type? ResolveType(string assemblyQualifiedName) { }
+        public delegate System.Type? GenericTypeFactoryDelegate(System.Type genericDefinition, System.Type[] typeArguments);
+        public delegate System.Threading.Tasks.Task<object?> MethodInvokerDelegate(string methodKey, object? instance, object?[]? parameters);
+        public delegate System.Threading.Tasks.Task PropertyInjectorDelegate<T>(T instance, System.Collections.Generic.Dictionary<string, object?> propertyValues, TUnit.Core.TestContext testContext);
+        public delegate object?[]? TupleConverterDelegate(object tuple);
+        public delegate bool TupleTypeCheckerDelegate(System.Type type);
+        public delegate System.Type? TypeResolverDelegate(string assemblyQualifiedName);
+    }
+}
+namespace TUnit.Generated
+{
+    public static class AotReplacementRegistry
+    {
+        [System.Runtime.CompilerServices.ModuleInitializer]
+        public static void Initialize() { }
+    }
+    public static class AotTypeResolver
+    {
+        public static System.Type? MakeGenericType(System.Type genericTypeDefinition, params System.Type[] typeArguments) { }
+        public static System.Type? ResolveType(string assemblyQualifiedName) { }
     }
 }
