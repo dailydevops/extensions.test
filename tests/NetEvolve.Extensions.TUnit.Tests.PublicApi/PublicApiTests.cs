@@ -14,6 +14,7 @@ using PublicApiGenerator;
 public class PublicApiTests
 {
     [Test]
+    [TestGroup("PublicApi")]
     public Task PublicApi_HasNotChanged_Expected()
     {
         var assembly = typeof(AcceptanceTestAttribute).Assembly;

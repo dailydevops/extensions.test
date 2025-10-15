@@ -12,6 +12,7 @@ using PublicApiGenerator;
 using Xunit;
 
 [TestGroup("MSTest")]
+[TestGroup("PublicApi")]
 public class PublicApiTests
 {
     [Fact]
