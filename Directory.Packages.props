@@ -20,8 +20,8 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.14.2" />
     <PackageVersion Include="Microsoft.TestPlatform.TestHost" Version="17.14.1" />
-    <PackageVersion Include="MSTest.TestAdapter" Version="3.10.4" />
-    <PackageVersion Include="MSTest.TestFramework" Version="4.0.0" />
+    <PackageVersion Include="MSTest.TestAdapter" Version="4.0.1" />
+    <PackageVersion Include="MSTest.TestFramework" Version="4.0.1" />
     <PackageVersion Include="NUnit" Version="4.4.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.2.0" />
     <PackageVersion Include="NUnit.Analyzers" Version="4.10.0" />
