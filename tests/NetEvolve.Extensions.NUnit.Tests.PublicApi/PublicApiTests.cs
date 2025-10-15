@@ -14,6 +14,7 @@ using Xunit;
 
 [IntegrationTest]
 [TestGroup("NUnit")]
+[TestGroup("PublicApi")]
 public class PublicApiTests
 {
     [Fact]
