@@ -1,4 +1,6 @@
-﻿namespace NetEvolve.Extensions.MSTest.Tests.Unit;
+﻿[assembly: Parallelize]
+
+namespace NetEvolve.Extensions.MSTest.Tests.Unit;
 
 using System.IO;
 using System.Runtime.CompilerServices;
