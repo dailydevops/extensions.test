@@ -10,23 +10,23 @@
     <GlobalPackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="9.0.0" />
     <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
     <GlobalPackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" />
-    <GlobalPackageReference Include="NetEvolve.Defaults" Version="1.4.0" />
-    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.14.0" />
+    <GlobalPackageReference Include="NetEvolve.Defaults" Version="1.4.25" />
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.14.1" />
     <GlobalPackageReference Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
     <PackageVersion Include="coverlet.msbuild" Version="6.0.4" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.14.2" />
-    <PackageVersion Include="Microsoft.TestPlatform.TestHost" Version="17.14.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.1.0" />
+    <PackageVersion Include="Microsoft.TestPlatform.TestHost" Version="18.0.0" />
     <PackageVersion Include="MSTest.TestAdapter" Version="4.0.1" />
     <PackageVersion Include="MSTest.TestFramework" Version="4.0.1" />
     <PackageVersion Include="NUnit" Version="4.4.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.2.0" />
     <PackageVersion Include="NUnit.Analyzers" Version="4.10.0" />
-    <PackageVersion Include="PublicApiGenerator" Version="11.4.6" />
-    <PackageVersion Include="TUnit" Version="0.70.4" />
+    <PackageVersion Include="PublicApiGenerator" Version="11.5.0" />
+    <PackageVersion Include="TUnit" Version="0.71.4" />
     <PackageVersion Include="TUnit.Core" Version="0.71.4" />
     <PackageVersion Include="Verify.MSTest" Version="31.0.1" />
     <PackageVersion Include="Verify.NUnit" Version="31.0.1" />
