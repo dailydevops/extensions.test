@@ -43,7 +43,7 @@ public class PublicApiTests
     private static bool IsVisibleToIntelliSense(Type type)
     {
         var browsable = type.GetCustomAttribute<BrowsableAttribute>();
-        if (browsable is null || browsable.Browsable)
+        if (browsable?.Browsable != false)
         {
             return true;
         }
