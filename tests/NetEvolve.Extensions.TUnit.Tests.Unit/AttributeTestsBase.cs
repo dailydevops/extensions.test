@@ -23,11 +23,14 @@ public abstract class AttributeTestsBase
     }
 
     private static IEnumerable<KeyValuePair<string, string>> GetCategories(TestContext context) =>
-        context.TestDetails.Categories.Select(category => new KeyValuePair<string, string>("TestCategory", category));
+        context.Metadata.TestDetails.Categories.Select(category => new KeyValuePair<string, string>(
+            "TestCategory",
+            category
+        ));
 
     private static IEnumerable<KeyValuePair<string, string>> GetProperties(TestContext context) =>
         context
-            .TestDetails.CustomProperties.Where(property =>
+            .Metadata.TestDetails.CustomProperties.Where(property =>
                 !property.Key.Equals("TestGroup", StringComparison.OrdinalIgnoreCase)
             )
             .SelectMany(property =>
