@@ -29,7 +29,7 @@
     <PackageVersion Include="TUnit" Version="1.2.11" />
     <PackageVersion Include="TUnit.Core" Version="1.1.27" />
     <PackageVersion Include="Verify.MSTest" Version="31.7.2" />
-    <PackageVersion Include="Verify.NUnit" Version="31.7.1" />
+    <PackageVersion Include="Verify.NUnit" Version="31.7.2" />
     <PackageVersion Include="Verify.TUnit" Version="31.7.2" />
     <PackageVersion Include="Verify.Xunit" Version="31.7.1" />
     <PackageVersion Include="Verify.XunitV3" Version="31.7.2" />
