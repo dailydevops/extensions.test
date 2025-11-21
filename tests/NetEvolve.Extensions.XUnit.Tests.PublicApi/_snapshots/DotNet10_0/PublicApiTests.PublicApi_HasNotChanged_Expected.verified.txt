@@ -1,0 +1,139 @@
+﻿namespace NetEvolve.Extensions.XUnit
+{
+    public sealed class AcceptanceTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public AcceptanceTestAttribute() { }
+    }
+    public sealed class ArchitectureTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public ArchitectureTestAttribute() { }
+    }
+    public sealed class BugAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public BugAttribute() { }
+        public BugAttribute(long id) { }
+        public BugAttribute(string? id) { }
+    }
+    public sealed class CodedUITestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public CodedUITestAttribute() { }
+    }
+    public sealed class EndToEndTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public EndToEndTestAttribute() { }
+    }
+    public sealed class EpicAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public EpicAttribute() { }
+        public EpicAttribute(long id) { }
+        public EpicAttribute(string? id) { }
+    }
+    public sealed class FeatureAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public FeatureAttribute() { }
+        public FeatureAttribute(long id) { }
+        public FeatureAttribute(string? id) { }
+    }
+    public sealed class FunctionalTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public FunctionalTestAttribute() { }
+    }
+    public sealed class IntegrationTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public IntegrationTestAttribute() { }
+    }
+    public sealed class IssueAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public IssueAttribute() { }
+        public IssueAttribute(long id) { }
+        public IssueAttribute(string? id) { }
+    }
+    public sealed class PerformanceTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public PerformanceTestAttribute() { }
+    }
+    public sealed class PostDeploymentAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public PostDeploymentAttribute() { }
+    }
+    public sealed class PreDeploymentAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public PreDeploymentAttribute() { }
+    }
+    public sealed class SetCultureAttribute : NetEvolve.Extensions.XUnit.Internal.CultureAttributeBase
+    {
+        public SetCultureAttribute() { }
+        public SetCultureAttribute(string culture, bool asHiddenCategory = false) { }
+        public SetCultureAttribute(string culture, string? uiCulture, bool asHiddenCategory = false) { }
+        public string? UICulture { get; }
+        public override void After(System.Reflection.MethodInfo methodUnderTest) { }
+        public override void Before(System.Reflection.MethodInfo methodUnderTest) { }
+    }
+    public sealed class SetUICultureAttribute : NetEvolve.Extensions.XUnit.Internal.CultureAttributeBase
+    {
+        public SetUICultureAttribute() { }
+        public SetUICultureAttribute(string culture, bool asHiddenCategory = false) { }
+    }
+    public sealed class TestGroupAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public TestGroupAttribute(string id) { }
+    }
+    public sealed class UnitTestAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public UnitTestAttribute() { }
+    }
+    public sealed class UserStoryAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public UserStoryAttribute() { }
+        public UserStoryAttribute(long id) { }
+        public UserStoryAttribute(string? id) { }
+    }
+    public sealed class WorkItemAttribute : NetEvolve.Extensions.XUnit.Internal.CategoryWithIdTraitBaseAttribute
+    {
+        public WorkItemAttribute() { }
+        public WorkItemAttribute(long id) { }
+        public WorkItemAttribute(string? id) { }
+    }
+}
+namespace NetEvolve.Extensions.XUnit.Internal
+{
+    [Xunit.Sdk.TraitDiscoverer("NetEvolve.Extensions.XUnit.Internal.CategoryTraitDiscoverer", "NetEvolve.Extensions.XUnit")]
+    public abstract class CategoryTraitBaseAttribute : System.Attribute, Xunit.Sdk.ITraitAttribute
+    {
+        protected CategoryTraitBaseAttribute(string category) { }
+        public string Category { get; }
+    }
+    public sealed class CategoryTraitDiscoverer : NetEvolve.Extensions.XUnit.Internal.DiscovererBase
+    {
+        public CategoryTraitDiscoverer() { }
+        public override System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> GetTraits(Xunit.Abstractions.IAttributeInfo traitAttribute) { }
+    }
+    [Xunit.Sdk.TraitDiscoverer("NetEvolve.Extensions.XUnit.Internal.CategoryTraitDiscoverer", "NetEvolve.Extensions.XUnit")]
+    public abstract class CategoryWithIdTraitBaseAttribute : System.Attribute, Xunit.Sdk.ITraitAttribute
+    {
+        protected CategoryWithIdTraitBaseAttribute(string category, long id) { }
+        protected CategoryWithIdTraitBaseAttribute(string category, string? id) { }
+        public string Category { get; }
+        public string? Id { get; }
+    }
+    [Xunit.Sdk.TraitDiscoverer("NetEvolve.Extensions.XUnit.Internal.CultureTraitDiscoverer", "NetEvolve.Extensions.XUnit")]
+    public abstract class CultureAttributeBase : Xunit.Sdk.BeforeAfterTestAttribute, Xunit.Sdk.ITraitAttribute
+    {
+        protected CultureAttributeBase(string category, string culture, bool asHiddenCategory) { }
+        public bool AsHiddenCategory { get; }
+        public string Category { get; }
+        public string Culture { get; }
+        public override void After(System.Reflection.MethodInfo methodUnderTest) { }
+        public override void Before(System.Reflection.MethodInfo methodUnderTest) { }
+    }
+    public sealed class CultureTraitDiscoverer : NetEvolve.Extensions.XUnit.Internal.DiscovererBase
+    {
+        public CultureTraitDiscoverer() { }
+        public override System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> GetTraits(Xunit.Abstractions.IAttributeInfo traitAttribute) { }
+    }
+    public abstract class DiscovererBase : Xunit.Sdk.ITraitDiscoverer
+    {
+        protected DiscovererBase() { }
+        public abstract System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> GetTraits(Xunit.Abstractions.IAttributeInfo traitAttribute);
+    }
+}
