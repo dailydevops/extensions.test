@@ -19,7 +19,6 @@
     <Project Path="src/NetEvolve.Extensions.NUnit/NetEvolve.Extensions.NUnit.csproj" />
     <Project Path="src/NetEvolve.Extensions.TUnit/NetEvolve.Extensions.TUnit.csproj" />
     <Project Path="src/NetEvolve.Extensions.XUnit.V3/NetEvolve.Extensions.XUnit.V3.csproj" />
-    <Project Path="src/NetEvolve.Extensions.XUnit/NetEvolve.Extensions.XUnit.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/NetEvolve.Extensions.MSTest.Tests.PublicApi/NetEvolve.Extensions.MSTest.Tests.PublicApi.csproj" />
@@ -28,8 +27,6 @@
     <Project Path="tests/NetEvolve.Extensions.NUnit.Tests.Unit/NetEvolve.Extensions.NUnit.Tests.Unit.csproj" />
     <Project Path="tests/NetEvolve.Extensions.TUnit.Tests.PublicApi/NetEvolve.Extensions.TUnit.Tests.PublicApi.csproj" />
     <Project Path="tests/NetEvolve.Extensions.TUnit.Tests.Unit/NetEvolve.Extensions.TUnit.Tests.Unit.csproj" />
-    <Project Path="tests/NetEvolve.Extensions.XUnit.Tests.PublicApi/NetEvolve.Extensions.XUnit.Tests.PublicApi.csproj" />
-    <Project Path="tests/NetEvolve.Extensions.XUnit.Tests.Unit/NetEvolve.Extensions.XUnit.Tests.Unit.csproj" />
     <Project Path="tests/NetEvolve.Extensions.XUnit.V3.Tests.PublicApi/NetEvolve.Extensions.XUnit.V3.Tests.PublicApi.csproj" />
     <Project Path="tests/NetEvolve.Extensions.XUnit.V3.Tests.Unit/NetEvolve.Extensions.XUnit.V3.Tests.Unit.csproj" />
   </Folder>
