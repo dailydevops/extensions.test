@@ -10,14 +10,13 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 using System.Threading.Tasks;
 using PublicApiGenerator;
-using Xunit;
 
 [IntegrationTest]
 [TestGroup("NUnit")]
 [TestGroup("PublicApi")]
 public class PublicApiTests
 {
-    [Fact]
+    [Test]
     public Task PublicApi_HasNotChanged_Expected()
     {
         var assembly = typeof(AcceptanceTestAttribute).Assembly;

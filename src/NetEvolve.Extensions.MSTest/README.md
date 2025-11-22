@@ -53,8 +53,9 @@ dotnet add package NetEvolve.Extensions.MSTest
 
 ## 🛠️ Requirements
 
-- **.NET Standard 2.0** (compatible with .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5+)
-- **Multi-target support**: .NET 8, .NET 9
+- **.NET 10** or later
+- Compatible with **.NET Standard 2.0** projects (.NET Framework 4.6.1+, .NET Core 2.0+)
+- **C# 13** support
 - **MSTest framework** compatibility
 
 ## 📖 Usage
