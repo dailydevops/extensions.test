@@ -1,9 +1,10 @@
-﻿namespace NetEvolve.Extensions.MSTest.Tests.PublicApi;
+﻿[assembly: Parallelize]
+
+namespace NetEvolve.Extensions.MSTest.Tests.PublicApi;
 
 using System.IO;
 using System.Runtime.CompilerServices;
 using VerifyTests;
-using VerifyXunit;
 
 internal static class Predefined
 {
