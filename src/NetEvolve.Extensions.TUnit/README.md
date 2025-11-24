@@ -37,6 +37,9 @@ This package is part of the **NetEvolve Extensions Test** ecosystem, designed to
 - **PreDeploymentTestAttribute** - Mark tests that run before deployment
 - **PostDeploymentTestAttribute** - Identify post-deployment validation tests
 
+### Test Behavior Attributes
+- **SkipOnFailureAttribute** - Marks tests as flaky and automatically converts failures to skipped state
+
 ## 📦 Installation
 
 ### .NET CLI
@@ -206,6 +209,59 @@ public class DeploymentTests
 }
 ```
 
+### Flaky Test Handling
+
+Mark tests that are inherently unreliable and should be skipped on failure:
+
+```csharp
+public class FlakyTests
+{
+    [Test]
+    [SkipOnFailure] // Automatically skips this test if it fails
+    [IntegrationTest]
+    public async Task Should_Handle_External_Service_Timeout()
+    {
+        // Test that might fail due to external service availability
+        var service = new ExternalService();
+        await Assert.That(service.IsAvailable()).IsTrue();
+    }
+
+    [Test]
+    [SkipOnFailure]
+    [PerformanceTest]
+    public async Task Should_Complete_Within_Time_Limit()
+    {
+        // Performance test that might be affected by system load
+        var stopwatch = Stopwatch.StartNew();
+        PerformHeavyOperation();
+        stopwatch.Stop();
+        await Assert.That(stopwatch.ElapsedMilliseconds).IsLessThan(1000);
+    }
+}
+```
+
+You can also apply `SkipOnFailure` at the class level to mark all tests in the class as flaky:
+
+```csharp
+[SkipOnFailure] // All tests in this class will be skipped on failure
+public class ExternalApiTests
+{
+    [Test]
+    public async Task Should_Fetch_User_Data()
+    {
+        // Test implementation
+        await Assert.That(true).IsTrue();
+    }
+
+    [Test]
+    public async Task Should_Update_User_Profile()
+    {
+        // Test implementation
+        await Assert.That(true).IsTrue();
+    }
+}
+```
+
 ## 🏗️ Real-World Example
 
 ```csharp
@@ -326,6 +382,7 @@ dotnet test --filter TestCategory=PreDeploymentTest
 | `WorkItemAttribute` | Generic work item association | Flexible work tracking |
 | `PreDeploymentTestAttribute` | Pre-deployment validation | Deployment readiness |
 | `PostDeploymentTestAttribute` | Post-deployment verification | Production validation |
+| `SkipOnFailureAttribute` | Flaky test handling | Auto-skip unreliable tests |
 
 ## 🤝 Contributing
 

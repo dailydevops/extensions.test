@@ -60,6 +60,12 @@
     {
         public PreDeploymentAttribute() { }
     }
+    public sealed class SkipOnFailureAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestEndEventReceiver
+    {
+        public SkipOnFailureAttribute() { }
+        public int Order { get; }
+        public System.Threading.Tasks.ValueTask OnTestEnd(TUnit.Core.TestContext context) { }
+    }
     public sealed class TestGroupAttribute : NetEvolve.Extensions.TUnit.Internal.NamedCategoryTraitBaseAttribute
     {
         public TestGroupAttribute(string id) { }
