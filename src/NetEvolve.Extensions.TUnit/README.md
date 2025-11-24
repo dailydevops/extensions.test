@@ -214,29 +214,28 @@ public class DeploymentTests
 Mark tests that are inherently unreliable and should be skipped on failure:
 
 ```csharp
-[TestFixture]
 public class FlakyTests
 {
     [Test]
     [SkipOnFailure] // Automatically skips this test if it fails
     [IntegrationTest]
-    public void Should_Handle_External_Service_Timeout()
+    public async Task Should_Handle_External_Service_Timeout()
     {
         // Test that might fail due to external service availability
         var service = new ExternalService();
-        Assert.That(service.IsAvailable(), Is.True);
+        await Assert.That(service.IsAvailable()).IsTrue();
     }
 
     [Test]
     [SkipOnFailure]
     [PerformanceTest]
-    public void Should_Complete_Within_Time_Limit()
+    public async Task Should_Complete_Within_Time_Limit()
     {
         // Performance test that might be affected by system load
         var stopwatch = Stopwatch.StartNew();
         PerformHeavyOperation();
         stopwatch.Stop();
-        Assert.That(stopwatch.ElapsedMilliseconds, Is.LessThan(1000));
+        await Assert.That(stopwatch.ElapsedMilliseconds).IsLessThan(1000);
     }
 }
 ```
@@ -244,22 +243,21 @@ public class FlakyTests
 You can also apply `SkipOnFailure` at the class level to mark all tests in the class as flaky:
 
 ```csharp
-[TestFixture]
 [SkipOnFailure] // All tests in this class will be skipped on failure
 public class ExternalApiTests
 {
     [Test]
-    public void Should_Fetch_User_Data()
+    public async Task Should_Fetch_User_Data()
     {
         // Test implementation
-        Assert.That(true, Is.True);
+        await Assert.That(true).IsTrue();
     }
 
     [Test]
-    public void Should_Update_User_Profile()
+    public async Task Should_Update_User_Profile()
     {
         // Test implementation
-        Assert.That(true, Is.True);
+        await Assert.That(true).IsTrue();
     }
 }
 ```
