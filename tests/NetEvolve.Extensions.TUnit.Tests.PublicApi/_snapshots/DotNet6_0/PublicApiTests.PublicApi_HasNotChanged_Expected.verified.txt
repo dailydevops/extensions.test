@@ -114,3 +114,11 @@ namespace NetEvolve.Extensions.TUnit.Internal
         public System.Threading.Tasks.ValueTask OnTestDiscovered(TUnit.Core.DiscoveredTestContext context) { }
     }
 }
+namespace NetEvolve.Extensions.TUnit.Logging
+{
+    public static class TUnitLoggerExtensions
+    {
+        public static Microsoft.Extensions.Logging.ILogger ConvertTo(this TUnit.Core.Logging.ILogger logger) { }
+        public static Microsoft.Extensions.Logging.ILogger<T> ConvertTo<T>(this TUnit.Core.Logging.ILogger logger) { }
+    }
+}
