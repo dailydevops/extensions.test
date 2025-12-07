@@ -14,8 +14,7 @@ public static class TUnitLoggerExtensions
     /// <param name="logger">The TUnit logger instance to convert.</param>
     /// <returns>An <see cref="ILogger"/> implementation that wraps the provided TUnit logger.</returns>
     /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="logger"/> is <see langword="null"/>.</exception>
-    public static ILogger ConvertTo(this global::TUnit.Core.Logging.ILogger logger) =>
-        new TUnitLogger(logger);
+    public static ILogger ConvertTo(this global::TUnit.Core.Logging.ILogger logger) => new TUnitLogger(logger);
 
     /// <summary>
     /// Converts a TUnit <see cref="global::TUnit.Core.Logging.ILogger"/> to a Microsoft.Extensions.Logging <see cref="ILogger{T}"/>.
@@ -24,6 +23,5 @@ public static class TUnitLoggerExtensions
     /// <param name="logger">The TUnit logger instance to convert.</param>
     /// <returns>An <see cref="ILogger{T}"/> implementation that wraps the provided TUnit logger.</returns>
     /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="logger"/> is <see langword="null"/>.</exception>
-    public static ILogger<T> ConvertTo<T>(this global::TUnit.Core.Logging.ILogger logger) =>
-        new TUnitLogger<T>(logger);
+    public static ILogger<T> ConvertTo<T>(this global::TUnit.Core.Logging.ILogger logger) => new TUnitLogger<T>(logger);
 }
