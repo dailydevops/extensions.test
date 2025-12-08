@@ -30,11 +30,11 @@ public abstract class CategoryTraitBaseAttribute : Attribute, ITestDiscoveryEven
     {
         if (context is null)
         {
-            return ValueTask.CompletedTask;
+            return new ValueTask();
         }
 
         context.AddCategory(Category);
 
-        return ValueTask.CompletedTask;
+        return new ValueTask();
     }
 }
