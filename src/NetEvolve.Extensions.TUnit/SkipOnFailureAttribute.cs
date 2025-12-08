@@ -33,6 +33,6 @@ public sealed class SkipOnFailureAttribute : Attribute, ITestEndEventReceiver
             );
         }
 
-        return ValueTask.CompletedTask;
+        return new ValueTask();
     }
 }

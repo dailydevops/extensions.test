@@ -63,15 +63,15 @@ public abstract class CategoryWithIdTraitBaseAttribute : Attribute, ITestDiscove
     {
         if (context is null)
         {
-            return ValueTask.CompletedTask;
+            return new ValueTask();
         }
 
         context.AddCategory(Category);
         if (!string.IsNullOrWhiteSpace(Id))
         {
-            context.AddProperty(Category, Id);
+            context.AddProperty(Category, Id!);
         }
 
-        return ValueTask.CompletedTask;
+        return new ValueTask();
     }
 }
