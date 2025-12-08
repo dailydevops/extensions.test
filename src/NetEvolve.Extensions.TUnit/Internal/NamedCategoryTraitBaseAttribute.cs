@@ -36,7 +36,7 @@ public abstract class NamedCategoryTraitBaseAttribute : Attribute, ITestDiscover
     {
         if (context is null)
         {
-            return ValueTask.CompletedTask;
+            return new ValueTask();
         }
 
         if (!string.IsNullOrWhiteSpace(Id))
@@ -44,6 +44,6 @@ public abstract class NamedCategoryTraitBaseAttribute : Attribute, ITestDiscover
             context.AddProperty(Category, Id);
         }
 
-        return ValueTask.CompletedTask;
+        return new ValueTask();
     }
 }
