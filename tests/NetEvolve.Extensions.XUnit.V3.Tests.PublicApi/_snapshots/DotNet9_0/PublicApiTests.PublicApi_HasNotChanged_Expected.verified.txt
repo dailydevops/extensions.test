@@ -60,6 +60,10 @@
     {
         public PreDeploymentAttribute() { }
     }
+    public sealed class PublicApiAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryTraitBaseAttribute
+    {
+        public PublicApiAttribute() { }
+    }
     public sealed class TestGroupAttribute : NetEvolve.Extensions.XUnit.V3.Internal.CategoryWithIdTraitBaseAttribute
     {
         public TestGroupAttribute(string id) { }
