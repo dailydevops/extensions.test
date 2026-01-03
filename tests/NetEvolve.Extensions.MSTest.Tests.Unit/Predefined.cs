@@ -23,5 +23,7 @@ internal static class Predefined
 
         VerifierSettings.SortPropertiesAlphabetically();
         VerifierSettings.SortJsonObjects();
+
+        VerifierSettings.AutoVerify(includeBuildServer: false, throwException: true);
     }
 }
