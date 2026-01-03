@@ -72,6 +72,10 @@
     {
         public PreDeploymentAttribute() { }
     }
+    public sealed class PublicApiAttribute : NUnit.Framework.CategoryAttribute
+    {
+        public PublicApiAttribute() { }
+    }
     public sealed class TestGroupAttribute : NetEvolve.Extensions.NUnit.Internal.NamedCategoryBaseAttribute
     {
         public TestGroupAttribute(string id) { }

@@ -60,6 +60,10 @@
     {
         public PreDeploymentAttribute() { }
     }
+    public sealed class PublicApiAttribute : NetEvolve.Extensions.TUnit.Internal.CategoryTraitBaseAttribute
+    {
+        public PublicApiAttribute() { }
+    }
     public sealed class SkipOnFailureAttribute : System.Attribute, TUnit.Core.Interfaces.IEventReceiver, TUnit.Core.Interfaces.ITestEndEventReceiver
     {
         public SkipOnFailureAttribute() { }
