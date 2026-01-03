@@ -114,4 +114,9 @@ internal static class Internals
     /// TestGroup
     /// </summary>
     public const string TestGroup = nameof(TestGroup);
+
+    /// <summary>
+    /// PublicApi
+    /// </summary>
+    public const string PublicApi = nameof(PublicApi);
 }
