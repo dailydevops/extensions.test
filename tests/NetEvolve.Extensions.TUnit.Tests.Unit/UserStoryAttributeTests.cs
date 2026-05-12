@@ -19,7 +19,7 @@ public class UserStoryAttributeTests : AttributeTestsBase
     {
         var traits = GetTraits();
 
-        _ = await Verify(traits);
+        _ = await Verify(traits).ConfigureAwait(false);
     }
 
     /// <summary>
@@ -31,7 +31,7 @@ public class UserStoryAttributeTests : AttributeTestsBase
     {
         var traits = GetTraits();
 
-        _ = await Verify(traits);
+        _ = await Verify(traits).ConfigureAwait(false);
     }
 
     /// <summary>
@@ -43,6 +43,6 @@ public class UserStoryAttributeTests : AttributeTestsBase
     {
         var traits = GetTraits();
 
-        _ = await Verify(traits);
+        _ = await Verify(traits).ConfigureAwait(false);
     }
 }

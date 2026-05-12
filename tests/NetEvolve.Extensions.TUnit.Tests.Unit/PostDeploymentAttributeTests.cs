@@ -18,6 +18,6 @@ public class PostDeploymentAttributeTests : AttributeTestsBase
     {
         var traits = GetTraits();
 
-        _ = await Verify(traits);
+        _ = await Verify(traits).ConfigureAwait(false);
     }
 }

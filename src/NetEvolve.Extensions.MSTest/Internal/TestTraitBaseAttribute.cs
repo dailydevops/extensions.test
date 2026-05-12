@@ -3,14 +3,14 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-/// <inheritdoc/>
+/// <inheritdoc cref="TestCategoryBaseAttribute" />
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class TestTraitBaseAttribute : TestCategoryBaseAttribute
 {
     /// <inheritdoc/>
     public override IList<string> TestCategories { get; }
 
-    /// <inheritdoc/>
+    /// <inheritdoc cref="TestCategoryBaseAttribute" />
     protected TestTraitBaseAttribute(string categoryName)
         : base() => TestCategories = [categoryName];
 }

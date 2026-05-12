@@ -1,6 +1,6 @@
 ﻿namespace NetEvolve.Extensions.MSTest.Internal;
 
-/// <inheritdoc/>
+/// <inheritdoc cref="TestTraitBaseAttribute" />
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "As designed.")]
 public abstract class TestCategoryWithIdBaseAttribute : TestTraitBaseAttribute
 {
@@ -9,7 +9,7 @@ public abstract class TestCategoryWithIdBaseAttribute : TestTraitBaseAttribute
     /// </summary>
     public string? Id { get; }
 
-    /// <inheritdoc/>
+    /// <inheritdoc cref="TestTraitBaseAttribute" />
     protected TestCategoryWithIdBaseAttribute(string categoryName, string? id = default)
         : base(categoryName) => Id = id;
 }
