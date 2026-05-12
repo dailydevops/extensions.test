@@ -18,7 +18,7 @@ public class CodedUITestAttributeTests : AttributeTestsBase
     {
         var traits = GetTraits(methodName);
 
-        _ = await Verify(traits).UseParameters(methodName);
+        _ = await Verify(traits).UseParameters(methodName).ConfigureAwait(false);
     }
 
     [CodedUITest]

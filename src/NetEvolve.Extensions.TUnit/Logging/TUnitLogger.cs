@@ -34,3 +34,9 @@ internal class TUnitLogger : ILogger
             _ => global::TUnit.Core.Logging.LogLevel.None,
         };
 }
+
+internal sealed class TUnitLogger<T> : TUnitLogger, ILogger<T>
+{
+    public TUnitLogger(global::TUnit.Core.Logging.ILogger logger)
+        : base(logger) { }
+}
