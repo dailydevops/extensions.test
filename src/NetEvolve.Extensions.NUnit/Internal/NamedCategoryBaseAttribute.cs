@@ -40,7 +40,7 @@ public abstract class NamedCategoryBaseAttribute : NUnitAttribute, IApplyToTest
 
         if (!string.IsNullOrEmpty(Id))
         {
-            test.Properties.Add(Category, Id!);
+            test.Properties.Add(Category, Id);
         }
     }
 }
