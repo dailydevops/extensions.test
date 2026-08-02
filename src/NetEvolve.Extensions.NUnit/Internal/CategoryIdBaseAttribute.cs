@@ -44,7 +44,7 @@ public abstract class CategoryIdBaseAttribute : CategoryAttribute, IApplyToTest
 
         if (!string.IsNullOrEmpty(Id))
         {
-            test.Properties.Add(Name, Id!);
+            test.Properties.Add(Name, Id);
         }
     }
 }

@@ -96,7 +96,7 @@ public abstract class AttributeTestsBase : VerifyBase
                     && !string.IsNullOrWhiteSpace(attributeWithId.Id)
                 )
                 {
-                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id!);
+                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id);
                 }
             }
         }
@@ -136,7 +136,7 @@ public abstract class AttributeTestsBase : VerifyBase
                     && !string.IsNullOrWhiteSpace(attributeWithId.Id)
                 )
                 {
-                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id!);
+                    yield return new KeyValuePair<string, string>(testCategory, attributeWithId.Id);
                 }
             }
         }
