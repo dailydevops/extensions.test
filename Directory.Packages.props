@@ -30,11 +30,11 @@
     <PackageVersion Include="NUnit.Analyzers" Version="4.14.0" />
     <PackageVersion Include="Polyfill" Version="11.0.1" />
     <PackageVersion Include="PublicApiGenerator" Version="11.5.4" />
-    <PackageVersion Include="TUnit" Version="1.48.6" />
-    <PackageVersion Include="TUnit.Core" Version="1.48.6" />
+    <PackageVersion Include="TUnit" Version="1.63.0" />
+    <PackageVersion Include="TUnit.Core" Version="1.63.0" />
     <PackageVersion Include="Verify.MSTest" Version="31.28.0" />
     <PackageVersion Include="Verify.NUnit" Version="31.28.0" />
-    <PackageVersion Include="Verify.TUnit" Version="31.19.0" />
+    <PackageVersion Include="Verify.TUnit" Version="31.20.0" />
     <PackageVersion Include="Verify.XunitV3" Version="31.28.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
