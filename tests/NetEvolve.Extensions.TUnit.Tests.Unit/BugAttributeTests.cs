@@ -45,4 +45,15 @@ public class BugAttributeTests : AttributeTestsBase
 
         _ = await Verify(traits).ConfigureAwait(false);
     }
+
+    /// <summary>
+    /// Tests that <see cref="Internal.CategoryWithIdTraitBaseAttribute.OnTestDiscovered"/> is a no-op, when invoked with a <see langword="null"/> context.
+    /// </summary>
+    [Test]
+    public async Task OnTestDiscovered_ContextIsNull_DoesNotThrow()
+    {
+        var attribute = new BugAttribute();
+
+        await attribute.OnTestDiscovered(null!).ConfigureAwait(false);
+    }
 }
