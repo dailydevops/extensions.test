@@ -36,7 +36,7 @@
     <PackageVersion Include="Verify.MSTest" Version="31.28.0" />
     <PackageVersion Include="Verify.NUnit" Version="31.28.0" />
     <PackageVersion Include="Verify.TUnit" Version="31.28.0" />
-    <PackageVersion Include="Verify.XunitV3" Version="31.28.0" />
+    <PackageVersion Include="Verify.XunitV3" Version="32.0.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="4.0.0" />
     <PackageVersion Include="xunit.v3" Version="4.0.0" />
     <PackageVersion Include="xunit.v3.common" Version="4.0.0" />
