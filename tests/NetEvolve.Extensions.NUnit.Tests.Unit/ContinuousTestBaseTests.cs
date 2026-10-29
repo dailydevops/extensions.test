@@ -56,7 +56,11 @@ public class ContinuousTestBaseTests
 
             await sut.TearDownAsync();
 
-            _ = Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
+            var ex = Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
+            Assert.That(
+                ex!.Message,
+                Is.EqualTo("Previous test failed, further execution for this test class has been disabled!")
+            );
         }
     }
 
