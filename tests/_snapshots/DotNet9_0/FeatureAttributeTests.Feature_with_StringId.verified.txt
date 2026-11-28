@@ -1,8 +1,0 @@
-﻿[
-  {
-    TestCategory: Feature
-  },
-  {
-    Feature: 123456
-  }
-]

@@ -1,7 +1,7 @@
 # NetEvolve.Extensions.Test
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![.NET](https://img.shields.io/badge/.NET-10-blue.svg)](https://dotnet.microsoft.com/)
+[![.NET](https://img.shields.io/badge/.NET-10%20%7C%2011-blue.svg)](https://dotnet.microsoft.com/)
 [![Build Status](https://github.com/dailydevops/extensions.test/actions/workflows/ci.yml/badge.svg)](https://github.com/dailydevops/extensions.test/actions)
 
 A comprehensive compatibility library providing **standardized test categorization attributes** across multiple .NET test frameworks. This library enables teams to maintain consistent test organization, filtering, and execution management regardless of their chosen testing framework.
@@ -17,7 +17,7 @@ A comprehensive compatibility library providing **standardized test categorizati
 - ✅ **Standardized Organization**: Organize tests by type (Unit, Integration, Performance, etc.)
 - ✅ **Work Item Tracking**: Link tests to bugs, features, user stories, and epics
 - ✅ **Deployment Testing**: Separate pre-deployment and post-deployment validation
-- ✅ **.NET 10 Support**: Built for modern .NET with full C# 13 compatibility
+- ✅ **.NET 10 and .NET 11 Support**: Built for modern .NET with full C# 13 compatibility
 
 ## 📦 Supported Test Frameworks
 
@@ -109,7 +109,7 @@ dotnet test --filter "TestCategory!=PerformanceTest"
 
 ## 🛠️ Requirements
 
-- **.NET 10** or later
+- **.NET 10** or **.NET 11**
 - Compatible with **.NET Standard 2.0** projects (.NET Framework 4.6.1+, .NET Core 2.0+)
 - **C# 13** support
 
@@ -120,7 +120,6 @@ Each package includes comprehensive documentation:
 - [MSTest Documentation](src/NetEvolve.Extensions.MSTest/README.md)
 - [NUnit Documentation](src/NetEvolve.Extensions.NUnit/README.md)
 - [TUnit Documentation](src/NetEvolve.Extensions.TUnit/README.md)
-- [XUnit Documentation](src/NetEvolve.Extensions.XUnit/README.md)
 - [XUnit v3 Documentation](src/NetEvolve.Extensions.XUnit.V3/README.md)
 
 ## 🤝 Contributing

@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net8.0;net9.0;net10.0</TargetFrameworks>
+    <TargetFrameworks>$(NetEvolve_TestTargetFrameworks)</TargetFrameworks>
     <OutputType>Exe</OutputType>
-    <CheckEolTargetFramework>false</CheckEolTargetFramework>
     <!-- Do not copy referenced .pdb files to the output directory. PublicApiGenerator reads the
          assembly under test via Mono.Cecil, which throws SymbolsNotMatchingException if it finds
          a .pdb next to the assembly that code coverage instrumentation has rewritten out of sync

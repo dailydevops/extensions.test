@@ -2,19 +2,14 @@
   "version": "1",
   "environments": [
     {
-      "name": "Docker: .NET 10.0 Preview",
+      "name": "Docker: .NET 11.0",
       "type": "docker",
-      "dockerImage": "mcr.microsoft.com/dotnet/sdk:10.0-preview"
+      "dockerImage": "mcr.microsoft.com/dotnet/sdk:11.0"
     },
     {
-      "name": "Docker: .NET 9.0",
+      "name": "Docker: .NET 10.0",
       "type": "docker",
-      "dockerImage": "mcr.microsoft.com/dotnet/sdk:9.0"
-    },
-    {
-      "name": "Docker: .NET 8.0",
-      "type": "docker",
-      "dockerImage": "mcr.microsoft.com/dotnet/sdk:8.0"
+      "dockerImage": "mcr.microsoft.com/dotnet/sdk:10.0"
     },
     {
       "name": "WSL: Ubuntu",
