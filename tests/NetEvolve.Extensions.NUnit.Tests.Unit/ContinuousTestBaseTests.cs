@@ -31,11 +31,11 @@ public class ContinuousTestBaseTests
 
             var sut = new TestFixture();
 
-            Assert.DoesNotThrowAsync(() => sut.SetUpAsync());
+            await Assert.DoesNotThrowAsync(() => sut.SetUpAsync());
 
             await sut.TearDownAsync();
 
-            Assert.DoesNotThrowAsync(() => sut.SetUpAsync());
+            await Assert.DoesNotThrowAsync(() => sut.SetUpAsync());
         }
     }
 
@@ -52,11 +52,11 @@ public class ContinuousTestBaseTests
 
             var sut = new TestFixture();
 
-            Assert.DoesNotThrowAsync(() => sut.SetUpAsync());
+            await Assert.DoesNotThrowAsync(() => sut.SetUpAsync());
 
             await sut.TearDownAsync();
 
-            var ex = Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
+            var ex = await Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
             Assert.That(
                 ex!.Message,
                 Is.EqualTo("Previous test failed, further execution for this test class has been disabled!")
@@ -79,12 +79,12 @@ public class ContinuousTestBaseTests
 
             await sut.TearDownAsync();
 
-            _ = Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
+            _ = await Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
 
             SetPreviousResult(context, ResultState.Success);
             await sut.TearDownAsync();
 
-            _ = Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
+            _ = await Assert.ThrowsAsync<InconclusiveException>(() => sut.SetUpAsync());
         }
     }
 
