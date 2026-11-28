@@ -54,7 +54,7 @@ dotnet add package NetEvolve.Extensions.XUnit.V3
 
 ## 🛠️ Requirements
 
-- **.NET 10** or later
+- **.NET 10** or **.NET 11**
 - Compatible with **.NET Standard 2.0** projects (.NET Framework 4.6.1+, .NET Core 2.0+)
 - **C# 13** support
 - **XUnit v3 framework** compatibility

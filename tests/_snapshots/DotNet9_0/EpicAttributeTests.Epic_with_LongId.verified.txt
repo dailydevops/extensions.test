@@ -1,8 +1,0 @@
-﻿[
-  {
-    TestCategory: Epic
-  },
-  {
-    Epic: 123456
-  }
-]

@@ -1,8 +1,0 @@
-﻿[
-  {
-    TestCategory: UserStory
-  },
-  {
-    UserStory: 123456
-  }
-]

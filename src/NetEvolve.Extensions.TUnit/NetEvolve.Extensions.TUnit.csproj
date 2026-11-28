@@ -2,7 +2,6 @@
   <PropertyGroup>
     <TargetFrameworks>$(NetEvolve_ProjectTargetFrameworks)</TargetFrameworks>
     <PackageTags>$(PackageTags);tunit</PackageTags>
-    <CheckEolTargetFramework>false</CheckEolTargetFramework>
     <EnableTUnitPolyfills>false</EnableTUnitPolyfills>
     <NoWarn>$(NoWarn);PolyfillTargetsForNuget</NoWarn>
     <NetEvolveAnalyzerGroupGenericOverloads>true</NetEvolveAnalyzerGroupGenericOverloads>

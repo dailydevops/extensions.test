@@ -1,8 +1,0 @@
-﻿[
-  {
-    TestCategory: WorkItem
-  },
-  {
-    WorkItem: 123456
-  }
-]
